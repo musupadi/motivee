@@ -90,62 +90,62 @@ class Home extends StatelessWidget {
                     mainAxisSpacing: 12,
                     physics: const NeverScrollableScrollPhysics(),
                     childAspectRatio: 0.85, // sesuaikan tinggi-lebar card
-                    children: const [
+                    children: [
                       BalanceZoneCard(
                         title: "Spiritual & Kontribusi",
                         imagePath: "assets/img/spiritual pendek.png",
                         current: 7,
                         total: 10,
-                        backgroundColor: Color.fromRGBO(220, 120, 229, 1),
+                        backgroundColor: CSpiritual(),
                       ),
                       BalanceZoneCard(
                         title: "Kesehatan Fisik & Mental",
                         imagePath: "assets/img/kesehatan fisik.png",
                         current: 6,
                         total: 10,
-                        backgroundColor: Color.fromRGBO(197, 36, 176, 1),
+                        backgroundColor:CKesehatan(),
                       ),
                       BalanceZoneCard(
                         title: "Hubungan Sosial",
                         imagePath: "assets/img/hub sosial.png",
                         current: 10,
                         total: 15,
-                        backgroundColor: Color.fromRGBO(205, 127, 50, 1),
+                        backgroundColor: CHubunganSosial(),
                       ),
                       BalanceZoneCard(
                         title: "Finansial",
                         imagePath: "assets/img/keuangan.png",
                         current: 7,
                         total: 10,
-                        backgroundColor: Color.fromRGBO(112, 66, 20, 1),
+                        backgroundColor: CFinansial(),
                       ),
                       BalanceZoneCard(
                         title: "Pengembangan Diri & Kreativitas",
                         imagePath: "assets/img/pengembangan.png",
                         current: 5,
                         total: 10,
-                        backgroundColor: Color.fromRGBO(217, 108, 128, 1),
+                        backgroundColor: CPengembanganDiri(),
                       ),
                       BalanceZoneCard(
                         title: "Pekerjaan & Karir",
                         imagePath: "assets/img/pekerjaan.png",
                         current: 7,
                         total: 10,
-                        backgroundColor: Color.fromRGBO(242, 46, 82, 1),
+                        backgroundColor: CPekerjaanKarir(),
                       ),
                       BalanceZoneCard(
                         title: "Hunian & Lingkungan",
                         imagePath: "assets/img/hunian.png",
                         current: 7,
                         total: 10,
-                        backgroundColor: Color.fromRGBO(217, 108, 128, 1),
+                        backgroundColor: CHunian(),
                       ),
                       BalanceZoneCard(
                         title: "Rekreasi & Relaksasi",
                         imagePath: "assets/img/rekreasi.png",
                         current: 5,
                         total: 10,
-                        backgroundColor: Color.fromRGBO(108, 113, 2, 1),
+                        backgroundColor: CRekreasi(),
                       ),
 
                     ],
@@ -382,7 +382,7 @@ class BalanceZoneCard extends StatelessWidget {
   final int total;
   final Color backgroundColor;
 
-  const BalanceZoneCard({
+  BalanceZoneCard({
     super.key,
     required this.title,
     required this.imagePath,
