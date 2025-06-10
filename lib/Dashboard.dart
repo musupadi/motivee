@@ -85,20 +85,6 @@ class _DashboardState extends State<Dashboard> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
                   image: DecorationImage(
-                      image: AssetImage("assets/img/tutorial.png"),
-                      fit: BoxFit.cover
-                  )
-              ),
-            ),
-            label: "Tutorial",
-          ),
-          BottomNavigationBarItem(
-            icon: Container(
-              height: 30,
-              width: 30,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  image: DecorationImage(
                       image: AssetImage("assets/img/bantuan.png"),
                       fit: BoxFit.cover
                   )
@@ -113,12 +99,26 @@ class _DashboardState extends State<Dashboard> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
                   image: DecorationImage(
-                      image: AssetImage("assets/img/komunitas.png"),
+                      image: AssetImage("assets/img/Pintasan.png"),
                       fit: BoxFit.cover
                   )
               ),
             ),
             label: "Pintasan",
+          ),
+          BottomNavigationBarItem(
+            icon: Container(
+              height: 30,
+              width: 30,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  image: DecorationImage(
+                      image: AssetImage("assets/img/akunku.png"),
+                      fit: BoxFit.cover
+                  )
+              ),
+            ),
+            label: "Akunku",
           ),
         ],
       ),

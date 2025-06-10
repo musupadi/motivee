@@ -10,8 +10,14 @@ class PeekCarousel extends StatefulWidget {
 
 class _PeekCarouselState extends State<PeekCarousel> {
   final PageController _controller = PageController(
-    viewportFraction: 0.85, // Ini bikin kanan-kiri bisa "mengintip"
+    viewportFraction: 0.90, // Efek "peek" kanan-kiri
   );
+
+  final List<String> imagePaths = [
+    'assets/img/amazon.png',
+    'assets/img/apple.png',
+    'assets/img/netflix.png',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -19,19 +25,24 @@ class _PeekCarouselState extends State<PeekCarousel> {
       children: [
         SizedBox(
           height: 160,
-          child: PageView(
+          child: PageView.builder(
             controller: _controller,
-            children: const [
-              _PeekItem(imagePath: 'assets/img/amazon.png'),
-              _PeekItem(imagePath: 'assets/img/apple.png'),
-              _PeekItem(imagePath: 'assets/img/netflix.png'),
-            ],
+            itemCount: imagePaths.length,
+            itemBuilder: (context, index) {
+              double left = index == 0 ? 0 : 6;
+              double right = index == imagePaths.length - 1 ? 0 : 6;
+
+              return Padding(
+                padding: EdgeInsets.only(left: left, right: right),
+                child: _PeekItem(imagePath: imagePaths[index]),
+              );
+            },
           ),
         ),
         const SizedBox(height: 8),
         SmoothPageIndicator(
           controller: _controller,
-          count: 3,
+          count: imagePaths.length,
           effect: const ExpandingDotsEffect(
             activeDotColor: Colors.deepPurple,
             dotColor: Colors.grey,
@@ -51,16 +62,13 @@ class _PeekItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 6), // Jarak antar item
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: Container(
-          color: Colors.white,
-          child: Image.asset(
-            imagePath,
-            fit: BoxFit.contain,
-          ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        color: Colors.white,
+        child: Image.asset(
+          imagePath,
+          fit: BoxFit.contain,
         ),
       ),
     );

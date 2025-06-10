@@ -4,3 +4,7 @@ double TitleSize(){
 double SpaceSize(){
   return 24.0;
 }
+
+double FontSizeSmall(){
+  return 10;
+}

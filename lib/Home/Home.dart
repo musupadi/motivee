@@ -25,184 +25,247 @@ class Home extends StatelessWidget {
           color: CBackground(), // Netral lembut
         ),
         child: ListView(
-          padding: const EdgeInsets.all(16),
           children: [
-            const SizedBox(height: 5),
+            const SizedBox(height: 10),
             CategorySelector(),
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
             RunningHeader(),
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
             PeekCarousel(),
-            const SizedBox(height: 24),
-            Row(
-              children: [
-                RobotWithBubble(
-                  robotImagePath: 'assets/img/wajah robot futuristik.png',
-                  bubbleImagePath: 'assets/img/tap & talk.png',
+            const SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: CBackground2(),
+                  borderRadius: BorderRadius.circular(20)
                 ),
-                SizedBox(
-                  width: 15,
-                ),
-                Expanded(child: VeeChatPrompt()),
-              ],
-            ),
-            const SizedBox(height: 24),
-            Text(
-              "ZONA KEHIDUPAN",
-              style: TextStyle(
-                color: CWhite(),
-                fontWeight: FontWeight.bold,
-                fontSize: TitleSize()
-              ),
-            ),
-            const SizedBox(height: 24),
-            Wrap(
-              spacing: 12,
-              runSpacing: 12,
-              children: const [
-                _ProductivityItem(title: 'Agenda', imagePath: 'assets/img/agenda.png'),
-                _ProductivityItem(title: 'Rencana', imagePath: 'assets/img/rencana.png'),
-                _ProductivityItem(title: 'Aktivitas', imagePath: 'assets/img/aktivitas.png'),
-                _ProductivityItem(title: 'Catatan', imagePath: 'assets/img/catatan.png'),
-              ],
-            ),
-            const SizedBox(height: 24),
-            Text(
-              "ZONA KESEIMBANGAN HIDUP",
-              style: TextStyle(
-                  color: CWhite(),
-                  fontWeight: FontWeight.bold,
-                  fontSize: TitleSize()
-              ),
-            ),
-            SafeArea(
-              child: SingleChildScrollView(
-                child: Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: CBackground2(),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: GridView.count(
-                    shrinkWrap: true,
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 12,
-                    mainAxisSpacing: 12,
-                    physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: 0.85, // sesuaikan tinggi-lebar card
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
                     children: [
-                      BalanceZoneCard(
-                        title: "Spiritual & Kontribusi",
-                        imagePath: "assets/img/spiritual pendek.png",
-                        current: 7,
-                        total: 10,
-                        backgroundColor: CSpiritual(),
+                      RobotWithBubble(
+                        robotImagePath: 'assets/img/wajah robot futuristik.png',
+                        // bubbleImagePath: 'assets/img/tap & talk.png',
                       ),
-                      BalanceZoneCard(
-                        title: "Kesehatan Fisik & Mental",
-                        imagePath: "assets/img/kesehatan fisik.png",
-                        current: 6,
-                        total: 10,
-                        backgroundColor:CKesehatan(),
-                      ),
-                      BalanceZoneCard(
-                        title: "Hubungan Sosial",
-                        imagePath: "assets/img/hub sosial.png",
-                        current: 10,
-                        total: 15,
-                        backgroundColor: CHubunganSosial(),
-                      ),
-                      BalanceZoneCard(
-                        title: "Finansial",
-                        imagePath: "assets/img/keuangan.png",
-                        current: 7,
-                        total: 10,
-                        backgroundColor: CFinansial(),
-                      ),
-                      BalanceZoneCard(
-                        title: "Pengembangan Diri & Kreativitas",
-                        imagePath: "assets/img/pengembangan.png",
-                        current: 5,
-                        total: 10,
-                        backgroundColor: CPengembanganDiri(),
-                      ),
-                      BalanceZoneCard(
-                        title: "Pekerjaan & Karir",
-                        imagePath: "assets/img/pekerjaan.png",
-                        current: 7,
-                        total: 10,
-                        backgroundColor: CPekerjaanKarir(),
-                      ),
-                      BalanceZoneCard(
-                        title: "Hunian & Lingkungan",
-                        imagePath: "assets/img/hunian.png",
-                        current: 7,
-                        total: 10,
-                        backgroundColor: CHunian(),
-                      ),
-                      BalanceZoneCard(
-                        title: "Rekreasi & Relaksasi",
-                        imagePath: "assets/img/rekreasi.png",
-                        current: 5,
-                        total: 10,
-                        backgroundColor: CRekreasi(),
-                      ),
-
+                      Expanded(child: VeeChatPrompt()),
                     ],
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 24),
-            Text(
-              "ZONA EKONOMI",
-              style: TextStyle(
+            Padding(
+              padding: const EdgeInsets.only(left: 8,right: 8,top: 8),
+              child: Text(
+                "ZONA PRODUKTIVITAS",
+                style: TextStyle(
                   color: CWhite(),
                   fontWeight: FontWeight.bold,
                   fontSize: TitleSize()
+                ),
               ),
             ),
-            SafeArea(
-              child: SingleChildScrollView(
-                child: Container(
-                  padding: const EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 10),
-                  decoration: BoxDecoration(
-                    color: CBackground2(),
-                    borderRadius: BorderRadius.circular(20),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 4,bottom: 4,top: 0,left: 8),
+                        child: _ProductivityItem(title: 'Agenda', imagePath: 'assets/img/agenda.png'),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 4,bottom: 4,top: 0,right: 8),
+                        child: _ProductivityItem(title: 'Rencana', imagePath: 'assets/img/rencana.png'),
+                      ),
+                    )
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 8,bottom: 8,top: 4,right: 4),
+                        child: _ProductivityItem(title: 'Aktivitas', imagePath: 'assets/img/aktivitas.png'),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 4,bottom: 8,top: 4,right: 8),
+                        child: _ProductivityItem(title: 'Catatan', imagePath: 'assets/img/catatan.png'),
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 24),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "ZONA KESEIMBANGAN HIDUP",
+                style: TextStyle(
+                    color: CWhite(),
+                    fontWeight: FontWeight.bold,
+                    fontSize: TitleSize()
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SafeArea(
+                child: SingleChildScrollView(
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: CBackground2(),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: GridView.count(
+                      shrinkWrap: true,
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 12,
+                      mainAxisSpacing: 12,
+                      physics: const NeverScrollableScrollPhysics(),
+                      childAspectRatio: 0.85, // sesuaikan tinggi-lebar card
+                      children: [
+                        BalanceZoneCard(
+                          title: "Spiritual & Kontribusi",
+                          imagePath: "assets/img/spiritual pendek.png",
+                          current: 7,
+                          total: 10,
+                          backgroundColor: CSpiritual(),
+                        ),
+                        BalanceZoneCard(
+                          title: "Kesehatan Fisik & Mental",
+                          imagePath: "assets/img/kesehatan fisik.png",
+                          current: 6,
+                          total: 10,
+                          backgroundColor:CKesehatan(),
+                        ),
+                        BalanceZoneCard(
+                          title: "Hubungan Sosial",
+                          imagePath: "assets/img/hub sosial.png",
+                          current: 10,
+                          total: 15,
+                          backgroundColor: CHubunganSosial(),
+                        ),
+                        BalanceZoneCard(
+                          title: "Finansial",
+                          imagePath: "assets/img/keuangan.png",
+                          current: 7,
+                          total: 10,
+                          backgroundColor: CFinansial(),
+                        ),
+                        BalanceZoneCard(
+                          title: "Pengembangan Diri & Kreativitas",
+                          imagePath: "assets/img/pengembangan.png",
+                          current: 5,
+                          total: 10,
+                          backgroundColor: CPengembanganDiri(),
+                        ),
+                        BalanceZoneCard(
+                          title: "Pekerjaan & Karir",
+                          imagePath: "assets/img/pekerjaan.png",
+                          current: 7,
+                          total: 10,
+                          backgroundColor: CPekerjaanKarir(),
+                        ),
+                        BalanceZoneCard(
+                          title: "Hunian & Lingkungan",
+                          imagePath: "assets/img/hunian.png",
+                          current: 7,
+                          total: 10,
+                          backgroundColor: CHunian(),
+                        ),
+                        BalanceZoneCard(
+                          title: "Rekreasi & Relaksasi",
+                          imagePath: "assets/img/rekreasi.png",
+                          current: 5,
+                          total: 10,
+                          backgroundColor: CRekreasi(),
+                        ),
+
+                      ],
+                    ),
                   ),
-                  child: Wrap(
-                    spacing: 12,
-                    runSpacing: 12,
-                    children: const [
-                      EconomyCard(
-                        title: "Dompetku",
-                        imagePath: "assets/img/dompetku.png",
-                      ),
-                      EconomyCard(
-                        title: "Lapak MotiVee",
-                        imagePath: "assets/img/lapak.png",
-                      ),
-                      EconomyCard(
-                        title: "Cuan Dari Rumah",
-                        imagePath: "assets/img/cuan.png",
-                      ),
-                      EconomyCard(
-                        title: "Pojok UMKM",
-                        imagePath: "assets/img/pojok UMKM.png",
-                      ),
-                    ],
-                  )
                 ),
               ),
             ),
             const SizedBox(height: 24),
-            SponsorCard(imagePath: "assets/img/gambar motivee diluncurkan.png"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "ZONA EKONOMI",
+                style: TextStyle(
+                    color: CWhite(),
+                    fontWeight: FontWeight.bold,
+                    fontSize: TitleSize()
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SafeArea(
+                child: SingleChildScrollView(
+                  child: Container(
+                    padding: const EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 10),
+                    decoration: BoxDecoration(
+                      color: CBackground2(),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Wrap(
+                      spacing: 12,
+                      runSpacing: 12,
+                      children: const [
+                        EconomyCard(
+                          title: "Dompetku",
+                          imagePath: "assets/img/dompetku.png",
+                        ),
+                        EconomyCard(
+                          title: "Lapak MotiVee",
+                          imagePath: "assets/img/lapak.png",
+                        ),
+                        EconomyCard(
+                          title: "Cuan Dari Rumah",
+                          imagePath: "assets/img/cuan.png",
+                        ),
+                        EconomyCard(
+                          title: "Pojok UMKM",
+                          imagePath: "assets/img/pojok UMKM.png",
+                        ),
+                      ],
+                    )
+                  ),
+                ),
+              ),
+            ),
             const SizedBox(height: 24),
-            ZonaPotensiSection(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SponsorCard(imagePath: "assets/img/Klinik Aliyya.png"),
+            ),
             const SizedBox(height: 24),
-            PremiumUpgradeButton(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ZonaPotensiSection(),
+            ),
             const SizedBox(height: 24),
-            ZonaPublikSection(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PremiumUpgradeButton(),
+            ),
+            const SizedBox(height: 24),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ZonaPublikSection(),
+            ),
             const SizedBox(height: 24),
           ],
         ),
@@ -473,9 +536,9 @@ class _ProductivityItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: (MediaQuery.of(context).size.width - 16 * 2 - 12) / 2, // 2 column
-      height: 100,
+      height: 70,
       child: Container(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: Color(0xFFFFD54F),
           borderRadius: BorderRadius.circular(16),
@@ -590,28 +653,60 @@ class VeeChatPrompt extends StatelessWidget {
       onTap: () => _showChatModal(context),
       borderRadius: BorderRadius.circular(20),
       child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: const Color.fromRGBO(217, 217, 217, 1),
-          borderRadius: BorderRadius.circular(20),
-        ),
+        padding: const EdgeInsets.all(12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              "Selamat datang kembali Bang Piyo!\nSaya Vee, Sahabat AI anda yang siap membantu kapan saja !!!",
+          children: [
+            const Text(
+              "Selamat datang kembali \nBang Piyo! \nVee, Sahabat AI anda siap membantu kapan saja 😊",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF0D1A64),
+                color: Colors.black,
+                fontSize: 14,
               ),
+              textAlign: TextAlign.center,
             ),
-            SizedBox(height: 12),
-            TextField(
-              decoration: InputDecoration(
-                hintText: "Ketik yang anda pikirkan ........",
-                border: OutlineInputBorder(),
-                contentPadding: EdgeInsets.symmetric(horizontal: 12),
-              ),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: Colors.grey.shade300),
+                    ),
+                    child: Row(
+                      children: [
+                        const SizedBox(width: 12),
+                        const Expanded(
+                          child: Text(
+                            "Ketik yang anda pikirkan......",
+                            style: TextStyle(color: Colors.grey,fontSize: 10),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Container(
+                  height: 40,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                  ),
+                  child: IconButton(
+                    icon: const Icon(Icons.mic, color: Colors.blue),
+                    onPressed: () {
+                      // bisa ditambahkan fungsi voice
+                    },
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -632,15 +727,13 @@ class VeeChatPrompt extends StatelessWidget {
           heightFactor: 0.8,
           child: Column(
             children: [
-              const SizedBox(height: 20),
-              // 🔼 Gambar robot
               Container(
                 height: 100,
                 width: 100,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage('assets/img/vee_robot.png'), // kamu atur
+                    image: AssetImage('assets/img/vee_robot.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -692,6 +785,7 @@ class VeeChatPrompt extends StatelessWidget {
     );
   }
 }
+
 class RunningHeader extends StatelessWidget {
   const RunningHeader({super.key});
 
@@ -700,60 +794,83 @@ class RunningHeader extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start, // supaya rata atas
+        crossAxisAlignment: CrossAxisAlignment.start, // penting!
         children: [
-          // Akunku
-          SizedBox(
-            width: 60,
-            child: Column(
-              children: const [
-                CircleAvatar(
-                  radius: 20,
-                  backgroundImage: AssetImage("assets/img/akunku.png"),
-                ),
-                SizedBox(height: 4),
-                Text('Akunku', style: TextStyle(fontSize: 12, color: Colors.white)),
-              ],
-            ),
-          ),
-          const SizedBox(width: 4),
-
-          // Marquee
+          // Kiri: Marquee + Selengkapnya dalam 1 kotak
           Expanded(
-            child: Align(
-              alignment: Alignment.topCenter,
-              child: Container(
-                height: 36,
-                margin: const EdgeInsets.only(top: 4),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF1A6D73),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                alignment: Alignment.center,
-                child: Marquee(
-                  text: 'MOTIVASI, DO’A, TIPS, TRIK & AFIRMASI HARIAN',
-                  style: const TextStyle(color: Colors.white, fontSize: 14),
-                  blankSpace: 40,
-                  velocity: 30,
-                ),
+            child: Container(
+              height: 55,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(96,242, 210, 1),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 20, // tinggi tetap supaya marquee tidak loncat
+                    child: Marquee(
+                      text: 'MOTIVASI, DO’A, TIPS, TRIK & AFIRMASI HARIAN',
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      blankSpace: 40,
+                      velocity: 30,
+                    ),
+                  ),
+                  const Align(
+                    alignment: Alignment.bottomRight,
+                    child: Text(
+                      'Selengkapnya......',
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: Colors.black,
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
-          const SizedBox(width: 4),
 
-          // VeeBoost
-          SizedBox(
-            width: 60,
-            child: Column(
-              children: const [
-                CircleAvatar(
-                  radius: 20,
-                  backgroundImage: AssetImage("assets/img/boster.png"),
+          const SizedBox(width: 8),
+
+          // Kanan: Veeboost
+          Container(
+            width: 55,
+            height: 55,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              image: const DecorationImage(
+                image: AssetImage("assets/img/boster panjng.png"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 3),
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.5),
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(12),
+                    bottomRight: Radius.circular(12),
+                  ),
                 ),
-                SizedBox(height: 4),
-                Text('VeeBoost', style: TextStyle(fontSize: 12, color: Colors.white)),
-              ],
+                child: const Text(
+                  'Veeboost',
+                  style: TextStyle(
+                    fontSize: 8,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
           ),
         ],
@@ -764,59 +881,49 @@ class RunningHeader extends StatelessWidget {
 
 class RobotWithBubble extends StatelessWidget {
   final String robotImagePath;
-  final String bubbleImagePath;
 
   const RobotWithBubble({
-    super.key,
     required this.robotImagePath,
-    required this.bubbleImagePath,
+    super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 100,
-      height: 160,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          // Gambar robot utama
-          Positioned.fill(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(80),
-                image: DecorationImage(
-                  image: AssetImage(
-                    robotImagePath,
-                  ),
-                  fit: BoxFit.cover
-                )
-              ),
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        // Robot image
+        Container(
+          height: 130,
+          width: 80,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(50),
+            image: DecorationImage(
+                image: AssetImage(
+                  robotImagePath
+                ),
+              fit: BoxFit.cover
+            )
+          ),
+        ),
+        // Bubble kotak biru di atas robot
+        Positioned(
+          top: -20,
+          left: 40,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+            decoration: BoxDecoration(
+              color: const Color.fromRGBO(51, 189, 196, 1), // warna biru dari RGB
+              borderRadius: BorderRadius.circular(12),
             ),
           ),
-          // Logo "TAP AND TALK"
-          Positioned(
-            bottom: 35,
-            right: -10,
-            child: Container(
-              width: 40,
-              height: 40,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(80),
-                  image: DecorationImage(
-                      image: AssetImage(
-                        bubbleImagePath,
-                      ),
-                      fit: BoxFit.cover
-                  )
-              ),
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
+
 class CategorySelector extends StatefulWidget {
   const CategorySelector({super.key});
 
@@ -831,10 +938,10 @@ class _CategorySelectorState extends State<CategorySelector> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 40,
+      height: 30,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 6),
         itemCount: categories.length,
         separatorBuilder: (_, __) => const SizedBox(width: 8),
         itemBuilder: (context, index) {
@@ -848,20 +955,20 @@ class _CategorySelectorState extends State<CategorySelector> {
               });
             },
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
                 color: isSelected
-                    ? Colors.yellow
-                    : const Color.fromRGBO(23, 97, 110, 1),
+                    ?  const Color.fromRGBO(253, 137, 22, 1)
+                    : const Color.fromRGBO(120, 209, 196, 1),
                 borderRadius: BorderRadius.circular(12),
               ),
               alignment: Alignment.center,
               child: Text(
                 category,
                 style: TextStyle(
-                  color: isSelected ? Colors.black : Colors.white,
+                  color: isSelected ? Colors.white : Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontSize: 14,
+                  fontSize: FontSizeSmall(),
                 ),
               ),
             ),
