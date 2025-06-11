@@ -105,9 +105,9 @@ class Home extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 8,right: 8),
               child: Text(
                 "ZONA KESEIMBANGAN HIDUP",
                 style: TextStyle(
@@ -118,7 +118,7 @@ class Home extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 8,right: 8),
               child: SafeArea(
                 child: SingleChildScrollView(
                   child: Container(
@@ -198,9 +198,9 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 8,right: 8),
               child: Text(
                 "ZONA EKONOMI",
                 style: TextStyle(
@@ -211,7 +211,7 @@ class Home extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 8,right: 8),
               child: SafeArea(
                 child: SingleChildScrollView(
                   child: Container(
@@ -246,27 +246,27 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SponsorCard(imagePath: "assets/img/Klinik Aliyya.png"),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 8,right: 8),
               child: ZonaPotensiSection(),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: PremiumUpgradeButton(),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 8,right: 8),
               child: ZonaPublikSection(),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
           ],
         ),
       ),
@@ -490,7 +490,7 @@ class BalanceZoneCard extends StatelessWidget {
                   style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 14,
+                    fontSize: 12,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -498,7 +498,6 @@ class BalanceZoneCard extends StatelessWidget {
               ],
             ),
           ),
-
           Padding(
             padding: const EdgeInsets.all(5.0),
             child: Column(
@@ -1050,11 +1049,10 @@ class ZonaPublikSection extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 18,
+              fontSize: 22,
             ),
           ),
         ),
-        const SizedBox(height: 12),
         Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
