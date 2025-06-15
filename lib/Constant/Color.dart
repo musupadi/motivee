@@ -16,11 +16,11 @@ Color CYellowUnactive(){
 }
 
 Color CBackground(){
-  return Color.fromRGBO(0,173,181,1.0);
+  return Color.fromRGBO(179,239,235,1.0);
 }
 
 Color CBackground2(){
-  return Color.fromRGBO(70, 202, 206, 1);
+  return Color.fromRGBO(64, 224, 208, 1);
 }
 
 Color CBackgroundChat(){
@@ -59,3 +59,14 @@ Color CHunian(){
 Color CRekreasi(){
   return Color.fromRGBO(156,201,127,1.0);
 }
+
+
+//Konsultasi Ahli
+Color CKonsultasi(){
+  return Color.fromRGBO(6, 38, 47,1.0);
+}
+// Community Container
+Color CCommunityContainer(){
+  return Color.fromRGBO(0,173, 181,1.0);
+}
+

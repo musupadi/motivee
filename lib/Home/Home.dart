@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:marquee/marquee.dart';
+import 'package:motivee/Constant/Route.dart';
 
 import '../Constant/Color.dart';
 import '../Constant/PeakCarousel.dart';
@@ -135,12 +136,17 @@ class Home extends StatelessWidget {
                       physics: const NeverScrollableScrollPhysics(),
                       childAspectRatio: 0.85, // sesuaikan tinggi-lebar card
                       children: [
-                        BalanceZoneCard(
-                          title: "Spiritual & Kontribusi",
-                          imagePath: "assets/img/spiritual pendek.png",
-                          current: 7,
-                          total: 10,
-                          backgroundColor: CSpiritual(),
+                        InkWell(
+                          onTap: () {
+                            toSpiritual(context,false);
+                          },
+                          child: BalanceZoneCard(
+                            title: "Spiritual & Kontribusi",
+                            imagePath: "assets/img/spiritual pendek.png",
+                            current: 7,
+                            total: 10,
+                            backgroundColor: CSpiritual(),
+                          ),
                         ),
                         BalanceZoneCard(
                           title: "Kesehatan Fisik & Mental",

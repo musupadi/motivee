@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:motivee/Home/ZonaKeseimbaganHidup/Spiritual.dart';
 
 import 'Home/Home.dart';
 
 class Dashboard extends StatefulWidget {
-  const Dashboard({super.key});
+  final String page;
+  Dashboard({super.key,required this.page});
 
   @override
   State<Dashboard> createState() => _DashboardState();
@@ -12,13 +14,22 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   int _currentIndex = 0;
 
-  final List<Widget> _pages = const [
+  final List<Widget> _pages = [
     Home(),
     Text("Aktivitas"),
     Text("Premium"),
     Text("Komunitas"),
     Text("Pengaturan"),
   ];
+  final List<Widget> _pages2 = [
+    Spiritual(),
+    Text("Aktivitas"),
+    Text("Premium"),
+    Text("Komunitas"),
+    Text("Pengaturan"),
+  ];
+
+
 
   // Warna calm dan pastel
   final Color bgColor = Color(0xFFF7F6F2); // putih susu
@@ -29,7 +40,7 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
-      body: _pages[_currentIndex],
+      body: widget.page == "Spiritual" ? _pages2[_currentIndex] : _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,

@@ -87,6 +87,24 @@ flutter:
     - family: calibri
       fonts:
         - asset: assets/font/calibri.ttf
+    - family: arialnarrow
+      fonts:
+        - asset: assets/font/arialnarrow.ttf
+    - family: Lexend
+      fonts:
+        - asset: assets/font/Lexend.ttf
+    - family: Nunito
+      fonts:
+        - asset: assets/font/Nunito.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/font/Poppins.ttf
+    - family: Poppins-Bold
+      fonts:
+        - asset: assets/font/Poppins-Bold.ttf
+    - family: Roboto-bold
+      fonts:
+        - asset: assets/font/Roboto-bold.ttf
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
