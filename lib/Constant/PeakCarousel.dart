@@ -14,9 +14,9 @@ class _PeekCarouselState extends State<PeekCarousel> {
   );
 
   final List<String> imagePaths = [
-    'assets/img/amazon.png',
-    'assets/img/apple.png',
-    'assets/img/netflix.png',
+    'assets/img/Slider news 1.png',
+    'assets/img/slider news2.png',
+    'assets/img/slide news3.png',
   ];
 
   @override

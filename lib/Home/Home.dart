@@ -60,7 +60,7 @@ class Home extends StatelessWidget {
               child: Text(
                 "ZONA PRODUKTIVITAS",
                 style: TextStyle(
-                  color: CWhite(),
+                  color: CBlack(),
                   fontWeight: FontWeight.bold,
                   fontSize: TitleSize()
                 ),
@@ -112,7 +112,7 @@ class Home extends StatelessWidget {
               child: Text(
                 "ZONA KESEIMBANGAN HIDUP",
                 style: TextStyle(
-                    color: CWhite(),
+                    color: CBlack(),
                     fontWeight: FontWeight.bold,
                     fontSize: TitleSize()
                 ),
@@ -210,7 +210,7 @@ class Home extends StatelessWidget {
               child: Text(
                 "ZONA EKONOMI",
                 style: TextStyle(
-                    color: CWhite(),
+                    color: CBlack(),
                     fontWeight: FontWeight.bold,
                     fontSize: TitleSize()
                 ),
@@ -494,7 +494,7 @@ class BalanceZoneCard extends StatelessWidget {
                 Text(
                   title,
                   style: const TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 12,
                   ),
@@ -510,7 +510,7 @@ class BalanceZoneCard extends StatelessWidget {
               children: [
                 Text(
                   "$current/$total",
-                  style: const TextStyle(color: Colors.white, fontSize: 12),
+                  style: const TextStyle(color: Colors.black, fontSize: 12),
                 ),
                 const SizedBox(height: 4),
                 ClipRRect(
@@ -518,7 +518,7 @@ class BalanceZoneCard extends StatelessWidget {
                   child: LinearProgressIndicator(
                     value: progress,
                     backgroundColor: Colors.white.withOpacity(0.3),
-                    valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor: const AlwaysStoppedAnimation<Color>(Colors.black),
                     minHeight: 6,
                   ),
                 ),
@@ -634,13 +634,21 @@ class PremiumUpgradeButton extends StatelessWidget {
             children: [
               const Icon(Icons.arrow_forward, color: Colors.white),
               const SizedBox(width: 8),
-              Container(
-                padding: const EdgeInsets.all(6),
-                decoration: const BoxDecoration(
-                  color: Color(0xFFFFECB3), // light yellow
-                  shape: BoxShape.circle,
+              Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Container(
+                  width: 30,
+                  height: 30,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      image: DecorationImage(
+                          image: AssetImage(
+                              "assets/img/star.png"
+                          ),
+                          fit: BoxFit.cover
+                      )
+                  ),
                 ),
-                child: const Icon(Icons.star, size: 18, color: Color(0xFFFFC001)),
               ),
             ],
           ),
@@ -650,6 +658,7 @@ class PremiumUpgradeButton extends StatelessWidget {
   }
 }
 class VeeChatPrompt extends StatelessWidget {
+
   const VeeChatPrompt({super.key});
 
   @override
@@ -663,11 +672,22 @@ class VeeChatPrompt extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              "Selamat datang kembali \nBang Piyo! \nVee, Sahabat AI anda siap membantu kapan saja 😊",
+              "Senang Bertemu lagi Bang Piyo",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Colors.black,
+                color: Colors.white,
+                fontSize: 24,
+                fontFamily: 'Roboto-bold'
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const Text(
+              "Vee siap menemani dan membantu kapanpun kamu butuh",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
                 fontSize: 14,
+                fontFamily: 'Roboto'
               ),
               textAlign: TextAlign.center,
             ),
@@ -807,7 +827,7 @@ class RunningHeader extends StatelessWidget {
               height: 55,
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
               decoration: BoxDecoration(
-                color: const Color.fromRGBO(96,242, 210, 1),
+                color: CBackground2(),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Column(
@@ -1053,7 +1073,7 @@ class ZonaPublikSection extends StatelessWidget {
           child: Text(
             "ZONA PUBLIK",
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontWeight: FontWeight.bold,
               fontSize: 22,
             ),
@@ -1127,7 +1147,7 @@ class PotensiCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: const Color.fromRGBO(223, 228, 51, 1),
+        color: const Color.fromRGBO(205,214, 51, 1),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(

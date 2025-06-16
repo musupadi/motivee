@@ -20,7 +20,7 @@ Color CBackground(){
 }
 
 Color CBackground2(){
-  return Color.fromRGBO(64, 224, 208, 1);
+  return Color.fromRGBO(0, 173, 181, 1);
 }
 
 Color CBackgroundChat(){
@@ -33,31 +33,31 @@ Color CZonaProdukBackground(){
 
 // Zona Keseimbangan Hidup
 Color CSpiritual(){
-  return Color.fromRGBO(174, 186, 138, 1.0);
+  return Color.fromRGBO(255, 64, 129, 1.0);
 }
 Color CKesehatan(){
-  return Color.fromRGBO(116, 148, 140, 1.0);
+  return Color.fromRGBO(221, 140, 241, 1.0);
 }
 
 Color CHubunganSosial(){
-  return Color.fromRGBO(209, 157, 86, 1.0);
+  return Color.fromRGBO(48, 131, 255, 1.0);
 }
 Color CFinansial(){
-  return Color.fromRGBO(249, 186, 46, 1.0);
+  return Color.fromRGBO(51, 148, 112, 1.0);
 }
 
 Color CPengembanganDiri(){
-  return Color.fromRGBO(217, 108, 128, 1.0);
+  return Color.fromRGBO(255, 148, 7, 1.0);
 }
 
 Color CPekerjaanKarir(){
-  return Color.fromRGBO(234, 157, 174, 1.0);
+  return Color.fromRGBO(255, 253,103,1.0);
 }
 Color CHunian(){
-  return Color.fromRGBO(197, 208,70, 1.0);
+  return Color.fromRGBO(180, 255,43, 1.0);
 }
 Color CRekreasi(){
-  return Color.fromRGBO(156,201,127,1.0);
+  return Color.fromRGBO(248,90,65,1.0);
 }
 
 
