@@ -82,7 +82,7 @@ class Spiritual extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 20),
-            Text("        Konsultasi Ahli", style: TextStyle(
+            Text("Konsultasi Ahli", style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
                 color: Colors.black,
