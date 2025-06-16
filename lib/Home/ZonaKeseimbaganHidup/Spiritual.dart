@@ -186,8 +186,7 @@ class Spiritual extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 8,right: 8),
       child: Container(
-        width: 100,
-        height: 90,
+
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.yellow,
