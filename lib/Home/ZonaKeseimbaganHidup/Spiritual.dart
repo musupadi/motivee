@@ -113,7 +113,7 @@ class Spiritual extends StatelessWidget {
             height: 80,
             decoration: BoxDecoration(
               image: const DecorationImage(
-                image: AssetImage('assets/img/spiritual pendek.png'),
+                image: AssetImage('assets/img/spiritual--.png'),
                 fit: BoxFit.cover,
               ),
               borderRadius: BorderRadius.circular(12),

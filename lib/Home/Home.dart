@@ -27,19 +27,17 @@ class Home extends StatelessWidget {
         ),
         child: ListView(
           children: [
-            const SizedBox(height: 10),
-            CategorySelector(),
             const SizedBox(height: 12),
-            RunningHeader(),
-            const SizedBox(height: 12),
-            PeekCarousel(),
-            const SizedBox(height: 12),
+
+            // ✅ Chatbot box muncul pertama
+            // 🔹 1. Chatbot section
+            // 🔹 1. Chatbot Vee
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Container(
                 decoration: BoxDecoration(
                   color: CBackground2(),
-                  borderRadius: BorderRadius.circular(20)
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -47,7 +45,6 @@ class Home extends StatelessWidget {
                     children: [
                       RobotWithBubble(
                         robotImagePath: 'assets/img/wajah robot futuristik.png',
-                        // bubbleImagePath: 'assets/img/tap & talk.png',
                       ),
                       Expanded(child: VeeChatPrompt()),
                     ],
@@ -55,66 +52,71 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
+
+            const SizedBox(height: 24),
+
+// 🔹 2. Motivasi box dan booster image
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Kotak biru teks
+                  Expanded(
+                    child: Container(
+                      height: 80,
+                      width: 200,
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                      decoration: BoxDecoration(
+                        color: const Color.fromRGBO(0, 173, 181, 1),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: const Text(
+                        "Motivasi, Do’a, Tips, Trik & Afirmasi\n Harian",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Roboto',
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(width: 8),
+
+                  // Gambar booster (tanpa container tambahan, transparan)
+                  Container(
+                    width: 48,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      image: const DecorationImage(
+                        image: AssetImage('assets/img/boster panjng.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 24),
+
+// 🔹 3. PeekCarousel (Slider)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: PeekCarousel(),
+            ),
+
             Padding(
               padding: const EdgeInsets.only(left: 8,right: 8,top: 8),
               child: Text(
-                "ZONA PRODUKTIVITAS",
+                "ZONA KESEIMBANGAN HIDUP",
                 style: TextStyle(
                   color: CBlack(),
                   fontWeight: FontWeight.bold,
                   fontSize: TitleSize()
-                ),
-              ),
-            ),
-            Column(
-              children: [
-                Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 4,bottom: 4,top: 0,left: 8),
-                        child: _ProductivityItem(title: 'Agenda', imagePath: 'assets/img/agenda.png'),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 4,bottom: 4,top: 0,right: 8),
-                        child: _ProductivityItem(title: 'Rencana', imagePath: 'assets/img/rencana.png'),
-                      ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 8,bottom: 8,top: 4,right: 4),
-                        child: _ProductivityItem(title: 'Aktivitas', imagePath: 'assets/img/aktivitas.png'),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 4,bottom: 8,top: 4,right: 8),
-                        child: _ProductivityItem(title: 'Catatan', imagePath: 'assets/img/catatan.png'),
-                      ),
-                    )
-                  ],
-                ),
-              ],
-            ),
-            const SizedBox(height: 12),
-            Padding(
-              padding: const EdgeInsets.only(left: 8,right: 8),
-              child: Text(
-                "ZONA KESEIMBANGAN HIDUP",
-                style: TextStyle(
-                    color: CBlack(),
-                    fontWeight: FontWeight.bold,
-                    fontSize: TitleSize()
                 ),
               ),
             ),
@@ -142,7 +144,7 @@ class Home extends StatelessWidget {
                           },
                           child: BalanceZoneCard(
                             title: "Spiritual & Kontribusi",
-                            imagePath: "assets/img/spiritual pendek.png",
+                            imagePath: "assets/img/spiritual--.png",
                             current: 7,
                             total: 10,
                             backgroundColor: CSpiritual(),
@@ -157,42 +159,42 @@ class Home extends StatelessWidget {
                         ),
                         BalanceZoneCard(
                           title: "Hubungan Sosial",
-                          imagePath: "assets/img/hub sosial.png",
+                          imagePath: "assets/img/komunitas--.png",
                           current: 10,
                           total: 15,
                           backgroundColor: CHubunganSosial(),
                         ),
                         BalanceZoneCard(
                           title: "Finansial",
-                          imagePath: "assets/img/keuangan.png",
+                          imagePath: "assets/img/koin.png",
                           current: 7,
                           total: 10,
                           backgroundColor: CFinansial(),
                         ),
                         BalanceZoneCard(
                           title: "Pengembangan Diri & Kreativitas",
-                          imagePath: "assets/img/pengembangan.png",
+                          imagePath: "assets/img/pengembangan2.png",
                           current: 5,
                           total: 10,
                           backgroundColor: CPengembanganDiri(),
                         ),
                         BalanceZoneCard(
                           title: "Pekerjaan & Karir",
-                          imagePath: "assets/img/pekerjaan.png",
+                          imagePath: "assets/img/pekerjaan2.png",
                           current: 7,
                           total: 10,
                           backgroundColor: CPekerjaanKarir(),
                         ),
                         BalanceZoneCard(
                           title: "Hunian & Lingkungan",
-                          imagePath: "assets/img/hunian.png",
+                          imagePath: "assets/img/hunian2.png",
                           current: 7,
                           total: 10,
                           backgroundColor: CHunian(),
                         ),
                         BalanceZoneCard(
                           title: "Rekreasi & Relaksasi",
-                          imagePath: "assets/img/rekreasi.png",
+                          imagePath: "assets/img/rekreasi2i.png",
                           current: 5,
                           total: 10,
                           backgroundColor: CRekreasi(),
@@ -204,6 +206,60 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
+
+            const SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.only(left: 8,right: 8),
+              child: Text(
+                "ZONA PRODUKTIVITAS",
+                style: TextStyle(
+                    color: CBlack(),
+                    fontWeight: FontWeight.w900,
+                    fontSize: TitleSize()
+                ),
+              ),
+            ),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 4,bottom: 4,top: 0,left: 8),
+                        child: _ProductivityItem(title: 'Rencana', imagePath: 'assets/img/rencana2.png'),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 4,bottom: 4,top: 0,right: 8),
+                        child: _ProductivityItem(title: 'Agenda', imagePath: 'assets/img/agenda.png'),
+                      ),
+                    )
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 8,bottom: 8,top: 4,right: 4),
+                        child: _ProductivityItem(title: 'Aktivitas', imagePath: 'assets/img/aktivitas.png'),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 4,bottom: 8,top: 4,right: 8),
+                        child: _ProductivityItem(title: 'Catatan', imagePath: 'assets/img/catatan2.png'),
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+
             const SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.only(left: 8,right: 8),
@@ -244,7 +300,7 @@ class Home extends StatelessWidget {
                         ),
                         EconomyCard(
                           title: "Pojok UMKM",
-                          imagePath: "assets/img/pojok UMKM.png",
+                          imagePath: "assets/img/pojok umkm2.png",
                         ),
                       ],
                     )
@@ -273,6 +329,7 @@ class Home extends StatelessWidget {
               child: ZonaPublikSection(),
             ),
             const SizedBox(height: 12),
+
           ],
         ),
       ),
@@ -643,7 +700,7 @@ class PremiumUpgradeButton extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
                       image: DecorationImage(
                           image: AssetImage(
-                              "assets/img/star.png"
+                              "assets/img/bintang.png"
                           ),
                           fit: BoxFit.cover
                       )
@@ -674,10 +731,10 @@ class VeeChatPrompt extends StatelessWidget {
             const Text(
               "Senang Bertemu lagi Bang Piyo",
               style: TextStyle(
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w900,
                 color: Colors.white,
                 fontSize: 24,
-                fontFamily: 'Roboto-bold'
+                fontFamily: 'Lato'
               ),
               textAlign: TextAlign.center,
             ),
@@ -708,7 +765,9 @@ class VeeChatPrompt extends StatelessWidget {
                         const Expanded(
                           child: Text(
                             "Ketik yang anda pikirkan......",
-                            style: TextStyle(color: Colors.grey,fontSize: 10),
+                            style: TextStyle(
+                                fontFamily: 'Nunito.ttf',
+                                color: Colors.grey,fontSize: 10),
                           ),
                         ),
                       ],
@@ -1059,9 +1118,9 @@ class ZonaPublikSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final items = [
-      {"title": "Komunitas", "img": "assets/img/komunitas.png"},
-      {"title": "Layanan Umum", "img": "assets/img/layanan umum.png"},
-      {"title": "Kolaborasi", "img": "assets/img/kolaborasi.png"},
+      {"title": "Komunitas", "img": "assets/img/komunitas--.png"},
+      {"title": "Layanan Umum", "img": "assets/img/layanan umum2.png"},
+      {"title": "Kolaborasi", "img": "assets/img/kolaborasi2.png"},
       {"title": "Acara", "img": "assets/img/acara.png"},
     ];
 
@@ -1163,7 +1222,7 @@ class ZonaPotensiSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final items = [
       {"title": "Tes & Tantangan", "img": "assets/img/multi tes.png"},
-      {"title": "VEE Akademi", "img": "assets/img/vee akademi.png"},
+      {"title": "VEE Akademi", "img": "assets/img/vee akademi2.png"},
       {"title": "Video & Artikel", "img": "assets/img/artikel.png"},
       {"title": "Berita", "img": "assets/img/berita.png"},
     ];

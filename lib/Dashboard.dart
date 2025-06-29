@@ -82,7 +82,7 @@ class _DashboardState extends State<Dashboard> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
                   image: DecorationImage(
-                      image: AssetImage("assets/img/notifikasi.png"),
+                      image: AssetImage("assets/img/notifikasi 2.png"),
                       fit: BoxFit.cover
                   )
               ),
