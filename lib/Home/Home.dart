@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:marquee/marquee.dart';
-import 'package:motivee/Constant/Route.dart';
+import 'package:motivee/Constant/Route.dart'; // Ensure toSpiritual is defined here
 
 import '../Constant/Color.dart';
 import '../Constant/PeakCarousel.dart';
@@ -23,8 +22,18 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
-          color: CBackground(), // Netral lembut
+          gradient: const LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment(1.0, 0.4),
+          colors: [
+            Color(0xFF48F3FF),
+            Color(0xFFACDECE),
+          ],
         ),
+        // Jika Anda memiliki borderRadius atau properti BoxDecoration lainnya di CBackground(),
+        // pastikan untuk menuliskannya di sini juga.
+        // Contoh: borderRadius: BorderRadius.circular(0), // atau nilai lain
+      ), // Netral lembut
         child: ListView(
           children: [
             const SizedBox(height: 12),
@@ -32,26 +41,36 @@ class Home extends StatelessWidget {
             // ✅ Chatbot box muncul pertama
             // 🔹 1. Chatbot section
             // 🔹 1. Chatbot Vee
+            // 🔹 1. Chatbot section
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: CBackground2(),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      RobotWithBubble(
-                        robotImagePath: 'assets/img/wajah robot futuristik.png',
-                      ),
-                      Expanded(child: VeeChatPrompt()),
-                    ],
+              padding: const EdgeInsets.symmetric(horizontal: 12), // Padding ini berlaku untuk seluruh area Stack
+              child: Stack(
+                clipBehavior: Clip.none,
+                children: [
+
+                  Container(
+                    margin: const EdgeInsets.only(left: 90),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFC3EDF0),// Menggunakan warna background kedua Anda (putih/terang)
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0), // Padding internal untuk konten di dalam gelembung chat
+                      child: VeeChatPrompt(), // VeeChatPrompt sudah berisi teks dan input field
+                    ),
                   ),
-                ),
+                  // 2. Gambar robot, diposisikan untuk menonjol
+                  Positioned(
+                    left: 0,
+                    top: 0,
+                    child: RobotWithBubble(
+                      robotImagePath: 'assets/img/wajah robot futuristik.png',
+                    ),
+                  ),
+                ],
               ),
             ),
+
 
             const SizedBox(height: 24),
 
@@ -64,28 +83,42 @@ class Home extends StatelessWidget {
                   // Kotak biru teks
                   Expanded(
                     child: Container(
-                      height: 80,
+                      height: 65,
                       width: 200,
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                       decoration: BoxDecoration(
                         color: const Color.fromRGBO(0, 173, 181, 1),
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: const Text(
-                        "Motivasi, Do’a, Tips, Trik & Afirmasi\n Harian",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Roboto',
-                          fontSize: 14,
-                        ),
+                      child: const Column(
+                        children: [
+                          Text(
+                            "Motivasi, Do'a, Tips, Trik & Afirmasi",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Roboto',
+                              fontSize: 14,
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.center,
+                            child: const Text(
+                              "Harian",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Roboto',
+                                fontSize: 14,
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                     ),
                   ),
-
                   const SizedBox(width: 8),
 
-                  // Gambar booster (tanpa container tambahan, transparan)
                   Container(
                     width: 48,
                     height: 48,
@@ -114,9 +147,9 @@ class Home extends StatelessWidget {
               child: Text(
                 "ZONA KESEIMBANGAN HIDUP",
                 style: TextStyle(
-                  color: CBlack(),
-                  fontWeight: FontWeight.bold,
-                  fontSize: TitleSize()
+                    color: CBlack(),
+                    fontWeight: FontWeight.bold,
+                    fontSize: TitleSize()
                 ),
               ),
             ),
@@ -140,7 +173,7 @@ class Home extends StatelessWidget {
                       children: [
                         InkWell(
                           onTap: () {
-                            toSpiritual(context,false);
+                            toSpiritual(context,false); // Ensure toSpiritual is defined or imported
                           },
                           child: BalanceZoneCard(
                             title: "Spiritual & Kontribusi",
@@ -277,33 +310,33 @@ class Home extends StatelessWidget {
               child: SafeArea(
                 child: SingleChildScrollView(
                   child: Container(
-                    padding: const EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 10),
-                    decoration: BoxDecoration(
-                      color: CBackground2(),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Wrap(
-                      spacing: 12,
-                      runSpacing: 12,
-                      children: const [
-                        EconomyCard(
-                          title: "Dompetku",
-                          imagePath: "assets/img/dompetku.png",
-                        ),
-                        EconomyCard(
-                          title: "Lapak MotiVee",
-                          imagePath: "assets/img/lapak.png",
-                        ),
-                        EconomyCard(
-                          title: "Cuan Dari Rumah",
-                          imagePath: "assets/img/cuan.png",
-                        ),
-                        EconomyCard(
-                          title: "Pojok UMKM",
-                          imagePath: "assets/img/pojok umkm2.png",
-                        ),
-                      ],
-                    )
+                      padding: const EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 10),
+                      decoration: BoxDecoration(
+                        color: CBackground2(),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Wrap(
+                        spacing: 12,
+                        runSpacing: 12,
+                        children: const [
+                          EconomyCard(
+                            title: "Dompetku",
+                            imagePath: "assets/img/dompetku.png",
+                          ),
+                          EconomyCard(
+                            title: "Lapak MotiVee",
+                            imagePath: "assets/img/lapak.png",
+                          ),
+                          EconomyCard(
+                            title: "Cuan Dari Rumah",
+                            imagePath: "assets/img/cuan.png",
+                          ),
+                          EconomyCard(
+                            title: "Pojok UMKM",
+                            imagePath: "assets/img/pojok umkm2.png",
+                          ),
+                        ],
+                      )
                   ),
                 ),
               ),
@@ -329,13 +362,17 @@ class Home extends StatelessWidget {
               child: ZonaPublikSection(),
             ),
             const SizedBox(height: 12),
-
           ],
         ),
       ),
     );
   }
 }
+
+// =================================================================
+// ALL WIDGETS BELOW ARE NOW CORRECTLY DEFINED AND ACCESSIBLE
+// =================================================================
+
 class VeeChatBubbleWithTail extends StatelessWidget {
   final String message;
 
@@ -540,11 +577,11 @@ class BalanceZoneCard extends StatelessWidget {
                   height: 50,
                   width: 50,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    image: DecorationImage(
-                        image: AssetImage(imagePath),
-                        fit: BoxFit.cover
-                    )
+                      borderRadius: BorderRadius.circular(50),
+                      image: DecorationImage(
+                          image: AssetImage(imagePath),
+                          fit: BoxFit.cover
+                      )
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -602,7 +639,7 @@ class _ProductivityItem extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: Color(0xFFFFD54F),
+          color: const Color(0xFFFFD54F), // Added const
           borderRadius: BorderRadius.circular(16),
         ),
         child: Row(
@@ -698,7 +735,7 @@ class PremiumUpgradeButton extends StatelessWidget {
                   height: 30,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      image: DecorationImage(
+                      image: const DecorationImage( // Added const
                           image: AssetImage(
                               "assets/img/bintang.png"
                           ),
@@ -714,91 +751,13 @@ class PremiumUpgradeButton extends StatelessWidget {
     );
   }
 }
-class VeeChatPrompt extends StatelessWidget {
 
+// Moved VeeChatPrompt above RobotWithBubble for cleaner dependency flow (optional but good practice)
+class VeeChatPrompt extends StatelessWidget {
   const VeeChatPrompt({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => _showChatModal(context),
-      borderRadius: BorderRadius.circular(20),
-      child: Container(
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              "Senang Bertemu lagi Bang Piyo",
-              style: TextStyle(
-                fontWeight: FontWeight.w900,
-                color: Colors.white,
-                fontSize: 24,
-                fontFamily: 'Lato'
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const Text(
-              "Vee siap menemani dan membantu kapanpun kamu butuh",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontSize: 14,
-                fontFamily: 'Roboto'
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 8),
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: Colors.grey.shade300),
-                    ),
-                    child: Row(
-                      children: [
-                        const SizedBox(width: 12),
-                        const Expanded(
-                          child: Text(
-                            "Ketik yang anda pikirkan......",
-                            style: TextStyle(
-                                fontFamily: 'Nunito.ttf',
-                                color: Colors.grey,fontSize: 10),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                Container(
-                  height: 40,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                  ),
-                  child: IconButton(
-                    icon: const Icon(Icons.mic, color: Colors.blue),
-                    onPressed: () {
-                      // bisa ditambahkan fungsi voice
-                    },
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  void _showChatModal(BuildContext context) {
+  // Made _showChatModal a static method of VeeChatPrompt
+  static void _showChatModal(BuildContext context) {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -857,7 +816,7 @@ class VeeChatPrompt extends StatelessWidget {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    suffixIcon: Icon(Icons.send),
+                    suffixIcon: const Icon(Icons.send), // Added const
                   ),
                 ),
               ),
@@ -868,100 +827,90 @@ class VeeChatPrompt extends StatelessWidget {
       },
     );
   }
-}
-
-class RunningHeader extends StatelessWidget {
-  const RunningHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start, // penting!
-        children: [
-          // Kiri: Marquee + Selengkapnya dalam 1 kotak
-          Expanded(
-            child: Container(
-              height: 55,
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-              decoration: BoxDecoration(
-                color: CBackground2(),
-                borderRadius: BorderRadius.circular(10),
+    return InkWell(
+      onTap: () => VeeChatPrompt._showChatModal(context), // Corrected call for static method
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Senang Bertemu lagi Bang Piyo",
+              style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontFamily: 'Lato'
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: 20, // tinggi tetap supaya marquee tidak loncat
-                    child: Marquee(
-                      text: 'MOTIVASI, DO’A, TIPS, TRIK & AFIRMASI HARIAN',
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      blankSpace: 40,
-                      velocity: 30,
+              textAlign: TextAlign.left,
+            ),
+            const Text(
+              "Vee siap menemani dan membantu kapanpun kamu butuh 🤝",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontFamily: 'Roboto'
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: Colors.grey.shade300),
+                    ),
+                    child: const Row( // Added const
+                      children: [
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Text(
+                            "Ketik yang anda pikirkan......",
+                            style: TextStyle(
+                                fontFamily: 'Nunito', // Changed to string literal 'Nunito' if it's a font family name. Remove .ttf
+                                color: Colors.grey, fontSize: 10),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  const Align(
-                    alignment: Alignment.bottomRight,
-                    child: Text(
-                      'Selengkapnya......',
-                      style: TextStyle(
-                        fontSize: 11,
-                        color: Colors.black,
-                        fontStyle: FontStyle.italic,
-                      ),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: IconButton(
+                    icon: Image.asset(
+                      'assets/img/mic1.png',
+                      width: 32,
+                      height: 32,
                     ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-
-          const SizedBox(width: 8),
-
-          // Kanan: Veeboost
-          Container(
-            width: 55,
-            height: 55,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              image: const DecorationImage(
-                image: AssetImage("assets/img/boster panjng.png"),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 3),
-                decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.5),
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(12),
-                    bottomRight: Radius.circular(12),
+                    onPressed: () {
+                    },
                   ),
                 ),
-                child: const Text(
-                  'Veeboost',
-                  style: TextStyle(
-                    fontSize: 8,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+              ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 }
+
+
+
 
 class RobotWithBubble extends StatelessWidget {
   final String robotImagePath;
@@ -981,14 +930,14 @@ class RobotWithBubble extends StatelessWidget {
           height: 130,
           width: 80,
           decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(50),
-            image: DecorationImage(
-                image: AssetImage(
-                  robotImagePath
-                ),
-              fit: BoxFit.cover
-            )
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(50),
+              image: DecorationImage(
+                  image: AssetImage(
+                      robotImagePath
+                  ),
+                  fit: BoxFit.cover
+              )
           ),
         ),
         // Bubble kotak biru di atas robot
@@ -1230,12 +1179,15 @@ class ZonaPotensiSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          "ZONA POTENSI",
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: TitleSize(),
+        Padding( // Added Padding to match the other ZONA sections
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Text(
+            "ZONA POTENSI",
+            style: TextStyle(
+              color: CBlack(), // Changed from Colors.white to CBlack() for consistency
+              fontWeight: FontWeight.bold,
+              fontSize: TitleSize(),
+            ),
           ),
         ),
         const SizedBox(height: 12),
