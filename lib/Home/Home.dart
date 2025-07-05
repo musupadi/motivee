@@ -24,16 +24,13 @@ class Home extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: const LinearGradient(
           begin: Alignment.topRight,
-          end: Alignment(1.0, 0.4),
+          end: Alignment(1.0, 0.2),
           colors: [
             Color(0xFF48F3FF),
             Color(0xFFACDECE),
           ],
         ),
-        // Jika Anda memiliki borderRadius atau properti BoxDecoration lainnya di CBackground(),
-        // pastikan untuk menuliskannya di sini juga.
-        // Contoh: borderRadius: BorderRadius.circular(0), // atau nilai lain
-      ), // Netral lembut
+      ),
         child: ListView(
           children: [
             const SizedBox(height: 12),
@@ -43,7 +40,7 @@ class Home extends StatelessWidget {
             // 🔹 1. Chatbot Vee
             // 🔹 1. Chatbot section
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12), // Padding ini berlaku untuk seluruh area Stack
+              padding: const EdgeInsets.symmetric(horizontal: 12),
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
@@ -51,20 +48,20 @@ class Home extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.only(left: 90),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFC3EDF0),// Menggunakan warna background kedua Anda (putih/terang)
+                      color: const Color(0xFFDBF4FF),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0), // Padding internal untuk konten di dalam gelembung chat
-                      child: VeeChatPrompt(), // VeeChatPrompt sudah berisi teks dan input field
+                      padding: const EdgeInsets.all(8.0),
+                      child: VeeChatPrompt(),
                     ),
                   ),
-                  // 2. Gambar robot, diposisikan untuk menonjol
+                  //
                   Positioned(
                     left: 0,
                     top: 0,
                     child: RobotWithBubble(
-                      robotImagePath: 'assets/img/wajah robot futuristik.png',
+                      robotImagePath: 'assets/img/botvee2.png',
                     ),
                   ),
                 ],
@@ -83,7 +80,7 @@ class Home extends StatelessWidget {
                   // Kotak biru teks
                   Expanded(
                     child: Container(
-                      height: 65,
+                      height: 80,
                       width: 200,
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                       decoration: BoxDecoration(
@@ -100,6 +97,7 @@ class Home extends StatelessWidget {
                               fontFamily: 'Roboto',
                               fontSize: 14,
                             ),
+
                           ),
                           Align(
                             alignment: Alignment.center,
@@ -107,9 +105,22 @@ class Home extends StatelessWidget {
                               "Harian",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: 'Roboto',
+                                fontWeight: FontWeight.bold,
                                 fontSize: 14,
+                              ),
+                            ),
+                          ),
+
+                          Align(
+                            alignment: Alignment.bottomRight,
+                            child: const Text(
+                              "Selengkapnya...",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 9,
                               ),
                             ),
                           )
@@ -125,7 +136,7 @@ class Home extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                       image: const DecorationImage(
-                        image: AssetImage('assets/img/boster panjng.png'),
+                        image: AssetImage('assets/img/veeboost.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -141,104 +152,119 @@ class Home extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: PeekCarousel(),
             ),
-
+            const SizedBox(height: 24),
             Padding(
-              padding: const EdgeInsets.only(left: 8,right: 8,top: 8),
+              padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
               child: Text(
                 "ZONA KESEIMBANGAN HIDUP",
                 style: TextStyle(
                     color: CBlack(),
-                    fontWeight: FontWeight.bold,
-                    fontSize: TitleSize()
+                    fontWeight: FontWeight.w900,
+                    fontSize: 16,
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 8,right: 8),
-              child: SafeArea(
-                child: SingleChildScrollView(
-                  child: Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: CBackground2(),
-                      borderRadius: BorderRadius.circular(20),
+              padding: const EdgeInsets.only(left: 8, right: 8),
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: CBackground2(),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: GridView.count(
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 12,
+                  mainAxisSpacing: 10,
+                  physics: const NeverScrollableScrollPhysics(),
+                  childAspectRatio: 1.1,
+                  children: [
+                    // --- Daftar Kartu BalanceZoneCard Anda ---
+                    InkWell(
+                      onTap: () { toSpiritual(context, false); },
+                      child: BalanceZoneCard(
+                        title: "Spiritual & Kontribusi",
+                        imagePath: "assets/img/spiritual--.png",
+                        current: 7,
+                        total: 10,
+                        backgroundColor: CSpiritual(),
+                      ),
                     ),
-                    child: GridView.count(
-                      shrinkWrap: true,
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 12,
-                      mainAxisSpacing: 12,
-                      physics: const NeverScrollableScrollPhysics(),
-                      childAspectRatio: 0.85, // sesuaikan tinggi-lebar card
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            toSpiritual(context,false); // Ensure toSpiritual is defined or imported
-                          },
-                          child: BalanceZoneCard(
-                            title: "Spiritual & Kontribusi",
-                            imagePath: "assets/img/spiritual--.png",
-                            current: 7,
-                            total: 10,
-                            backgroundColor: CSpiritual(),
-                          ),
-                        ),
-                        BalanceZoneCard(
-                          title: "Kesehatan Fisik & Mental",
-                          imagePath: "assets/img/kesehatan fisik.png",
-                          current: 6,
-                          total: 10,
-                          backgroundColor:CKesehatan(),
-                        ),
-                        BalanceZoneCard(
-                          title: "Hubungan Sosial",
-                          imagePath: "assets/img/komunitas--.png",
-                          current: 10,
-                          total: 15,
-                          backgroundColor: CHubunganSosial(),
-                        ),
-                        BalanceZoneCard(
-                          title: "Finansial",
-                          imagePath: "assets/img/koin.png",
-                          current: 7,
-                          total: 10,
-                          backgroundColor: CFinansial(),
-                        ),
-                        BalanceZoneCard(
-                          title: "Pengembangan Diri & Kreativitas",
-                          imagePath: "assets/img/pengembangan2.png",
-                          current: 5,
-                          total: 10,
-                          backgroundColor: CPengembanganDiri(),
-                        ),
-                        BalanceZoneCard(
-                          title: "Pekerjaan & Karir",
-                          imagePath: "assets/img/pekerjaan2.png",
-                          current: 7,
-                          total: 10,
-                          backgroundColor: CPekerjaanKarir(),
-                        ),
-                        BalanceZoneCard(
-                          title: "Hunian & Lingkungan",
-                          imagePath: "assets/img/hunian2.png",
-                          current: 7,
-                          total: 10,
-                          backgroundColor: CHunian(),
-                        ),
-                        BalanceZoneCard(
-                          title: "Rekreasi & Relaksasi",
-                          imagePath: "assets/img/rekreasi2i.png",
-                          current: 5,
-                          total: 10,
-                          backgroundColor: CRekreasi(),
-                        ),
+                    InkWell(
+                      child: BalanceZoneCard(
+                        title: "Kesehatan Fisik & Mental",
+                        imagePath: "assets/img/kesehatan fisik.png",
+                        current: 6,
+                        total: 10,
+                        backgroundColor: CKesehatan(),
+                      ),
+                    ),
+                    InkWell(
+                      child: BalanceZoneCard(
+                        title: "Hubungan Sosial",
+                        imagePath: "assets/img/komunitas--.png",
+                        current: 10,
+                        total: 15,
+                        backgroundColor: CHubunganSosial(),
+                      ),
+                    ),
+                    InkWell(
 
-                      ],
+                      child: BalanceZoneCard(
+                        title: "Finansial",
+                        imagePath: "assets/img/koin.png",
+                        current: 7,
+                        total: 10,
+                        backgroundColor: CFinansial(),
+                      ),
                     ),
-                  ),
+                    InkWell(
+
+                      child: BalanceZoneCard(
+                        title: "Pengembangan Diri & Kreativitas",
+                        imagePath: "assets/img/pengembangan2.png",
+                        current: 7,
+                        total: 10,
+                        backgroundColor: CPengembanganDiri(),
+                      ),
+                    ),
+                    InkWell(
+
+                      child: BalanceZoneCard(
+                        title: "Pekerjaan & Karir",
+                        imagePath: "assets/img/pekerjaan2.png",
+                        current: 7,
+                        total: 10,
+                        backgroundColor: CPekerjaanKarir(),
+                      ),
+                    ),
+                    InkWell(
+
+                      child: BalanceZoneCard(
+                        title: "Hunian & Lingkungan",
+                        imagePath: "assets/img/hunian2.png",
+                        current: 7,
+                        total: 10,
+                        backgroundColor: CHunian(),
+                      ),
+                    ),
+                    InkWell(
+
+                      child: BalanceZoneCard(
+                        title: "Rekreasi & Relaksasi",
+                        imagePath: "assets/img/rekreasi2i.png",
+                        current: 5,
+                        total: 10,
+                        backgroundColor: CRekreasi(),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
+
+            const SizedBox(height: 12),
 
             const SizedBox(height: 12),
             Padding(
@@ -369,9 +395,6 @@ class Home extends StatelessWidget {
   }
 }
 
-// =================================================================
-// ALL WIDGETS BELOW ARE NOW CORRECTLY DEFINED AND ACCESSIBLE
-// =================================================================
 
 class VeeChatBubbleWithTail extends StatelessWidget {
   final String message;
@@ -545,7 +568,7 @@ class BalanceZoneCard extends StatelessWidget {
   final int total;
   final Color backgroundColor;
 
-  BalanceZoneCard({
+  const BalanceZoneCard({
     super.key,
     required this.title,
     required this.imagePath,
@@ -558,67 +581,116 @@ class BalanceZoneCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final double progress = current / total;
 
+    final textColor = backgroundColor.computeLuminance() > 0.5 ? Colors.black87 : Colors.white;
+    final secondaryTextColor = backgroundColor.computeLuminance() > 0.5 ? Colors.black54 : Colors.white70;
+    final progressBarValueColor = backgroundColor.computeLuminance() > 0.5 ? Colors.black : Colors.white;
+
+    List<String> titleParts = title.split(' & ');
+
+
+    const double iconSize = 50;
+    const double iconOverlap = 20;
+
     return Container(
-      width: (MediaQuery.of(context).size.width - 48) / 2,
-      padding: const EdgeInsets.all(5),
+
+
+      width: (MediaQuery.of(context).size.width - 68) / 2,
+
       decoration: BoxDecoration(
-        color: backgroundColor,
+          gradient: const LinearGradient(
+            begin: Alignment.centerLeft,
+            end: Alignment(1.0, 0.6),
+            colors: [
+              Color.fromRGBO(161, 219, 255, 1.0),
+              Color.fromRGBO(113, 179, 255, 1.0),
+            ],
+          ),
         borderRadius: BorderRadius.circular(20),
       ),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Stack(
+        clipBehavior: Clip.none,
         children: [
-          Expanded(
+          // Konten Utama Kartu (Teks & Progress Bar)
+          Container(
+            // Memberikan padding untuk konten agar tidak tumpang tindih dengan ikon
+            // Kiri & Atas: (Ukuran ikon yang overlap) + margin internal
+            padding: const EdgeInsets.fromLTRB(iconOverlap + 12, iconOverlap + 12, 16, 16),
             child: Column(
+              mainAxisSize: MainAxisSize.min, // Tinggi Column menyesuaikan konten
+              crossAxisAlignment: CrossAxisAlignment.start, // Ratakan konten ke kiri
               children: [
-                Container(
-                  height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      image: DecorationImage(
-                          image: AssetImage(imagePath),
-                          fit: BoxFit.cover
-                      )
-                  ),
+                // Bagian Judul (Teks)
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      titleParts[0],
+                      style: TextStyle(
+                        color: textColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
+                      maxLines: 1, // Pastikan hanya satu baris
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    if (titleParts.length > 1) // Jika ada baris kedua
+                      Text(
+                        titleParts[1],
+                        style: TextStyle(
+                          color: textColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                        maxLines: 1, // Pastikan hanya satu baris
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                  ],
                 ),
-                const SizedBox(height: 8),
-                Text(
-                  title,
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12,
-                  ),
-                  textAlign: TextAlign.center,
+
+                const SizedBox(height: 12),
+
+
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "$current/$total",
+                      style: TextStyle(color: secondaryTextColor, fontSize: 12),
+                    ),
+                    const SizedBox(height: 4),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: LinearProgressIndicator(
+                        value: progress,
+                        backgroundColor: progressBarValueColor.withOpacity(0.3),
+                        valueColor: AlwaysStoppedAnimation<Color>(progressBarValueColor),
+                        minHeight: 6,
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 6),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(5.0),
-            child: Column(
-              children: [
-                Text(
-                  "$current/$total",
-                  style: const TextStyle(color: Colors.black, fontSize: 12),
+
+
+          Positioned(
+            left: -iconOverlap,
+            bottom: 40,
+            child: Container(
+              width: iconSize,
+              height: iconSize,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12), //
+                image: DecorationImage(
+                  image: AssetImage(imagePath),
+                  fit: BoxFit.cover,
                 ),
-                const SizedBox(height: 4),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: LinearProgressIndicator(
-                    value: progress,
-                    backgroundColor: Colors.white.withOpacity(0.3),
-                    valueColor: const AlwaysStoppedAnimation<Color>(Colors.black),
-                    minHeight: 6,
-                  ),
-                ),
-              ],
+              ),
             ),
-          )
+          ),
         ],
       ),
     );
@@ -752,7 +824,7 @@ class PremiumUpgradeButton extends StatelessWidget {
   }
 }
 
-// Moved VeeChatPrompt above RobotWithBubble for cleaner dependency flow (optional but good practice)
+
 class VeeChatPrompt extends StatelessWidget {
   const VeeChatPrompt({super.key});
 
@@ -816,7 +888,7 @@ class VeeChatPrompt extends StatelessWidget {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    suffixIcon: const Icon(Icons.send), // Added const
+                    suffixIcon: const Icon(Icons.send),
                   ),
                 ),
               ),
@@ -831,7 +903,7 @@ class VeeChatPrompt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => VeeChatPrompt._showChatModal(context), // Corrected call for static method
+      onTap: () => VeeChatPrompt._showChatModal(context),
       borderRadius: BorderRadius.circular(20),
       child: Container(
         padding: const EdgeInsets.all(12),
@@ -875,7 +947,7 @@ class VeeChatPrompt extends StatelessWidget {
                           child: Text(
                             "Ketik yang anda pikirkan......",
                             style: TextStyle(
-                                fontFamily: 'Nunito', // Changed to string literal 'Nunito' if it's a font family name. Remove .ttf
+                                fontFamily: 'Nunito',
                                 color: Colors.grey, fontSize: 10),
                           ),
                         ),
@@ -940,14 +1012,14 @@ class RobotWithBubble extends StatelessWidget {
               )
           ),
         ),
-        // Bubble kotak biru di atas robot
+
         Positioned(
           top: -20,
           left: 40,
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
-              color: const Color.fromRGBO(51, 189, 196, 1), // warna biru dari RGB
+              color: const Color.fromRGBO(51, 189, 196, 1),
               borderRadius: BorderRadius.circular(12),
             ),
           ),
@@ -1105,7 +1177,7 @@ class ZonaPublikSection extends StatelessWidget {
               return PublikCard(
                 title: item["title"]!,
                 imagePath: item["img"]!,
-                iconOnLeft: index % 2 == 0, // kiri kalau genap (kiri)
+                iconOnLeft: index % 2 == 0,
               );
             }),
           ),
@@ -1179,12 +1251,12 @@ class ZonaPotensiSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding( // Added Padding to match the other ZONA sections
+        Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Text(
             "ZONA POTENSI",
             style: TextStyle(
-              color: CBlack(), // Changed from Colors.white to CBlack() for consistency
+              color: CBlack(),
               fontWeight: FontWeight.bold,
               fontSize: TitleSize(),
             ),
@@ -1209,7 +1281,7 @@ class ZonaPotensiSection extends StatelessWidget {
               return PotensiCard(
                 title: item["title"]!,
                 imagePath: item["img"]!,
-                iconOnRight: index % 2 == 1, // kanan kalau ganjil
+                iconOnRight: index % 2 == 1,
               );
             }),
           ),

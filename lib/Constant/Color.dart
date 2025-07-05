@@ -16,7 +16,7 @@ Color CYellowUnactive(){
 }
 
 Color CBackground(){
-  return Color.fromRGBO(179,239,235,1.0);
+  return Color(0xFFF2FCFF);
 }
 
 Color CBackground2(){
