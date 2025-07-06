@@ -69,7 +69,7 @@ class _PeekItem extends StatelessWidget {
         color: Colors.white,
         child: Image.asset(
           imagePath,
-          fit: BoxFit.contain,
+          fit: BoxFit.fill,
         ),
       ),
     );

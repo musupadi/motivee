@@ -419,9 +419,9 @@ class Home extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8),
               child: Container(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: CBackground(),
+                    color: CBackground3(),
                     borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
@@ -445,11 +445,12 @@ class Home extends StatelessWidget {
                                 current: 7,
                                 total: 10,
                                 backgroundColor: CSpiritual(),
+                                Left: true,
                               ),
                             ),
                           ),
                           SizedBox(
-                            width: 30,
+                            width: 15,
                           ),
                           Expanded(
                             flex: 1,
@@ -461,13 +462,14 @@ class Home extends StatelessWidget {
                                 current: 6,
                                 total: 10,
                                 backgroundColor: CSpiritual(),
+                                Left: false,
                               ),
                             ),
                           ),
                         ],
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 15,
                       ),
                       //         InkWell(
                       //           child: BalanceZoneCard(
@@ -503,11 +505,12 @@ class Home extends StatelessWidget {
                                 current: 7,
                                 total: 10,
                                 backgroundColor: CHubunganSosial(),
+                                Left: true,
                               ),
                             ),
                           ),
                           SizedBox(
-                            width: 30,
+                            width: 15,
                           ),
                           Expanded(
                             flex: 1,
@@ -519,13 +522,14 @@ class Home extends StatelessWidget {
                                 current: 6,
                                 total: 10,
                                 backgroundColor: CFinansial(),
+                                Left: false,
                               ),
                             ),
                           ),
                         ],
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 15,
                       ),
                       //           child: BalanceZoneCard(
                       //             title: "",
@@ -554,16 +558,17 @@ class Home extends StatelessWidget {
                             child: InkWell(
                               onTap: () { toPengembanganDiri(context, false); },
                               child: BalanceZoneCard(
-                                title: "Pengembangan Diri & Kreativitas",
+                                title: "Pengembangan\nDiri & Kreativitas",
                                 imagePath: "assets/img/pengembangan2.png",
                                 current: 7,
                                 total: 10,
                                 backgroundColor: CPengembanganDiri(),
+                                Left: true,
                               ),
                             ),
                           ),
                           SizedBox(
-                            width: 30,
+                            width: 15,
                           ),
                           Expanded(
                             flex: 1,
@@ -575,13 +580,14 @@ class Home extends StatelessWidget {
                                 current: 6,
                                 total: 10,
                                 backgroundColor: CSpiritual(),
+                                Left: false,
                               ),
                             ),
                           ),
                         ],
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 15,
                       ),
                       //         InkWell(
                       //
@@ -615,11 +621,12 @@ class Home extends StatelessWidget {
                                 current: 7,
                                 total: 10,
                                 backgroundColor: CSpiritual(),
+                                Left: true,
                               ),
                             ),
                           ),
                           SizedBox(
-                            width: 30,
+                            width: 15,
                           ),
                           Expanded(
                             flex: 1,
@@ -631,6 +638,7 @@ class Home extends StatelessWidget {
                                 current: 6,
                                 total: 10,
                                 backgroundColor: CSpiritual(),
+                                Left: false,
                               ),
                             ),
                           ),
@@ -683,17 +691,11 @@ class Home extends StatelessWidget {
                     children: [
                       Expanded(
                         flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 4,bottom: 4,top: 0,left: 8),
-                          child: ProductivityCard(title: 'Rencana', imagePath: 'assets/img/rencana2.png',Left: true,),
-                        ),
+                        child: ProductivityCard(title: 'Rencana', imagePath: 'assets/img/rencana2.png',Left: true,),
                       ),
                       Expanded(
                         flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 4,bottom: 4,top: 0,right: 8),
-                          child: ProductivityCard(title: 'Agenda', imagePath: 'assets/img/agenda.png',Left: false,),
-                        ),
+                        child: ProductivityCard(title: 'Agenda', imagePath: 'assets/img/agenda.png',Left: false,),
                       )
                     ],
                   ),
@@ -701,17 +703,11 @@ class Home extends StatelessWidget {
                     children: [
                       Expanded(
                         flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8,bottom: 8,top: 4,right: 4),
-                          child: ProductivityCard(title: 'Aktivitas', imagePath: 'assets/img/aktivitas.png',Left: true,),
-                        ),
+                        child: ProductivityCard(title: 'Aktivitas', imagePath: 'assets/img/aktivitas.png',Left: true,),
                       ),
                       Expanded(
                         flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 4,bottom: 8,top: 4,right: 8),
-                          child: ProductivityCard(title: 'Catatan', imagePath: 'assets/img/catatan2.png',Left: false,),
-                        ),
+                        child: ProductivityCard(title: 'Catatan', imagePath: 'assets/img/catatan2.png',Left: false,),
                       )
                     ],
                   ),

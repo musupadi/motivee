@@ -57,6 +57,9 @@ Color CKesehatanKonsultasi(){
 Color CSosialKonsultasi(){
   return Color.fromRGBO(248, 162, 151,1.0);
 }
+Color CProgress(){
+  return Color.fromRGBO(0, 173, 181,1.0);
+}
 
 
 Color CIbadahDanAksiButton(){
