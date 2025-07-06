@@ -52,9 +52,10 @@ class BalanceZoneCard extends StatelessWidget {
           Container(
             // Memberikan padding untuk konten agar tidak tumpang tindih dengan ikon
             // Kiri & Atas: (Ukuran ikon yang overlap) + margin internal
-            padding: const EdgeInsets.only(left: 65,right: 10,top: 10,bottom: 10),
+            padding: const EdgeInsets.only(left: 65,right: 5,top: 5,bottom: 5),
             child: Column(
-              mainAxisSize: MainAxisSize.min, // Tinggi Column menyesuaikan konten
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max, // Tinggi Column menyesuaikan konten
               crossAxisAlignment: CrossAxisAlignment.start, // Ratakan konten ke kiri
               children: [
                 Text(

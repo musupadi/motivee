@@ -444,112 +444,183 @@ class Home extends StatelessWidget {
                           ),
                         ),
                       ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    //         InkWell(
+                    //           child: BalanceZoneCard(
+                    //             title: "",
+                    //             imagePath: "",
+                    //             current: 10,
+                    //             total: 15,
+                    //             backgroundColor: CHubunganSosial(),
+                    //           ),
+                    //         ),
+                    //         InkWell(
+                    //
+                    //           child: BalanceZoneCard(
+                    //             title: "Finansial",
+                    //             imagePath: "assets/img/koin.png",
+                    //             current: 7,
+                    //             total: 10,
+                    //             backgroundColor: CFinansial(),
+                    //           ),
+                    //         ),
+                    //         InkWell(
+                    //
+
+                    Row(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: InkWell(
+                            onTap: () { toSpiritual(context, false); },
+                            child: BalanceZoneCard(
+                              title: "Hubungan Sosial",
+                              imagePath: "assets/img/komunitas--.png",
+                              current: 7,
+                              total: 10,
+                              backgroundColor: CHubunganSosial(),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: InkWell(
+                            onTap: () { toSpiritual(context, false); },
+                            child: BalanceZoneCard(
+                              title: "Finansial",
+                              imagePath: "assets/img/koin.png",
+                              current: 6,
+                              total: 10,
+                              backgroundColor: CFinansial(),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+    //           child: BalanceZoneCard(
+    //             title: "",
+    //             imagePath: "",
+    //             current: 7,
+    //             total: 10,
+    //             backgroundColor: CPengembanganDiri(),
+    //           ),
+    //         ),
+    //         InkWell(
+    //
+    //           child: BalanceZoneCard(
+    //             title: "",
+    //             imagePath: "",
+    //             current: 7,
+    //             total: 10,
+    //             backgroundColor: CPekerjaanKarir(),
+    //           ),
+    //         ),
+
+
+                    Row(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: InkWell(
+                            onTap: () { toSpiritual(context, false); },
+                            child: BalanceZoneCard(
+                              title: "Pengembangan Diri & Kreativitas",
+                              imagePath: "assets/img/pengembangan2.png",
+                              current: 7,
+                              total: 10,
+                              backgroundColor: CPengembanganDiri(),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: InkWell(
+                            onTap: () { toSpiritual(context, false); },
+                            child: BalanceZoneCard(
+                              title: "Pekerjaan & Karir",
+                              imagePath: "assets/img/pekerjaan2.png",
+                              current: 6,
+                              total: 10,
+                              backgroundColor: CSpiritual(),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    //         InkWell(
+                    //
+                    //           child: BalanceZoneCard(
+                    //             title: "",
+                    //             imagePath: "",
+                    //             current: 7,
+                    //             total: 10,
+                    //             backgroundColor: CHunian(),
+                    //           ),
+                    //         ),
+                    //         InkWell(
+                    //
+                    //           child: BalanceZoneCard(
+                    //             title: "",
+                    //             imagePath: "",
+                    //             current: 5,
+                    //             total: 10,
+                    //             backgroundColor: CRekreasi(),
+                    //           ),
+                    //         )
+                    Row(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: InkWell(
+                            onTap: () { toSpiritual(context, false); },
+                            child: BalanceZoneCard(
+                              title: "Hunian & Lingkungan",
+                              imagePath: "assets/img/hunian2.png",
+                              current: 7,
+                              total: 10,
+                              backgroundColor: CSpiritual(),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: InkWell(
+                            onTap: () { toSpiritual(context, false); },
+                            child: BalanceZoneCard(
+                              title: "Rekreasi & Relaksasi",
+                              imagePath: "assets/img/rekreasi2i.png",
+                              current: 6,
+                              total: 10,
+                              backgroundColor: CSpiritual(),
+                            ),
+                          ),
+                        ),
+                      ],
                     )
                   ],
                 )
               ),
             ),
-            // Padding(
-            //   padding: const EdgeInsets.only(left: 8, right: 8),
-            //   child: Container(
-            //     padding: const EdgeInsets.all(20),
-            //     decoration: BoxDecoration(
-            //       color: CBackground2(),
-            //       borderRadius: BorderRadius.circular(20),
-            //     ),
-            //     child: GridView.count(
-            //       shrinkWrap: true,
-            //       crossAxisCount: 2,
-            //       crossAxisSpacing: 12,
-            //       mainAxisSpacing: 10,
-            //       physics: const NeverScrollableScrollPhysics(),
-            //       childAspectRatio: 1.1,
-            //       children: [
-            //         // --- Daftar Kartu BalanceZoneCard Anda ---
-            //         InkWell(
-            //           onTap: () { toSpiritual(context, false); },
-            //           child: BalanceZoneCard(
-            //             title: "Spiritual & Kontribusi",
-            //             imagePath: "assets/img/spiritual--.png",
-            //             current: 7,
-            //             total: 10,
-            //             backgroundColor: CSpiritual(),
-            //           ),
-            //         ),
-            //         InkWell(
-            //           child: BalanceZoneCard(
-            //             title: "Kesehatan Fisik & Mental",
-            //             imagePath: "assets/img/kesehatan fisik.png",
-            //             current: 6,
-            //             total: 10,
-            //             backgroundColor: CKesehatan(),
-            //           ),
-            //         ),
-            //         InkWell(
-            //           child: BalanceZoneCard(
-            //             title: "Hubungan Sosial",
-            //             imagePath: "assets/img/komunitas--.png",
-            //             current: 10,
-            //             total: 15,
-            //             backgroundColor: CHubunganSosial(),
-            //           ),
-            //         ),
-            //         InkWell(
-            //
-            //           child: BalanceZoneCard(
-            //             title: "Finansial",
-            //             imagePath: "assets/img/koin.png",
-            //             current: 7,
-            //             total: 10,
-            //             backgroundColor: CFinansial(),
-            //           ),
-            //         ),
-            //         InkWell(
-            //
-            //           child: BalanceZoneCard(
-            //             title: "Pengembangan Diri & Kreativitas",
-            //             imagePath: "assets/img/pengembangan2.png",
-            //             current: 7,
-            //             total: 10,
-            //             backgroundColor: CPengembanganDiri(),
-            //           ),
-            //         ),
-            //         InkWell(
-            //
-            //           child: BalanceZoneCard(
-            //             title: "Pekerjaan & Karir",
-            //             imagePath: "assets/img/pekerjaan2.png",
-            //             current: 7,
-            //             total: 10,
-            //             backgroundColor: CPekerjaanKarir(),
-            //           ),
-            //         ),
-            //         InkWell(
-            //
-            //           child: BalanceZoneCard(
-            //             title: "Hunian & Lingkungan",
-            //             imagePath: "assets/img/hunian2.png",
-            //             current: 7,
-            //             total: 10,
-            //             backgroundColor: CHunian(),
-            //           ),
-            //         ),
-            //         InkWell(
-            //
-            //           child: BalanceZoneCard(
-            //             title: "Rekreasi & Relaksasi",
-            //             imagePath: "assets/img/rekreasi2i.png",
-            //             current: 5,
-            //             total: 10,
-            //             backgroundColor: CRekreasi(),
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            // ),
 
-            const SizedBox(height: 12),
+
 
             const SizedBox(height: 12),
             Padding(
@@ -611,7 +682,7 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
-      
+
 
             const SizedBox(height: 12),
             Padding(
@@ -690,62 +761,66 @@ class Home extends StatelessWidget {
               ),
             ),
 
-            Padding(
-              padding: const EdgeInsets.only(left: 8,right: 8),
-              child: Container(
-                padding: const EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 10),
-                decoration: BoxDecoration(
-                  color: CBackground2(),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        EconomyCard(
-                          title: "Dompetku",
-                          imagePath: "assets/img/dompetku.png",
-                          Left: true,
-                        ),
-                        EconomyCard(
-                          title: "Lapak MotiVee",
-                          imagePath: "assets/img/lapak.png",
-                          Left: false,
-                        ),
-
-                      ],
-                    ),
-                    Row(
-                      children: [
-
-                      ],
-                    )
-                  ],
-                ),
-
-              ),
-            ),
-            const SizedBox(height: 12),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 8,right: 8),
+            //   child: Container(
+            //     padding: const EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 10),
+            //     decoration: BoxDecoration(
+            //       color: CBackground2(),
+            //       borderRadius: BorderRadius.circular(20),
+            //     ),
+            //     child: Column(
+            //       children: [
+            //         Row(
+            //           children: [
+            //             EconomyCard(
+            //               title: "Dompetku",
+            //               imagePath: "assets/img/dompetku.png",
+            //               Left: true,
+            //             ),
+            //             EconomyCard(
+            //               title: "Lapak MotiVee",
+            //               imagePath: "assets/img/lapak.png",
+            //               Left: false,
+            //             ),
+            //
+            //           ],
+            //         ),
+            //         Row(
+            //           children: [
+            //
+            //           ],
+            //         )
+            //       ],
+            //     ),
+            //
+            //   ),
+            // ),
+            // const SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SponsorCard(imagePath: "assets/img/Klinik Aliyya.png"),
             ),
+            // const SizedBox(height: 12),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 8,right: 8),
+            //   child: ZonaPotensiSection(),
+            // ),
+            const SizedBox(height: 12),
+            // Padding(
+            //   padding: const EdgeInsets.all(8.0),
+            //   child: PremiumUpgradeButton(),
+            // ),
+            // const SizedBox(height: 12),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 8,right: 8),
+            //   child: ZonaPublikSection(),
+            // ),
             const SizedBox(height: 12),
             Padding(
-              padding: const EdgeInsets.only(left: 8,right: 8),
-              child: ZonaPotensiSection(),
+              padding: const EdgeInsets.only(bottom: 16),
+              child: Container(height: 1), // mencegah error "size: MISSING"
             ),
-            const SizedBox(height: 12),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PremiumUpgradeButton(),
-            ),
-            const SizedBox(height: 12),
-            Padding(
-              padding: const EdgeInsets.only(left: 8,right: 8),
-              child: ZonaPublikSection(),
-            ),
-            const SizedBox(height: 12),
           ],
         ),
       ),
