@@ -19,10 +19,13 @@ class Spiritual extends StatelessWidget {
           padding: const EdgeInsets.all(12),
           children: [
             Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  width: 50,
-                  height: 50,
+                  width: 60,
+                  height: 70,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
@@ -32,7 +35,7 @@ class Spiritual extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 5,
+                  width: 10,
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -40,11 +43,16 @@ class Spiritual extends StatelessWidget {
                   children: [
                     Text("Spiritual & Kontribusi",
                       style: TextStyle(
-                          fontSize: TitleSize(),
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Poppins'
                       ),),
-                    Text("Temukan Ketenganan lewat Ibadah \ndzikir,Syukur dan Amal baik")
+                    Text("Temukan Ketenangan lewat Ibadah\n dzikir, syukur, dan amal baik.",
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Inter'
+                      ),),
                   ],
                 )
               ],
