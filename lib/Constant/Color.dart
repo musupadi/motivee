@@ -45,10 +45,22 @@ Color CHubunganSosial(){
 Color CFinansial(){
   return Color.fromRGBO(51, 148, 112, 1.0);
 }
-
+Color CIbadahDanAksiButton(){
+  return Color.fromRGBO(255, 189, 150,1.0);
+}
+Color CSpiritualDanKontribusiButton(){
+  return Color.fromRGBO(255, 189, 150,1.0);
+}
+Color CSpiritualAndKontribusiHeader(){
+  return Color.fromRGBO(247,231,221,1.0);
+}
 Color CPengembanganDiri(){
   return Color.fromRGBO(255, 148, 7, 1.0);
 }
+Color CBackground3(){
+  return Color.fromRGBO(255, 250, 240, 1.0);
+}
+
 
 Color CPekerjaanKarir(){
   return Color.fromRGBO(255, 253,103,1.0);

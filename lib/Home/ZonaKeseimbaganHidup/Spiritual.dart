@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:motivee/Card/CardButtonGeneral.dart';
 import 'package:motivee/Constant/Size.dart';
+import '../../Card/CardButtonGeneral2.dart';
+import '../../Constant/ArrowPainter.dart';
 import '../../Constant/Color.dart';
 
 class Spiritual extends StatelessWidget {
@@ -17,80 +20,287 @@ class Spiritual extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text("Spiritual",
-                style: TextStyle(
-                  fontSize: TitleSize(),
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Poppins'
-                ),),
-                Text(" & ",
-                  style: TextStyle(
-                      fontSize: TitleSize(),
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Poppins'
+                Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    image: const DecorationImage(
+                      image: AssetImage('assets/img/spiritual--.png'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-                Text("Kontribusi",
-                    style: TextStyle(
-                    fontSize: TitleSize(),
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Poppins'
-                ),)
+                SizedBox(
+                  width: 5,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Spiritual & Kontribusi",
+                      style: TextStyle(
+                          fontSize: TitleSize(),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins'
+                      ),),
+                    Text("Temukan Ketenganan lewat Ibadah \ndzikir,Syukur dan Amal baik")
+                  ],
+                )
               ],
             ),
-            _buildIntroBanner(),
-            const SizedBox(height: 20),
+            Text("Teruslah Membangun Hubungan hangat dengan Allah SWT, langkah demi langkah sesuai ritme hidupmu.\nJadikan vesi terbaikmu yang ikhlas & selalu terhubung dengan-nya"),
             _buildTopButtons(),
             const SizedBox(height: 20),
-            Row(
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    margin: EdgeInsets.only(right: 15),
-                    child: _buildCardSection(
-                        title: 'Ibadah & Aksi Kebaikan',
-                        buttons: [
-                          'Jurnal Sholat & Puasa',
-                          'Al Qur an & Hadis Pilihan',
-                          'Pusat Dzikir & Doa',
-                          'Sedekah, Zakat & Aksi Sosial',
-                        ],
-                        color: Colors.deepPurple,
-                        assetsImage: 'assets/img/Jurnal Ibadah.png'
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    margin: EdgeInsets.only(left: 15),
-                    child: _buildCardSection(
-                      title: 'Langkah Spiritual & Kontribusi',
-                      buttons: [
-                        'Tes E-Spirit',
-                        'PencapaianKu',
-                        'Panduan',
-                        'Progres',
+            // Ibadah & Aksi Kebaikan
+            Container(
+              decoration:BoxDecoration(
+                color: CBackground3(),
+                borderRadius: BorderRadius.circular(20)
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          width: 70,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/img/spiritual--.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Column(
+                            children: [
+                              Text("Ibadah & Aksi",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: TitleSize(),
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text("Kebaikan",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: TitleSize(),
+                                    fontWeight: FontWeight.bold
+                                ),)
+                            ],
+                          ),
+                        )
                       ],
-                      color: Colors.redAccent,
-                      assetsImage: 'assets/img/Level.png'
                     ),
-                  ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Test E-Spirit",Left: true,),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Pencapaianku",Left: false,),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Panduan",Left: true,),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Progress",Left: false,),
+                            )
+                          ],
+                        )
+                      ],
+                    )
+                  ],
                 ),
-
-              ],
+              ),
             ),
-            const SizedBox(height: 20),
-            Text("Konsultasi Ahli", style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-                color: Colors.black,
-                fontFamily: 'Poppins-Bold'
+            const SizedBox(
+              height: 20,
             ),
+            // Langkah Spiritual dan Kontribusi
+            Container(
+              decoration:BoxDecoration(
+                  color: CBackground3(),
+                  borderRadius: BorderRadius.circular(20)
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          width: 70,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/img/spiritual--.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Column(
+                            children: [
+                              Text("Langkah Spiritual",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: TitleSize(),
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text("& Kontribusi",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: TitleSize(),
+                                    fontWeight: FontWeight.bold
+                                ),)
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Jumlah Shalat\n& Puasa",Left: true,),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Al Qur'an &\nHadist Pilihan",Left: false,),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Pusat Dzikir\n& Doa",Left: true,),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Sedekah,Zakat\n& Aksi Sosial",Left: false,),
+                            )
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
             ),
-            KonsultasiAhli(),
-            const SizedBox(height: 20),
+            const SizedBox(
+              height: 20,
+            ),
+            // Konsultasi Ahli
+            Container(
+              decoration:BoxDecoration(
+                  color: CBackground3(),
+                  borderRadius: BorderRadius.circular(20)
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          width: 70,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/img/spiritual--.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Column(
+                            children: [
+                              Text("Konsultasi Ahli",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: TitleSize(),
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Ustadz",imagePath: 'assets/img/spiritual--.png',Left: true),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Ustadzah",imagePath: 'assets/img/spiritual--.png',Left: false),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Ahli Fikih\n& Ibadah",imagePath: 'assets/img/spiritual--.png',Left: true),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Relawan\nSosialisasi Islami",imagePath: 'assets/img/spiritual--.png',Left: false),
+                            )
+                          ],
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
             menujuKomunitasButton(context)
           ],
         ),
@@ -159,10 +369,7 @@ class Spiritual extends StatelessWidget {
   Widget _buildTopButtons() {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12),
-      decoration: BoxDecoration(
-        color: CBackground2(),
-        borderRadius: BorderRadius.circular(16),
-      ),
+
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -189,7 +396,7 @@ class Spiritual extends StatelessWidget {
 
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Colors.yellow,
+          color: CSpiritualAndKontribusiHeader(),
         ),
         child: Padding(
           padding: const EdgeInsets.all(5.0),
@@ -210,9 +417,12 @@ class Spiritual extends StatelessWidget {
                     ),
                    ),
               ),
+              SizedBox(
+                height: 5,
+              ),
               Text(
                 label,
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
             ],
@@ -297,7 +507,7 @@ class Spiritual extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               const Text(
                 'Menuju Komunitas',
@@ -309,7 +519,11 @@ class Spiritual extends StatelessWidget {
               ),
               Row(
                 children: [
-                  const Icon(Icons.arrow_forward, color: Colors.white, size: 20),
+                  CustomPaint(
+                    size: const Size(80, 80),
+                    painter: ArrowPainter(),
+                  ),
+
                   const SizedBox(width: 8),
                   Container(
                     width: 30,
