@@ -42,105 +42,172 @@ class Home extends StatelessWidget {
             // 🔹 1. Chatbot section
             // 🔹 1. Chatbot Vee
             // 🔹 1. Chatbot section
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
 
-                  Container(
-                    margin: const EdgeInsets.only(left: 90),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFDBF4FF),
-                      borderRadius: BorderRadius.circular(20),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                child: Column(
+
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Expanded(
+                          flex : 1,
+                          child: Container(
+                            height: 150,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(
+                                    60
+                                ),
+                                image: DecorationImage(
+                                    image: AssetImage("assets/img/botvee2.png"),
+                                  fit: BoxFit.fill
+                                )
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex : 3,
+                          child: Column(
+
+                            children: [
+                              Text(
+                                "Senang Bertemu lagi dengan Bang Piyo"
+                              ),
+                              Text(
+                                  "Senang Bertemu lagi dengan Bang Piyo"
+                              ),
+
+                            ],
+                          ),
+                        )
+                      ],
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: VeeChatPrompt(),
-                    ),
-                  ),
-                  //
-                  Positioned(
-                    left: 0,
-                    top: 0,
-                    child: RobotWithBubble(
-                      robotImagePath: 'assets/img/botvee2.png',
-                    ),
-                  ),
-                ],
+                    VeeChatPrompt(),
+                  ],
+                ),
               ),
             ),
-
-
-            const SizedBox(height: 24),
-
-// 🔹 2. Motivasi box dan booster image
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.all(10.0),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Kotak biru teks
                   Expanded(
                     child: Container(
-                      height: 80,
-                      width: 200,
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                      margin: EdgeInsets.only(right: 10),
+                      height: 200,
                       decoration: BoxDecoration(
-                        color: const Color.fromRGBO(0, 173, 181, 1),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.red
                       ),
-                      child: const Column(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            "Motivasi, Do'a, Tips, Trik & Afirmasi",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Roboto',
-                              fontSize: 14,
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                      image: DecorationImage(
+                                          image: AssetImage("assets/img/botvee2.png"),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text("Motivasi harian")
+                              ],
                             ),
-
                           ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: const Text(
-                              "Harian",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14,
-                              ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Text("Loreum Ipsum"),
                             ),
                           ),
-
-                          Align(
-                            alignment: Alignment.bottomRight,
-                            child: const Text(
-                              "Selengkapnya...",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 9,
-                              ),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text("Selengkapnya...."),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text(">")
+                              ],
                             ),
                           )
                         ],
                       ),
                     ),
                   ),
-                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(left: 10),
+                      height: 200,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.red
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      image: DecorationImage(
+                                          image: AssetImage("assets/img/botvee2.png"),
+                                          fit: BoxFit.fill
+                                      )
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text("VeeBoost")
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Text("Loreum Ipsum"),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Container(
+                              height: 40,
+                              width: double.maxFinite,
 
-                  Container(
-                    width: 48,
-                    height: 48,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      image: const DecorationImage(
-                        image: AssetImage('assets/img/veeboost.png'),
-                        fit: BoxFit.cover,
+                              decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(20)
+                              ),
+                              child: Center(child: Text("Boost Sekarang")),
+                            )
+                          )
+                        ],
                       ),
                     ),
                   ),
@@ -150,7 +217,7 @@ class Home extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-// 🔹 3. PeekCarousel (Slider)
+            // 🔹 3. PeekCarousel (Slider)
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: PeekCarousel(),
@@ -900,26 +967,6 @@ class VeeChatPrompt extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Senang Bertemu lagi Bang Piyo",
-              style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  color: Colors.black,
-                  fontSize: 14,
-                  fontFamily: 'Lato'
-              ),
-              textAlign: TextAlign.left,
-            ),
-            const Text(
-              "Vee siap menemani dan membantu kapanpun kamu butuh 🤝",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 14,
-                  fontFamily: 'Roboto'
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 8),
             Row(
               children: [
                 Expanded(
