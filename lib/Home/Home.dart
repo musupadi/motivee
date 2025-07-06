@@ -42,7 +42,15 @@ class Home extends StatelessWidget {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text("Tantangan")),
+                        child: Center(child: Text(
+                          "Tantangan",
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 10,
+                            color: Colors.white,
+                          ),
+                        ),),
                       ),
                     ),
                   ),
@@ -58,7 +66,15 @@ class Home extends StatelessWidget {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text("Saldo")),
+                        child: Center(child: Text(
+                          "Saldo",
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 10,
+                            color: Colors.white,
+                          ),
+                        ),),
                       ),
                     ),
                   ),
@@ -74,7 +90,15 @@ class Home extends StatelessWidget {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text("Kantorku")),
+                        child: Center(child: Text(
+                          "Kantorku",
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 10,
+                            color: Colors.white,
+                          ),
+                        ),),
                       ),
                     ),
                   ),
@@ -90,7 +114,15 @@ class Home extends StatelessWidget {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text("Tambah")),
+                        child: Center(child: Text(
+                          "Tambah",
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 10,
+                            color: Colors.white,
+                          ),
+                        ),),
                       ),
                     ),
                   ),
@@ -118,10 +150,10 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex : 1,
                           child: Container(
-                            height: 150,
+                            height: 130,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(
-                                    60
+                                    50
                                 ),
                                 image: DecorationImage(
                                     image: AssetImage("assets/img/botvee2.png"),
@@ -151,12 +183,15 @@ class Home extends StatelessWidget {
                                     fontSize: 20,
                                   ),
                               ),
-                              Text(
-                                  "Vee siap menemani dan membantu kapan pun kamu butuh !!!",
-                                textAlign: TextAlign.start,
-                                style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontSize: 14,
+                              Padding(
+                                padding: const EdgeInsets.only(left: 15, top: 15),
+                                child: Text(
+                                    "Vee siap menemani dan membantu kapan pun kamu butuh !!!",
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                    fontFamily: 'Roboto',
+                                    fontSize: 14,
+                                  ),
                                 ),
                               ),
                             ],
@@ -176,10 +211,10 @@ class Home extends StatelessWidget {
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.only(right: 10),
-                      height: 200,
+                      height: 226,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.red
+                        color: Color.fromRGBO(170, 239,235, 1.0),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -195,23 +230,39 @@ class Home extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
                                       image: DecorationImage(
-                                          image: AssetImage("assets/img/botvee2.png"),
+                                          image: AssetImage("assets/img/pengembangan2.png"),
                                           fit: BoxFit.fill
                                       )
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 5,
+                                  width: 8,
                                 ),
-                                Text("Motivasi harian")
+                                Text(
+                                  "Motivasi \nHarian",
+                                  style: TextStyle(
+                                    fontFamily: 'Lato-Black',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+
+
                               ],
                             ),
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text("Tidak ada yang lebih kuat dari seseorang "
-                                  "memilih untuk bangkit, meski sedang lelah. Kamu......"),
+                              padding: const EdgeInsets.all(12.0),
+                              child: Text(
+                                "Tidak ada yang lebih kuat dari seseorang "
+                                    "yang memilih untuk bangkit, meski sedang lelah. Kamu...",
+                                style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                ),
+                              ),
                             ),
                           ),
                           Padding(
@@ -221,11 +272,27 @@ class Home extends StatelessWidget {
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text("Selengkapnya...."),
+                                Text(
+                                  "Selengkapnya...",
+                                  style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 10,
+                                    color: Colors.red,
+                                  ),
+                                ),
                                 SizedBox(
                                   width: 5,
                                 ),
-                                Text(">")
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12,
+                                    color: Colors.red,
+                                  ),
+                                ),
                               ],
                             ),
                           )
@@ -236,10 +303,10 @@ class Home extends StatelessWidget {
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.only(left: 10),
-                      height: 200,
+                      height: 226,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Colors.red
+                          color: Color.fromRGBO(170, 239,235, 1.0),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -253,9 +320,9 @@ class Home extends StatelessWidget {
                                   height: 50,
                                   width: 50,
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
+                                      borderRadius: BorderRadius.circular(16),
                                       image: DecorationImage(
-                                          image: AssetImage("assets/img/botvee2.png"),
+                                          image: AssetImage("assets/img/veeboost.png"),
                                           fit: BoxFit.fill
                                       )
                                   ),
@@ -263,14 +330,28 @@ class Home extends StatelessWidget {
                                 SizedBox(
                                   width: 5,
                                 ),
-                                Text("VeeBoost")
+                                Text(
+                                  "Vee Boost",
+                                  style: TextStyle(
+                                    fontFamily: 'Lato-Black',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(10.0),
-                              child: Text("Loreum Ipsum"),
+                              child: Text(
+                                "Butuh dorongan semangat yang lebih kuat?",
+                                style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
                             ),
                           ),
                           Padding(
@@ -280,10 +361,18 @@ class Home extends StatelessWidget {
                               width: double.maxFinite,
 
                               decoration: BoxDecoration(
-                                  color: Colors.blue,
-                                  borderRadius: BorderRadius.circular(20)
+                                  color: Color.fromRGBO(249, 77, 0, 1.0),
+                                  borderRadius: BorderRadius.circular(10)
                               ),
-                              child: Center(child: Text("Boost Sekarang")),
+                              child: Center(child: Text(
+                                "BOOST SEKARANG",
+                                style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                  color: Colors.white,
+                                ),
+                              ),),
                             )
                           )
                         ],
@@ -1063,8 +1152,8 @@ class VeeChatPrompt extends StatelessWidget {
                           child: Text(
                             "Ketik yang anda pikirkan......",
                             style: TextStyle(
-                                fontFamily: 'Nunito',
-                                color: Colors.grey, fontSize: 10),
+                                fontFamily: 'Roboto',
+                                color: Colors.grey, fontSize: 12),
                           ),
                         ),
                       ],
