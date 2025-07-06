@@ -6,8 +6,8 @@ import '../../Constant/ArrowPainter.dart';
 import '../../Constant/Ascendant.dart';
 import '../../Constant/Color.dart';
 
-class FisikDanMental extends StatelessWidget {
-  const FisikDanMental({super.key});
+class PengembanganDiri extends StatelessWidget {
+  const PengembanganDiri({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +42,13 @@ class FisikDanMental extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Kesehatan Fisik & Mental",
+                    Text("Pengembangan Diri &\nKreativitas",
                       style: TextStyle(
                           fontSize: TitlesSize(),
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Poppins'
                       ),),
-                    Text("Sehat luar dalam, Pondasi Hidup\nseimbang dimulai dari sini.",
+                    Text("Hadirlan Sepenuhnya, jalinlah \nhubungan yang bermakna",
                       style: TextStyle(
                           fontSize: Header1Size(),
                           fontWeight: FontWeight.bold,
@@ -58,7 +58,7 @@ class FisikDanMental extends StatelessWidget {
                 )
               ],
             ),
-            Text("Motivee mendampingimu merawat fisik dan mental agar langkah hidup terasa lebih ringan, hati lebih tenang, dan kamu siap jalani hari dengan versi terbaikmu."),
+            Text("Hubungan yang hangat, saling menghargai dan tahan uji, baik dengan keluarga, pasangan, sahabat, Rekan Kerja maupun orang baru.Di sinilah tempatnya belajar menjadi manusia yang lebih hangat dan terhubung"),
             const SizedBox(height: 10),
             _buildTopButtons(),
             const SizedBox(height: 20),
@@ -101,7 +101,7 @@ class FisikDanMental extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Level Kesehatan",
+                              Text("Tes dan Tantangan",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: Header2Size(),
@@ -122,11 +122,11 @@ class FisikDanMental extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Tes Kesehatan",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Tes Kualitas Hubungan",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Levelku",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Level Hubunganku",Left: false,),
                             )
                           ],
                         ),
@@ -137,7 +137,7 @@ class FisikDanMental extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Panduan",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Panduan\nBijak",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
@@ -194,7 +194,7 @@ class FisikDanMental extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Gaya Hidup Sehat",
+                              Text("Aksi Nyata",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: Header2Size(),
@@ -215,11 +215,11 @@ class FisikDanMental extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Rutinitas Sehat",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Jurnal\nHubungan",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Olahraga Tanpa Ribet",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Komunikasi\nSehat",Left: false,),
                             )
                           ],
                         ),
@@ -230,11 +230,11 @@ class FisikDanMental extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Pola Tidur &\nMakan",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Koneksi\nPositif",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Kelola Stress &\nPola Pikir",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Aksi Kebaikan\nSosial",Left: false,),
                             )
                           ],
                         )
@@ -307,11 +307,11 @@ class FisikDanMental extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(), TextString: "Dokter Umum&\nSpesialis",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nKeluarga",imagePath: 'assets/img/spiritual--.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(), TextString: "Psikolog &\nTerapis",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Konselor\nKomunikasi",imagePath: 'assets/img/spiritual--.png',Left: false),
                             )
                           ],
                         ),
@@ -322,11 +322,11 @@ class FisikDanMental extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(), TextString: "Ahli Gizi&\nHerbal",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nParenting",imagePath: 'assets/img/spiritual--.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(), TextString: "Pelatih\nKebugaran",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Sosiolog\nKomunitas",imagePath: 'assets/img/spiritual--.png',Left: false),
                             )
                           ],
                         ),
@@ -353,13 +353,13 @@ class FisikDanMental extends StatelessWidget {
         children: [
           Expanded(
               flex: 1,
-              child: iconImageButton('Buku Sehat', 'assets/img/Ilmu agama.png')),
+              child: iconImageButton('Pola\nHubungan', 'assets/img/Ilmu agama.png')),
           Expanded(
               flex: 1,
-              child: iconImageButton('Inspirasi Kesehatan', 'assets/img/Inspirasi Islam.png')),
+              child: iconImageButton('Komunikasi Empatik', 'assets/img/Inspirasi Islam.png')),
           Expanded(
               flex: 1,
-              child: iconImageButton('Emosi &\nGejala Tubuh', 'assets/img/Syukur & Amal harian.png')),
+              child: iconImageButton('Petuah\nLeluhur', 'assets/img/Syukur & Amal harian.png')),
         ],
       ),
     );

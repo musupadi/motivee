@@ -488,7 +488,7 @@ class Home extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: InkWell(
-                              onTap: () { toSpiritual(context, false); },
+                              onTap: () { toSosial(context, false); },
                               child: BalanceZoneCard(
                                 title: "Hubungan Sosial",
                                 imagePath: "assets/img/komunitas--.png",
@@ -544,7 +544,7 @@ class Home extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: InkWell(
-                              onTap: () { toSpiritual(context, false); },
+                              onTap: () { toPengembanganDiri(context, false); },
                               child: BalanceZoneCard(
                                 title: "Pengembangan Diri & Kreativitas",
                                 imagePath: "assets/img/pengembangan2.png",
@@ -560,7 +560,7 @@ class Home extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: InkWell(
-                              onTap: () { toSpiritual(context, false); },
+                              onTap: () { toPekerjaan(context, false); },
                               child: BalanceZoneCard(
                                 title: "Pekerjaan & Karir",
                                 imagePath: "assets/img/pekerjaan2.png",
@@ -600,7 +600,7 @@ class Home extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: InkWell(
-                              onTap: () { toSpiritual(context, false); },
+                              onTap: () { toHunian(context, false); },
                               child: BalanceZoneCard(
                                 title: "Hunian & Lingkungan",
                                 imagePath: "assets/img/hunian2.png",
@@ -616,7 +616,7 @@ class Home extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: InkWell(
-                              onTap: () { toSpiritual(context, false); },
+                              onTap: () { toRekreasi(context, false); },
                               child: BalanceZoneCard(
                                 title: "Rekreasi & Relaksasi",
                                 imagePath: "assets/img/rekreasi2i.png",
