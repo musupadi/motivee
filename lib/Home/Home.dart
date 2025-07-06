@@ -364,7 +364,7 @@ class Home extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.only(left: 20, top: 12),
                               child: Text(
-                                "Butuh dorongan semangat yang\n lebih kuat ?",
+                                "Butuh dorongan semangat yang\nlebih kuat ?",
                                 style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontWeight: FontWeight.bold,
