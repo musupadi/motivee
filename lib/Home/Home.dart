@@ -405,13 +405,14 @@ class Home extends StatelessWidget {
             const SizedBox(height: 12),
 
             Padding(
-              padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
+              padding: const EdgeInsets.only(left: 20, right: 8, top: 8, bottom: 20),
               child: Text(
                 "ZONA KESEIMBANGAN HIDUP",
                 style: TextStyle(
                   color: CBlack(),
+                  fontFamily: 'Poppins-Bold',
                   fontWeight: FontWeight.w900,
-                  fontSize: 16,
+                  fontSize: 18,
                 ),
               ),
             ),
@@ -420,8 +421,15 @@ class Home extends StatelessWidget {
               child: Container(
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: CBackground2(),
+                    color: CBackground(),
                     borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.brown.shade200,
+                            offset: Offset(0, 0),
+                            blurRadius: 0.1
+                        )
+                      ]
                   ),
                   child: Column(
                     children: [
@@ -633,32 +641,41 @@ class Home extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: PeekCarousel(),
-            ),
+            ),//PeekCarousel
 
 
 
 
             const SizedBox(height: 12),
             Padding(
-              padding: const EdgeInsets.only(left: 8,right: 8),
+              padding: const EdgeInsets.only(left: 20, right: 8, top: 8, bottom: 20),
               child: Text(
                 "ZONA PRODUKTIVITAS",
                 style: TextStyle(
                     color: CBlack(),
                     fontWeight: FontWeight.w900,
-                    fontSize: TitleSize()
+                    fontFamily: 'Poppins-Bold',
+                    fontSize: 18,
                 ),
               ),
             ),
             Container(
               margin: EdgeInsets.all(10),
-              padding: const EdgeInsets.all(5),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: CBackground2(),
-                borderRadius: BorderRadius.circular(20),
+                  color: CBackground(),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.brown.shade200,
+                        offset: Offset(0, 0),
+                        blurRadius: 0.1
+                    )
+                  ]
               ),
               child: Column(
                 children: [

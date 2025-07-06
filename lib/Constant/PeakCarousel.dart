@@ -45,7 +45,7 @@ class _PeekCarouselState extends State<PeekCarousel> {
           controller: _controller,
           count: imagePaths.length,
           effect: const ExpandingDotsEffect(
-            activeDotColor: Colors.deepOrangeAccent,
+            activeDotColor: Color.fromRGBO(201, 100, 73, 1.0),
             dotColor: Colors.grey,
             dotHeight: 8,
             dotWidth: 8,//push
