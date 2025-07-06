@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:marquee/marquee.dart';
+import 'package:motivee/Card/ProductivityCard.dart';
 import 'package:motivee/Constant/Route.dart'; // Ensure toSpiritual is defined here
 
 import '../Card/BalanceZoneCard.dart';
+import '../Card/EconomyCard.dart';
 import '../Constant/Color.dart';
 import '../Constant/PeakCarousel.dart';
 import '../Constant/Size.dart';
@@ -326,46 +328,55 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-            Column(
-              children: [
-                Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 4,bottom: 4,top: 0,left: 8),
-                        child: _ProductivityItem(title: 'Rencana', imagePath: 'assets/img/rencana2.png'),
+            Container(
+              margin: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                color: CBackground2(),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 4,bottom: 4,top: 0,left: 8),
+                          child: ProductivityCard(title: 'Rencana', imagePath: 'assets/img/rencana2.png',Left: true,),
+                        ),
                       ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 4,bottom: 4,top: 0,right: 8),
-                        child: _ProductivityItem(title: 'Agenda', imagePath: 'assets/img/agenda.png'),
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 4,bottom: 4,top: 0,right: 8),
+                          child: ProductivityCard(title: 'Agenda', imagePath: 'assets/img/agenda.png',Left: false,),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8,bottom: 8,top: 4,right: 4),
+                          child: ProductivityCard(title: 'Aktivitas', imagePath: 'assets/img/aktivitas.png',Left: true,),
+                        ),
                       ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 8,bottom: 8,top: 4,right: 4),
-                        child: _ProductivityItem(title: 'Aktivitas', imagePath: 'assets/img/aktivitas.png'),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 4,bottom: 8,top: 4,right: 8),
-                        child: _ProductivityItem(title: 'Catatan', imagePath: 'assets/img/catatan2.png'),
-                      ),
-                    )
-                  ],
-                ),
-              ],
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 4,bottom: 8,top: 4,right: 8),
+                          child: ProductivityCard(title: 'Catatan', imagePath: 'assets/img/catatan2.png',Left: false,),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
+      
 
             const SizedBox(height: 12),
             Padding(
@@ -379,40 +390,104 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 8,right: 8),
-              child: SafeArea(
-                child: SingleChildScrollView(
-                  child: Container(
-                      padding: const EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 10),
-                      decoration: BoxDecoration(
-                        color: CBackground2(),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Wrap(
-                        spacing: 12,
-                        runSpacing: 12,
-                        children: const [
-                          EconomyCard(
+            Container(
+              margin: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                color: CBackground2(),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 4,bottom: 4,top: 0,left: 8),
+                          child: EconomyCard(
                             title: "Dompetku",
                             imagePath: "assets/img/dompetku.png",
+                            Left: true,
                           ),
-                          EconomyCard(
+                        ),
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 4,bottom: 4,top: 0,right: 8),
+                          child:   EconomyCard(
                             title: "Lapak MotiVee",
                             imagePath: "assets/img/lapak.png",
+                            Left: false,
                           ),
-                          EconomyCard(
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8,bottom: 8,top: 4,right: 4),
+                          child: EconomyCard(
                             title: "Cuan Dari Rumah",
                             imagePath: "assets/img/cuan.png",
+                            Left: true,
                           ),
-                          EconomyCard(
+                        ),
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 4,bottom: 8,top: 4,right: 8),
+                          child:  EconomyCard(
                             title: "Pojok UMKM",
                             imagePath: "assets/img/pojok umkm2.png",
+                            Left: false,
                           ),
-                        ],
+                        ),
                       )
+                    ],
                   ),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 8,right: 8),
+              child: Container(
+                padding: const EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 10),
+                decoration: BoxDecoration(
+                  color: CBackground2(),
+                  borderRadius: BorderRadius.circular(20),
                 ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        EconomyCard(
+                          title: "Dompetku",
+                          imagePath: "assets/img/dompetku.png",
+                          Left: true,
+                        ),
+                        EconomyCard(
+                          title: "Lapak MotiVee",
+                          imagePath: "assets/img/lapak.png",
+                          Left: false,
+                        ),
+
+                      ],
+                    ),
+                    Row(
+                      children: [
+
+                      ],
+                    )
+                  ],
+                ),
+
               ),
             ),
             const SizedBox(height: 12),
@@ -552,62 +627,62 @@ Widget buildRunningTextBar() {
 }
 
 
-class EconomyCard extends StatelessWidget {
-  final String title;
-  final String imagePath;
-
-  const EconomyCard({
-    super.key,
-    required this.title,
-    required this.imagePath,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 80,
-      width: (MediaQuery.of(context).size.width - 54) / 2, // 2 column,
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: const Color.fromRGBO(250, 60, 46, 1),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Row(
-        children: [
-          // Text
-          Expanded(
-            child: Text(
-              title,
-              style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 12,
-              ),
-              textAlign: TextAlign.center,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-          const SizedBox(width: 12),
-          // Icon/Image
-          Container(
-            width: 48,
-            height: 48,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              image: DecorationImage(
-                image: AssetImage(imagePath),
-                fit: BoxFit.contain,
-              ),
-            ),
-          ),
-
-
-        ],
-      ),
-    );
-  }
-}
+// class EconomyCard extends StatelessWidget {
+//   final String title;
+//   final String imagePath;
+//
+//   const EconomyCard({
+//     super.key,
+//     required this.title,
+//     required this.imagePath,
+//   });
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       height: 80,
+//       width: (MediaQuery.of(context).size.width - 54) / 2, // 2 column,
+//       padding: const EdgeInsets.all(12),
+//       decoration: BoxDecoration(
+//         color: const Color.fromRGBO(250, 60, 46, 1),
+//         borderRadius: BorderRadius.circular(20),
+//       ),
+//       child: Row(
+//         children: [
+//           // Text
+//           Expanded(
+//             child: Text(
+//               title,
+//               style: const TextStyle(
+//                 color: Colors.white,
+//                 fontWeight: FontWeight.bold,
+//                 fontSize: 12,
+//               ),
+//               textAlign: TextAlign.center,
+//               maxLines: 2,
+//               overflow: TextOverflow.ellipsis,
+//             ),
+//           ),
+//           const SizedBox(width: 12),
+//           // Icon/Image
+//           Container(
+//             width: 48,
+//             height: 48,
+//             decoration: BoxDecoration(
+//               borderRadius: BorderRadius.circular(12),
+//               image: DecorationImage(
+//                 image: AssetImage(imagePath),
+//                 fit: BoxFit.contain,
+//               ),
+//             ),
+//           ),
+//
+//
+//         ],
+//       ),
+//     );
+//   }
+// }
 
 
 
