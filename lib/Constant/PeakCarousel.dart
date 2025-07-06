@@ -48,7 +48,7 @@ class _PeekCarouselState extends State<PeekCarousel> {
             activeDotColor: Colors.deepOrangeAccent,
             dotColor: Colors.grey,
             dotHeight: 8,
-            dotWidth: 8,
+            dotWidth: 8,//push
           ),
         ),
       ],
