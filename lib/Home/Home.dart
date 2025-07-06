@@ -25,14 +25,7 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
-          gradient: const LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment(1.0, 0.2),
-          colors: [
-            Color(0xFF48F3FF),
-            Color(0xFFACDECE),
-          ],
-        ),
+          color: CBackground()
       ),
         child: ListView(
           children: [
@@ -45,7 +38,7 @@ class Home extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.red
+                        color: CBackground2()
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -61,11 +54,11 @@ class Home extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Colors.red
+                          color: CBackground2()
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text("Tantangan")),
+                        child: Center(child: Text("Saldo")),
                       ),
                     ),
                   ),
@@ -77,11 +70,11 @@ class Home extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Colors.red
+                          color: CBackground2()
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text("Tantangan")),
+                        child: Center(child: Text("Kantorku")),
                       ),
                     ),
                   ),
@@ -93,11 +86,11 @@ class Home extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Colors.red
+                          color: CBackground2()
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text("Tantangan")),
+                        child: Center(child: Text("Tambah")),
                       ),
                     ),
                   ),
@@ -143,12 +136,29 @@ class Home extends StatelessWidget {
 
                             children: [
                               Text(
-                                "Senang Bertemu lagi dengan Bang Piyo"
+                                "Senang Bertemu lagi",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  fontFamily: 'Lato-Black',
+                                ),
                               ),
                               Text(
-                                  "Senang Bertemu lagi dengan Bang Piyo"
+                                "Bang Piyo",
+                                  style: TextStyle(
+                                    fontFamily: 'Lato-Black',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                  ),
                               ),
-
+                              Text(
+                                  "Vee siap menemani dan membantu kapan pun kamu butuh !!!",
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                  fontFamily: 'Roboto',
+                                  fontSize: 14,
+                                ),
+                              ),
                             ],
                           ),
                         )
@@ -199,8 +209,9 @@ class Home extends StatelessWidget {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Text("Loreum Ipsum"),
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Tidak ada yang lebih kuat dari seseorang "
+                                  "memilih untuk bangkit, meski sedang lelah. Kamu......"),
                             ),
                           ),
                           Padding(

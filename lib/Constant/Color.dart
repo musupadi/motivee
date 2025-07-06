@@ -16,11 +16,11 @@ Color CYellowUnactive(){
 }
 
 Color CBackground(){
-  return Color(0xFFF2FCFF);
+  return Color.fromRGBO(254, 246, 228, 1.0);
 }
 
 Color CBackground2(){
-  return const Color(0xFFD7F9FF);
+  return const Color.fromRGBO(0, 173, 181, 1.0);
 }
 
 Color CBackgroundChat(){
