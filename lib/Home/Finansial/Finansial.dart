@@ -6,8 +6,8 @@ import '../../Constant/ArrowPainter.dart';
 import '../../Constant/Ascendant.dart';
 import '../../Constant/Color.dart';
 
-class Spiritual extends StatelessWidget {
-  const Spiritual({super.key});
+class Finansial extends StatelessWidget {
+  const Finansial({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +42,13 @@ class Spiritual extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Spiritual & Kontribusi",
+                    Text("Finansial",
                       style: TextStyle(
                           fontSize: TitlesSize(),
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Poppins'
                       ),),
-                    Text("Temukan Ketenangan lewat Ibadah,\ndzikir, syukur dan amal baik.",
+                    Text("Menata Keuangan menuju \nketenangan hidup",
                       style: TextStyle(
                           fontSize: Header1Size(),
                           fontWeight: FontWeight.bold,
@@ -58,7 +58,7 @@ class Spiritual extends StatelessWidget {
                 )
               ],
             ),
-            Text("Teruslah membangun hubungan yang hangat dengn Allah SWT,langkah demi langkah sesuai ritme hidupmu.\nJadilah versi terbaikmu yang ikhlas &amp; selalu terhubung dengan-Nya."),
+            Text("Uang bukan segalanya, tapi cara kita mengelolanya menentukan arah hidup yang lebih bebas.\nZona ini membantumu menjadi bijak, merdeka, dan seimbang secara finansial"),
             const SizedBox(height: 10),
             _buildTopButtons(),
             const SizedBox(height: 20),
@@ -101,7 +101,7 @@ class Spiritual extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Ibadah & Aksi Kebaikan",
+                              Text("Uji dan Tantangan",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: Header2Size(),
@@ -122,11 +122,11 @@ class Spiritual extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Tes E-Spirit",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Tes Kesehatan Finansial",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Pencapaianku",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Tingkatan Pencapaian",Left: false,),
                             )
                           ],
                         ),
@@ -137,11 +137,11 @@ class Spiritual extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Panduan",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Panduan Praktis",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Progress",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Pantau Progres",Left: false,),
                             )
                           ],
                         )
@@ -194,7 +194,7 @@ class Spiritual extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Langkah Spiritual & Kontribusi",
+                              Text("Aksi Finansial",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: Header2Size(),
@@ -215,11 +215,11 @@ class Spiritual extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Jurnal Sholat &\nPuasa",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Rencana\nKeuangan Pribadi",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Al Qur'an\nHadis Pilihan",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Pantau Keuangan harian",Left: false,),
                             )
                           ],
                         ),
@@ -230,11 +230,11 @@ class Spiritual extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Pusat Dzikir\n& Doa",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Belanja Cerdas",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Sedekah,Zakat\n& Aksi Sosial",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Manajemen Hutang & Tabungan",Left: false,),
                             )
                           ],
                         )
@@ -254,9 +254,9 @@ class Spiritual extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                        color: Colors.brown.shade200,
-                        offset: Offset(0, 0),
-                        blurRadius: 0.1
+                      color: Colors.brown.shade200,
+                      offset: Offset(0, 0),
+                      blurRadius: 0.1
                     )
                   ]
               ),
@@ -307,11 +307,11 @@ class Spiritual extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(), TextString: "Ustadz",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Perencana\nKeuangan",imagePath: 'assets/img/spiritual--.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(), TextString: "Ustadzah",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Konsultan\nBisnis UMKM",imagePath: 'assets/img/spiritual--.png',Left: false),
                             )
                           ],
                         ),
@@ -322,11 +322,11 @@ class Spiritual extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(), TextString: "Ahli Fikih\n& Ibadah",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Konsultan\nPajak",imagePath: 'assets/img/spiritual--.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(), TextString: "Relawan\nSosial Islami",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Konselor Emosional Finansial",imagePath: 'assets/img/spiritual--.png',Left: false),
                             )
                           ],
                         ),
@@ -353,13 +353,13 @@ class Spiritual extends StatelessWidget {
         children: [
           Expanded(
               flex: 1,
-              child: iconImageButton('Ruang Ilmu', 'assets/img/Ilmu agama.png')),
+              child: iconImageButton('Ilmu\nKeuangan', 'assets/img/Ilmu agama.png')),
           Expanded(
               flex: 1,
-              child: iconImageButton('Inspirasi Spiritual', 'assets/img/Inspirasi Islam.png')),
+              child: iconImageButton('Mindset\nFinansial', 'assets/img/Inspirasi Islam.png')),
           Expanded(
               flex: 1,
-              child: iconImageButton('Inspirasi Kebaikan', 'assets/img/Syukur & Amal harian.png')),
+              child: iconImageButton('Tips\nKeuangan', 'assets/img/Syukur & Amal harian.png')),
         ],
       ),
     );

@@ -17,21 +17,23 @@ class CardbuttonGeneral2 extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: EdgeInsets.only(left: Left ? 15 : 10,right: Left ? 10 : 15),
+          padding: EdgeInsets.only(left: Left ? 12 : 10,right: Left ? 10 : 12),
           child: Container(
-            height: 80,
+            height: 60,
             decoration: BoxDecoration(
               color: ColorsData,
               borderRadius: BorderRadius.circular(50),
             ),
             child: Center(child: Padding(
-              padding: EdgeInsets.only(left: Left ? 25: 5,right: Left ? 5 : 25,top: 5,bottom: 5 ),
-              child: Text(TextString,style: TextStyle(fontFamily: "Roboto",fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+              padding: EdgeInsets.only(left: Left ? 30 : 5,right: Left ? 5 : 30,top: 5,bottom: 5 ),
+              child: Text(TextString,style: TextStyle(
+                  fontSize: 12,
+                  fontFamily: "Roboto",fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
             )),
           ),
         ),
         Container(
-          height: 80,
+          height: 60,
           child: Align(
             alignment: Left ? Alignment.centerLeft : Alignment.centerRight,
             child: Container(

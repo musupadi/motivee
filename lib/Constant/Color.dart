@@ -45,6 +45,12 @@ Color CHubunganSosial(){
 Color CFinansial(){
   return Color.fromRGBO(51, 148, 112, 1.0);
 }
+// Konsultasi
+Color CSpiritualAndKontrbusiKonsultasi(){
+  return Color.fromRGBO(255, 243, 180,1.0);
+}
+
+
 Color CIbadahDanAksiButton(){
   return Color.fromRGBO(255, 189, 150,1.0);
 }

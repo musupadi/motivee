@@ -15,7 +15,7 @@ class CardbuttonGeneral extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: Left ? 0 : 10,right: Left ? 10 : 0),
       child: Container(
-        height: 80,
+        height: 60,
         decoration: BoxDecoration(
           color: ColorsData,
           borderRadius: BorderRadius.circular(50),

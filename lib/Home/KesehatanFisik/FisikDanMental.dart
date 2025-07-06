@@ -6,8 +6,8 @@ import '../../Constant/ArrowPainter.dart';
 import '../../Constant/Ascendant.dart';
 import '../../Constant/Color.dart';
 
-class Spiritual extends StatelessWidget {
-  const Spiritual({super.key});
+class FisikDanMental extends StatelessWidget {
+  const FisikDanMental({super.key});
 
   @override
   Widget build(BuildContext context) {

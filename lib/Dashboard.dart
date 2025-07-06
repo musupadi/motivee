@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:motivee/Home/Finansial/Finansial.dart';
+import 'package:motivee/Home/KesehatanFisik/FisikDanMental.dart';
 import 'package:motivee/Home/ZonaKeseimbaganHidup/Spiritual.dart';
 
 import 'Home/Home.dart';
@@ -21,8 +23,22 @@ class _DashboardState extends State<Dashboard> {
     Text("Komunitas"),
     Text("Pengaturan"),
   ];
-  final List<Widget> _pages2 = [
+  final List<Widget> Spirituals = [
     Spiritual(),
+    Text("Aktivitas"),
+    Text("Premium"),
+    Text("Komunitas"),
+    Text("Pengaturan"),
+  ];
+  final List<Widget> Kesehatan = [
+    FisikDanMental(),
+    Text("Aktivitas"),
+    Text("Premium"),
+    Text("Komunitas"),
+    Text("Pengaturan"),
+  ];
+  final List<Widget> Finansials = [
+    Finansial(),
     Text("Aktivitas"),
     Text("Premium"),
     Text("Komunitas"),
@@ -40,7 +56,11 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
-      body: widget.page == "Spiritual" ? _pages2[_currentIndex] : _pages[_currentIndex],
+      body:
+      widget.page == "Spiritual" ? Spirituals[_currentIndex]  :
+      widget.page == "Kesehatan" ? Kesehatan[_currentIndex] :
+      widget.page == "Finansial" ? Finansials[_currentIndex]
+          : _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
