@@ -14,6 +14,7 @@ class _PeekCarouselState extends State<PeekCarousel> {
   );
 
   final List<String> imagePaths = [
+    'assets/img/slider A.png',
     'assets/img/Slider news 1.png',
     'assets/img/slider news2.png',
     'assets/img/slide news3.png',
@@ -44,7 +45,7 @@ class _PeekCarouselState extends State<PeekCarousel> {
           controller: _controller,
           count: imagePaths.length,
           effect: const ExpandingDotsEffect(
-            activeDotColor: Colors.deepPurple,
+            activeDotColor: Colors.deepOrangeAccent,
             dotColor: Colors.grey,
             dotHeight: 8,
             dotWidth: 8,
