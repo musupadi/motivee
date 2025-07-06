@@ -211,7 +211,7 @@ class Home extends StatelessWidget {
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.only(right: 10),
-                      height: 226,
+                      height: 200,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Color.fromRGBO(170, 239,235, 1.0),
@@ -221,7 +221,7 @@ class Home extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.only(left: 20, right: 15, top: 10),
                             child: Row(
                               children: [
                                 Container(
@@ -253,7 +253,7 @@ class Home extends StatelessWidget {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.all(12.0),
+                              padding: const EdgeInsets.only(left: 12,right: 12,top: 12),
                               child: Text(
                                 "Tidak ada yang lebih kuat dari seseorang "
                                     "yang memilih untuk bangkit, meski sedang lelah. Kamu...",
@@ -266,7 +266,7 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.only(bottom: 10,right: 10),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               mainAxisSize: MainAxisSize.max,
@@ -303,7 +303,7 @@ class Home extends StatelessWidget {
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.only(left: 10),
-                      height: 226,
+                      height: 200,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: Color.fromRGBO(170, 239,235, 1.0),
@@ -313,7 +313,7 @@ class Home extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.only(left: 20, right: 15, top: 12),
                             child: Row(
                               children: [
                                 Container(
@@ -331,7 +331,7 @@ class Home extends StatelessWidget {
                                   width: 5,
                                 ),
                                 Text(
-                                  "Vee Boost",
+                                  "VeeBoost",
                                   style: TextStyle(
                                     fontFamily: 'Lato-Black',
                                     fontWeight: FontWeight.bold,
@@ -343,9 +343,9 @@ class Home extends StatelessWidget {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.all(10.0),
+                              padding: const EdgeInsets.only(left: 20, top: 12),
                               child: Text(
-                                "Butuh dorongan semangat yang lebih kuat?",
+                                "Butuh dorongan semangat yang\n lebih kuat ?",
                                 style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontWeight: FontWeight.bold,
@@ -355,7 +355,7 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.only(bottom: 10, left: 10, right: 10),
                             child: Container(
                               height: 40,
                               width: double.maxFinite,
