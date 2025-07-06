@@ -23,7 +23,7 @@ class BalanceZoneCard extends StatelessWidget {
 
     final textColor = backgroundColor.computeLuminance() > 0.5 ? Colors.black87 : Colors.white;
     final secondaryTextColor = backgroundColor.computeLuminance() > 0.5 ? Colors.black54 : Colors.white70;
-    final progressBarValueColor = backgroundColor.computeLuminance() > 0.5 ? Colors.black : Colors.white;
+    final progressBarValueColor = backgroundColor.computeLuminance() > 0.5 ? Colors.black : Color.fromRGBO(255, 190, 149  , 1.0);
 
 
 
@@ -35,14 +35,7 @@ class BalanceZoneCard extends StatelessWidget {
 
       height: 90,
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          begin: Alignment.centerLeft,
-          end: Alignment(1.0, 0.6),
-          colors: [
-            Color.fromRGBO(161, 219, 255, 1.0),
-            Color.fromRGBO(113, 179, 255, 1.0),
-          ],
-        ),
+        color: Color.fromRGBO(255, 219, 187, 1.0),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Stack(
@@ -62,7 +55,7 @@ class BalanceZoneCard extends StatelessWidget {
                   title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: textColor,
+                    color: Colors.black,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.bold,
                     fontSize: 10,
@@ -79,7 +72,7 @@ class BalanceZoneCard extends StatelessWidget {
                       "$current/$total",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          color: secondaryTextColor,
+                          color: Colors.black,
                           fontSize: 12
                       ),
                     ),
