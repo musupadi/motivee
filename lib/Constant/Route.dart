@@ -99,7 +99,7 @@ toKesehatan(
               Animation<double> secAnimation
               )
           {
-            return Dashboard(page: "Finansial");
+            return Dashboard(page: "Kesehatan");
           }
       )
   );

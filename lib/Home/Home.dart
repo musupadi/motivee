@@ -446,7 +446,7 @@ class Home extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: InkWell(
-                              onTap: () { toSpiritual(context, false); },
+                              onTap: () { toKesehatan(context, false); },
                               child: BalanceZoneCard(
                                 title: "Kesehatan Fisik & Mental",
                                 imagePath: "assets/img/kesehatan fisik.png",
@@ -504,7 +504,7 @@ class Home extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: InkWell(
-                              onTap: () { toSpiritual(context, false); },
+                              onTap: () { toFinansial(context, false); },
                               child: BalanceZoneCard(
                                 title: "Finansial",
                                 imagePath: "assets/img/koin.png",
