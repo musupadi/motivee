@@ -32,7 +32,7 @@ class Home extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  flex: 1,
+                  flex: 2,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  flex: 1,
+                  flex: 2,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
@@ -80,7 +80,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  flex: 1,
+                  flex: 2,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
@@ -108,6 +108,7 @@ class Home extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
+                      width: double.maxFinite,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: CBackground2()
@@ -115,7 +116,7 @@ class Home extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Center(child: Text(
-                          "Tambah",
+                          "+",
                           style: TextStyle(
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.bold,
@@ -156,7 +157,7 @@ class Home extends StatelessWidget {
                                     50
                                 ),
                                 image: DecorationImage(
-                                    image: AssetImage("assets/img/botvee2.png"),
+                                    image: AssetImage("assets/img/vee_bot.png"),
                                   fit: BoxFit.fill
                                 )
                             ),
@@ -177,21 +178,38 @@ class Home extends StatelessWidget {
                               ),
                               Text(
                                 "Bang Piyo",
-                                  style: TextStyle(
-                                    fontFamily: 'Lato-Black',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                  ),
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  fontFamily: 'Lato-Black',
+                                ),
                               ),
+
                               Padding(
-                                padding: const EdgeInsets.only(left: 15, top: 15),
-                                child: Text(
-                                    "Vee siap menemani dan membantu kapan pun kamu butuh !!!",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                    fontFamily: 'Roboto',
-                                    fontSize: 14,
-                                  ),
+                                padding: const EdgeInsets.only(left: 15, top: 10),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      "Vee ",
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                        fontFamily: 'Roboto',
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                    ),
+                                    Text(
+                                        "siap menemani dan membantu \nkapanpun kamu butuh !!!",
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                        fontFamily: 'Roboto',
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
@@ -204,6 +222,7 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
+
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Row(
@@ -211,7 +230,7 @@ class Home extends StatelessWidget {
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.only(right: 10),
-                      height: 200,
+                      height: 180,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Color.fromRGBO(170, 239,235, 1.0),
@@ -221,14 +240,14 @@ class Home extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 20, right: 15, top: 10),
+                            padding: const EdgeInsets.only(left: 10, right: 15, top: 10),
                             child: Row(
                               children: [
                                 Container(
-                                  height: 50,
-                                  width: 50,
+                                  height: 40,
+                                  width: 40,
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(16),
                                       image: DecorationImage(
                                           image: AssetImage("assets/img/pengembangan2.png"),
                                           fit: BoxFit.fill
@@ -256,7 +275,7 @@ class Home extends StatelessWidget {
                               padding: const EdgeInsets.only(left: 12,right: 12,top: 12),
                               child: Text(
                                 "Tidak ada yang lebih kuat dari seseorang "
-                                    "yang memilih untuk bangkit, meski sedang lelah. Kamu...",
+                                    "yang memilih untuk bangkit.",
                                 style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontWeight: FontWeight.bold,
@@ -303,7 +322,7 @@ class Home extends StatelessWidget {
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.only(left: 10),
-                      height: 200,
+                      height: 180,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: Color.fromRGBO(170, 239,235, 1.0),
@@ -313,12 +332,12 @@ class Home extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 20, right: 15, top: 12),
+                            padding: const EdgeInsets.only(left: 10, right: 15, top: 12),
                             child: Row(
                               children: [
                                 Container(
-                                  height: 50,
-                                  width: 50,
+                                  height: 40,
+                                  width: 40,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(16),
                                       image: DecorationImage(
@@ -349,7 +368,7 @@ class Home extends StatelessWidget {
                                 style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 14,
+                                  fontSize: 12,
                                 ),
                               ),
                             ),
@@ -383,242 +402,242 @@ class Home extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
 
-            // 🔹 3. PeekCarousel (Slider)
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: PeekCarousel(),
-            ),
-            const SizedBox(height: 24),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
               child: Text(
                 "ZONA KESEIMBANGAN HIDUP",
                 style: TextStyle(
-                    color: CBlack(),
-                    fontWeight: FontWeight.w900,
-                    fontSize: 16,
+                  color: CBlack(),
+                  fontWeight: FontWeight.w900,
+                  fontSize: 16,
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8),
               child: Container(
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: CBackground2(),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: InkWell(
-                            onTap: () { toSpiritual(context, false); },
-                            child: BalanceZoneCard(
-                              title: "Spiritual & Kontribusi",
-                              imagePath: "assets/img/spiritual--.png",
-                              current: 7,
-                              total: 10,
-                              backgroundColor: CSpiritual(),
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: CBackground2(),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: InkWell(
+                              onTap: () { toSpiritual(context, false); },
+                              child: BalanceZoneCard(
+                                title: "Spiritual & Kontribusi",
+                                imagePath: "assets/img/spiritual--.png",
+                                current: 7,
+                                total: 10,
+                                backgroundColor: CSpiritual(),
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 30,
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: InkWell(
-                            onTap: () { toSpiritual(context, false); },
-                            child: BalanceZoneCard(
-                              title: "Kesehatan Fisik & Mental",
-                              imagePath: "assets/img/kesehatan fisik.png",
-                              current: 6,
-                              total: 10,
-                              backgroundColor: CSpiritual(),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: InkWell(
+                              onTap: () { toSpiritual(context, false); },
+                              child: BalanceZoneCard(
+                                title: "Kesehatan Fisik & Mental",
+                                imagePath: "assets/img/kesehatan fisik.png",
+                                current: 6,
+                                total: 10,
+                                backgroundColor: CSpiritual(),
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    //         InkWell(
-                    //           child: BalanceZoneCard(
-                    //             title: "",
-                    //             imagePath: "",
-                    //             current: 10,
-                    //             total: 15,
-                    //             backgroundColor: CHubunganSosial(),
-                    //           ),
-                    //         ),
-                    //         InkWell(
-                    //
-                    //           child: BalanceZoneCard(
-                    //             title: "Finansial",
-                    //             imagePath: "assets/img/koin.png",
-                    //             current: 7,
-                    //             total: 10,
-                    //             backgroundColor: CFinansial(),
-                    //           ),
-                    //         ),
-                    //         InkWell(
-                    //
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      //         InkWell(
+                      //           child: BalanceZoneCard(
+                      //             title: "",
+                      //             imagePath: "",
+                      //             current: 10,
+                      //             total: 15,
+                      //             backgroundColor: CHubunganSosial(),
+                      //           ),
+                      //         ),
+                      //         InkWell(
+                      //
+                      //           child: BalanceZoneCard(
+                      //             title: "Finansial",
+                      //             imagePath: "assets/img/koin.png",
+                      //             current: 7,
+                      //             total: 10,
+                      //             backgroundColor: CFinansial(),
+                      //           ),
+                      //         ),
+                      //         InkWell(
+                      //
 
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: InkWell(
-                            onTap: () { toSpiritual(context, false); },
-                            child: BalanceZoneCard(
-                              title: "Hubungan Sosial",
-                              imagePath: "assets/img/komunitas--.png",
-                              current: 7,
-                              total: 10,
-                              backgroundColor: CHubunganSosial(),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: InkWell(
+                              onTap: () { toSpiritual(context, false); },
+                              child: BalanceZoneCard(
+                                title: "Hubungan Sosial",
+                                imagePath: "assets/img/komunitas--.png",
+                                current: 7,
+                                total: 10,
+                                backgroundColor: CHubunganSosial(),
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 30,
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: InkWell(
-                            onTap: () { toFinansial(context, false); },
-                            child: BalanceZoneCard(
-                              title: "Finansial",
-                              imagePath: "assets/img/koin.png",
-                              current: 6,
-                              total: 10,
-                              backgroundColor: CFinansial(),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: InkWell(
+                              onTap: () { toSpiritual(context, false); },
+                              child: BalanceZoneCard(
+                                title: "Finansial",
+                                imagePath: "assets/img/koin.png",
+                                current: 6,
+                                total: 10,
+                                backgroundColor: CFinansial(),
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-    //           child: BalanceZoneCard(
-    //             title: "",
-    //             imagePath: "",
-    //             current: 7,
-    //             total: 10,
-    //             backgroundColor: CPengembanganDiri(),
-    //           ),
-    //         ),
-    //         InkWell(
-    //
-    //           child: BalanceZoneCard(
-    //             title: "",
-    //             imagePath: "",
-    //             current: 7,
-    //             total: 10,
-    //             backgroundColor: CPekerjaanKarir(),
-    //           ),
-    //         ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      //           child: BalanceZoneCard(
+                      //             title: "",
+                      //             imagePath: "",
+                      //             current: 7,
+                      //             total: 10,
+                      //             backgroundColor: CPengembanganDiri(),
+                      //           ),
+                      //         ),
+                      //         InkWell(
+                      //
+                      //           child: BalanceZoneCard(
+                      //             title: "",
+                      //             imagePath: "",
+                      //             current: 7,
+                      //             total: 10,
+                      //             backgroundColor: CPekerjaanKarir(),
+                      //           ),
+                      //         ),
 
 
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: InkWell(
-                            onTap: () { toSpiritual(context, false); },
-                            child: BalanceZoneCard(
-                              title: "Pengembangan Diri & Kreativitas",
-                              imagePath: "assets/img/pengembangan2.png",
-                              current: 7,
-                              total: 10,
-                              backgroundColor: CPengembanganDiri(),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: InkWell(
+                              onTap: () { toSpiritual(context, false); },
+                              child: BalanceZoneCard(
+                                title: "Pengembangan Diri & Kreativitas",
+                                imagePath: "assets/img/pengembangan2.png",
+                                current: 7,
+                                total: 10,
+                                backgroundColor: CPengembanganDiri(),
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 30,
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: InkWell(
-                            onTap: () { toSpiritual(context, false); },
-                            child: BalanceZoneCard(
-                              title: "Pekerjaan & Karir",
-                              imagePath: "assets/img/pekerjaan2.png",
-                              current: 6,
-                              total: 10,
-                              backgroundColor: CSpiritual(),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: InkWell(
+                              onTap: () { toSpiritual(context, false); },
+                              child: BalanceZoneCard(
+                                title: "Pekerjaan & Karir",
+                                imagePath: "assets/img/pekerjaan2.png",
+                                current: 6,
+                                total: 10,
+                                backgroundColor: CSpiritual(),
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    //         InkWell(
-                    //
-                    //           child: BalanceZoneCard(
-                    //             title: "",
-                    //             imagePath: "",
-                    //             current: 7,
-                    //             total: 10,
-                    //             backgroundColor: CHunian(),
-                    //           ),
-                    //         ),
-                    //         InkWell(
-                    //
-                    //           child: BalanceZoneCard(
-                    //             title: "",
-                    //             imagePath: "",
-                    //             current: 5,
-                    //             total: 10,
-                    //             backgroundColor: CRekreasi(),
-                    //           ),
-                    //         )
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: InkWell(
-                            onTap: () { toSpiritual(context, false); },
-                            child: BalanceZoneCard(
-                              title: "Hunian & Lingkungan",
-                              imagePath: "assets/img/hunian2.png",
-                              current: 7,
-                              total: 10,
-                              backgroundColor: CSpiritual(),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      //         InkWell(
+                      //
+                      //           child: BalanceZoneCard(
+                      //             title: "",
+                      //             imagePath: "",
+                      //             current: 7,
+                      //             total: 10,
+                      //             backgroundColor: CHunian(),
+                      //           ),
+                      //         ),
+                      //         InkWell(
+                      //
+                      //           child: BalanceZoneCard(
+                      //             title: "",
+                      //             imagePath: "",
+                      //             current: 5,
+                      //             total: 10,
+                      //             backgroundColor: CRekreasi(),
+                      //           ),
+                      //         )
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: InkWell(
+                              onTap: () { toSpiritual(context, false); },
+                              child: BalanceZoneCard(
+                                title: "Hunian & Lingkungan",
+                                imagePath: "assets/img/hunian2.png",
+                                current: 7,
+                                total: 10,
+                                backgroundColor: CSpiritual(),
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 30,
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: InkWell(
-                            onTap: () { toSpiritual(context, false); },
-                            child: BalanceZoneCard(
-                              title: "Rekreasi & Relaksasi",
-                              imagePath: "assets/img/rekreasi2i.png",
-                              current: 6,
-                              total: 10,
-                              backgroundColor: CSpiritual(),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: InkWell(
+                              onTap: () { toSpiritual(context, false); },
+                              child: BalanceZoneCard(
+                                title: "Rekreasi & Relaksasi",
+                                imagePath: "assets/img/rekreasi2i.png",
+                                current: 6,
+                                total: 10,
+                                backgroundColor: CSpiritual(),
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    )
-                  ],
-                )
+                        ],
+                      )
+                    ],
+                  )
               ),
             ),
+            const SizedBox(height: 24),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: PeekCarousel(),
+            ),
+
 
 
 
@@ -1206,7 +1225,7 @@ class VeeChatPrompt extends StatelessWidget {
       onTap: () => VeeChatPrompt._showChatModal(context),
       borderRadius: BorderRadius.circular(20),
       child: Container(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.only(left: 12,right: 12,top: 12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

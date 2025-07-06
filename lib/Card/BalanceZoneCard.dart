@@ -28,7 +28,7 @@ class BalanceZoneCard extends StatelessWidget {
 
 
     const double iconSize = 70;
-    const double iconOverlap = 10;
+    const double iconOverlap = 8;
 
     return Container(
 
@@ -60,10 +60,12 @@ class BalanceZoneCard extends StatelessWidget {
               children: [
                 Text(
                   title,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: textColor,
+                    fontFamily: 'Roboto',
                     fontWeight: FontWeight.bold,
-                    fontSize: 11,
+                    fontSize: 10,
                   ),
                 ),
 
@@ -71,11 +73,15 @@ class BalanceZoneCard extends StatelessWidget {
 
                 Column(
                   mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       "$current/$total",
-                      style: TextStyle(color: secondaryTextColor, fontSize: 12),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: secondaryTextColor,
+                          fontSize: 12
+                      ),
                     ),
                     const SizedBox(height: 4),
                     ClipRRect(

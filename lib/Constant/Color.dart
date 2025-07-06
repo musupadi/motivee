@@ -26,7 +26,9 @@ Color CBackground2(){
 Color CBackgroundChat(){
   return Color.fromRGBO(217, 217, 217,1.0);
 }
-
+Color CTst(){
+  return Color.fromRGBO(202, 84, 0, 1.0);
+}
 Color CZonaProdukBackground(){
   return Color.fromRGBO(251,202,77,1.0);
 }
