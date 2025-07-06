@@ -13,7 +13,7 @@ double NormalSize(){
   return 14;
 }
 double TitlesSize(){
-  return 22;
+  return 20;
 }
 double Header1Size(){
   return 15;

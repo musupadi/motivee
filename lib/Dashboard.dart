@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:motivee/Home/Finansial/Finansial.dart';
+import 'package:motivee/Home/HubunganSosial/Sosial.dart';
+import 'package:motivee/Home/Hunian/Hunian.dart';
 import 'package:motivee/Home/KesehatanFisik/FisikDanMental.dart';
+import 'package:motivee/Home/Pekerjaan/Pekerjaan.dart';
+import 'package:motivee/Home/PengembanganDiri/PengembanganDiri.dart';
+import 'package:motivee/Home/Rekreasi/Rekreasi.dart';
 import 'package:motivee/Home/ZonaKeseimbaganHidup/Spiritual.dart';
 
 import 'Home/Home.dart';
@@ -44,6 +49,41 @@ class _DashboardState extends State<Dashboard> {
     Text("Komunitas"),
     Text("Pengaturan"),
   ];
+  final List<Widget> Sosials = [
+    Sosial(),
+    Text("Aktivitas"),
+    Text("Premium"),
+    Text("Komunitas"),
+    Text("Pengaturan"),
+  ];
+  final List<Widget> Pengembangans = [
+    PengembanganDiri(),
+    Text("Aktivitas"),
+    Text("Premium"),
+    Text("Komunitas"),
+    Text("Pengaturan"),
+  ];
+  final List<Widget> Pekerjaans = [
+    Pekerjaan(),
+    Text("Aktivitas"),
+    Text("Premium"),
+    Text("Komunitas"),
+    Text("Pengaturan"),
+  ];
+  final List<Widget> Hunians = [
+    Hunian(),
+    Text("Aktivitas"),
+    Text("Premium"),
+    Text("Komunitas"),
+    Text("Pengaturan"),
+  ];
+  final List<Widget> Rekreasis = [
+    Rekreasi(),
+    Text("Aktivitas"),
+    Text("Premium"),
+    Text("Komunitas"),
+    Text("Pengaturan"),
+  ];
 
 
 
@@ -59,8 +99,13 @@ class _DashboardState extends State<Dashboard> {
       body:
       widget.page == "Spiritual" ? Spirituals[_currentIndex]  :
       widget.page == "Kesehatan" ? Kesehatan[_currentIndex] :
-      widget.page == "Finansial" ? Finansials[_currentIndex]
-          : _pages[_currentIndex],
+      widget.page == "Finansial" ? Finansials[_currentIndex] :
+      widget.page == "Sosial" ? Sosials[_currentIndex] :
+      widget.page == "Pengembangan" ? Pengembangans[_currentIndex] :
+      widget.page == "Pekerjaan" ? Pekerjaans[_currentIndex] :
+      widget.page == "Hunian" ? Hunians[_currentIndex] :
+      widget.page == "Rekreasi" ? Rekreasis[_currentIndex] :
+      _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
