@@ -9,6 +9,8 @@ import '../Card/EconomyCard.dart';
 import '../Constant/Color.dart';
 import '../Constant/PeakCarousel.dart';
 import '../Constant/Size.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -1160,8 +1162,11 @@ class PremiumUpgradeButton extends StatelessWidget {
 class VeeChatPrompt extends StatelessWidget {
   const VeeChatPrompt({super.key});
 
-  // Made _showChatModal a static method of VeeChatPrompt
   static void _showChatModal(BuildContext context) {
+    final TextEditingController _chatController = TextEditingController();
+    List<Map<String, String>> messages = []; // {'sender': 'user'/'vee', 'text': '...'}
+    bool isLoading = false;
+
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -1170,63 +1175,144 @@ class VeeChatPrompt extends StatelessWidget {
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       builder: (context) {
-        return FractionallySizedBox(
-          heightFactor: 0.8,
-          child: Column(
-            children: [
-              Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage('assets/img/vee_robot.png'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
+        return StatefulBuilder(
+          builder: (context, setState) {
+            Future<void> sendToVee(String message) async {
+              setState(() {
+                isLoading = true;
+                messages.add({'sender': 'user', 'text': message});
+              });
+
+              try {
+                final response = await http.post(
+                  Uri.parse('https://mastiscan.com/api/VeeChat/respond'),
+                  headers: {'Accept': 'application/json'},
+                  body: {'message': message},
+                );
+
+                if (response.statusCode == 200) {
+                  final data = jsonDecode(response.body);
+                  final reply = data['vee_response'] ?? "Vee tidak bisa menjawab saat ini.";
+                  setState(() {
+                    messages.add({'sender': 'vee', 'text': reply});
+                  });
+                } else {
+                  setState(() {
+                    messages.add({'sender': 'vee', 'text': 'Gagal: ${response.statusCode}'});
+                  });
+                }
+              } catch (e) {
+                setState(() {
+                  messages.add({'sender': 'vee', 'text': 'Error: $e'});
+                });
+              }
+
+              setState(() {
+                isLoading = false;
+              });
+            }
+
+            return Padding(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).viewInsets.bottom,
               ),
-              const SizedBox(height: 12),
-              const Text(
-                "Halo Bang Piyo! Aku Vee siap bantu ✨",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 16),
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 16),
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF5F5F5),
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: Colors.grey.shade300),
-                  ),
-                  child: const Text(
-                    "Tulis apa saja yang kamu butuhkan...\nContoh: 'Bantu saya buat jadwal hari ini!'",
-                    style: TextStyle(fontSize: 14, color: Colors.black87),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 16),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: "Ketik pesan...",
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+              child: SizedBox(
+                height: MediaQuery.of(context).size.height * 0.8,
+                child: Column(
+                  children: [
+                    const SizedBox(height: 12),
+                    Container(
+                      height: 130,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                              50
+                          ),
+                          image: DecorationImage(
+                              image: AssetImage("assets/img/vee_bot.png"),
+                              fit: BoxFit.fill
+                          )
+                      ),
                     ),
-                    suffixIcon: const Icon(Icons.send),
-                  ),
+                    const SizedBox(height: 12),
+                    const Text(
+                      "Chat dengan Vee ✨",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const Divider(),
+                    Expanded(
+                      child: ListView.builder(
+                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                        itemCount: messages.length,
+                        itemBuilder: (context, index) {
+                          final msg = messages[index];
+                          final isUser = msg['sender'] == 'user';
+
+                          return Align(
+                            alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
+                            child: Container(
+                              margin: const EdgeInsets.symmetric(vertical: 4),
+                              padding: const EdgeInsets.all(12),
+                              constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.75),
+                              decoration: BoxDecoration(
+                                color: isUser ? Colors.blueAccent : const Color(0xFFD9E4FF),
+                                borderRadius: BorderRadius.only(
+                                  topLeft: const Radius.circular(16),
+                                  topRight: const Radius.circular(16),
+                                  bottomLeft: Radius.circular(isUser ? 16 : 0),
+                                  bottomRight: Radius.circular(isUser ? 0 : 16),
+                                ),
+                              ),
+                              child: Text(
+                                msg['text']!,
+                                style: TextStyle(
+                                  color: isUser ? Colors.white : Colors.black87,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                    if (isLoading) const Padding(
+                      padding: EdgeInsets.all(12),
+                      child: CircularProgressIndicator(),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: TextField(
+                              controller: _chatController,
+                              decoration: InputDecoration(
+                                hintText: "Tulis pesan...",
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          IconButton(
+                            icon: const Icon(Icons.send),
+                            onPressed: () {
+                              final msg = _chatController.text.trim();
+                              if (msg.isNotEmpty) {
+                                sendToVee(msg);
+                                _chatController.clear();
+                              }
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 24),
-            ],
-          ),
+            );
+          },
         );
       },
     );
@@ -1238,53 +1324,47 @@ class VeeChatPrompt extends StatelessWidget {
       onTap: () => VeeChatPrompt._showChatModal(context),
       borderRadius: BorderRadius.circular(20),
       child: Container(
-        padding: const EdgeInsets.only(left: 12,right: 12,top: 12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        padding: const EdgeInsets.only(left: 12, right: 12, top: 12),
+        child: Row(
           children: [
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: Colors.grey.shade300),
-                    ),
-                    child: const Row( // Added const
-                      children: [
-                        SizedBox(width: 12),
-                        Expanded(
-                          child: Text(
-                            "Ketik yang anda pikirkan......",
-                            style: TextStyle(
-                                fontFamily: 'Roboto',
-                                color: Colors.grey, fontSize: 12),
-                          ),
+            Expanded(
+              child: Container(
+                height: 40,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.grey.shade300),
+                ),
+                child: const Row(
+                  children: [
+                    SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        "Ketik yang anda pikirkan...",
+                        style: TextStyle(
+                          fontFamily: 'Roboto',
+                          color: Colors.grey,
+                          fontSize: 12,
                         ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
-                const SizedBox(
-                  width: 5,
+              ),
+            ),
+            const SizedBox(width: 5),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: IconButton(
+                icon: Image.asset(
+                  'assets/img/mic1.png',
+                  width: 32,
+                  height: 32,
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: IconButton(
-                    icon: Image.asset(
-                      'assets/img/mic1.png',
-                      width: 32,
-                      height: 32,
-                    ),
-                    onPressed: () {
-                    },
-                  ),
-                ),
-              ],
+                onPressed: () {},
+              ),
             ),
           ],
         ),
@@ -1292,6 +1372,7 @@ class VeeChatPrompt extends StatelessWidget {
     );
   }
 }
+
 
 
 
