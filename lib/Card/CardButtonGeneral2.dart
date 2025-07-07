@@ -17,9 +17,9 @@ class CardbuttonGeneral2 extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: EdgeInsets.only(left: Left ? 12 : 10,right: Left ? 10 : 12),
+          padding: EdgeInsets.only(left: Left ? 12 : 5,right: Left ? 5 : 12),
           child: Container(
-            height: 60,
+            height: 65,
             decoration: BoxDecoration(
               color: ColorsData,
               borderRadius: BorderRadius.circular(50),
@@ -33,7 +33,7 @@ class CardbuttonGeneral2 extends StatelessWidget {
           ),
         ),
         Container(
-          height: 60,
+          height: 65,
           child: Align(
             alignment: Left ? Alignment.centerLeft : Alignment.centerRight,
             child: Container(

@@ -30,7 +30,7 @@ class FisikDanMental extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
-                      image: AssetImage('assets/img/spiritual--.png'),
+                      image: AssetImage('assets/img/kesehatan fisik.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -44,21 +44,28 @@ class FisikDanMental extends StatelessWidget {
                   children: [
                     Text("Kesehatan Fisik & Mental",
                       style: TextStyle(
-                          fontSize: TitlesSize(),
+                          fontSize: 19,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins'
+                          fontFamily: 'Poppins-Bold'
                       ),),
                     Text("Sehat luar dalam, Pondasi Hidup\nseimbang dimulai dari sini.",
                       style: TextStyle(
-                          fontSize: Header1Size(),
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Inter'
+                          fontFamily: 'Inter',
+                          color: Colors.black,
                       ),),
                   ],
                 )
               ],
             ),
-            Text("Motivee mendampingimu merawat fisik dan mental agar langkah hidup terasa lebih ringan, hati lebih tenang, dan kamu siap jalani hari dengan versi terbaikmu."),
+            Text("Motivee mendampingimu merawat fisik dan mental agar langkah hidup terasa lebih ringan, "
+                "hati lebih tenang, dan kamu siap jalani hari dengan versi terbaikmu.",
+            style: TextStyle(
+              fontFamily: 'Inter',
+              fontSize: 12,
+            ),
+            ),
             const SizedBox(height: 10),
             _buildTopButtons(),
             const SizedBox(height: 20),
@@ -87,7 +94,7 @@ class FisikDanMental extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/level kesehatan1.png'),
                               fit: BoxFit.cover,
                             ),
 
@@ -103,11 +110,11 @@ class FisikDanMental extends StatelessWidget {
                             children: [
                               Text("Level Kesehatan",
                                 style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: Header2Size(),
-                                    fontWeight: FontWeight.bold
-                                ),
-                              ),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Poppins-Bold',
+                                  color: Colors.black,
+                                ),),
                             ],
                           ),
                         )
@@ -122,7 +129,8 @@ class FisikDanMental extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Tes Kesehatan",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Tes Kesehatan",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
@@ -181,7 +189,7 @@ class FisikDanMental extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/gaya sehat1.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -197,7 +205,8 @@ class FisikDanMental extends StatelessWidget {
                               Text("Gaya Hidup Sehat",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontFamily: 'Poppins-Bold',
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -272,7 +281,7 @@ class FisikDanMental extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/gaya sehat1.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -289,7 +298,8 @@ class FisikDanMental extends StatelessWidget {
                               Text("Konsultasi Ahli",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins-Bold',
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -307,11 +317,13 @@ class FisikDanMental extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(), TextString: "Dokter Umum&\nSpesialis",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(),
+                                  TextString: "Dokter Umum &\nSpesialis",imagePath: 'assets/img/dokter.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(), TextString: "Psikolog &\nTerapis",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(),
+                                  TextString: "Psikolog &\nTerapis",imagePath: 'assets/img/psikolog terapis.png',Left: false),
                             )
                           ],
                         ),
@@ -322,11 +334,13 @@ class FisikDanMental extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(), TextString: "Ahli Gizi&\nHerbal",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(),
+                                  TextString: "Ahli Gizi &\nHerbal",imagePath: 'assets/img/ahli gizi dan herbal.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(), TextString: "Pelatih\nKebugaran",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CKesehatanKonsultasi(),
+                                  TextString: "Pelatih\nKebugaran",imagePath: 'assets/img/pelatih kebugaran.png',Left: false),
                             )
                           ],
                         ),
@@ -353,13 +367,31 @@ class FisikDanMental extends StatelessWidget {
         children: [
           Expanded(
               flex: 1,
-              child: iconImageButton('Buku Sehat', 'assets/img/Ilmu agama.png')),
+              child: iconImageButton('Buku Sehat',
+                  'assets/img/buku sehat.png',
+                  textStyle: TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'Roboto-Bold'
+                  )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Inspirasi Kesehatan', 'assets/img/Inspirasi Islam.png')),
+              child: iconImageButton('Inspirasi Kesehatan',
+                  'assets/img/inspirasi kesehatan1.png',
+                  textStyle: TextStyle(
+                    fontFamily: 'Roboto-Bold',
+                    fontSize: 14,
+                  )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Emosi &\nGejala Tubuh', 'assets/img/Syukur & Amal harian.png')),
+              child: iconImageButton('Emosi &\nGejala Tubuh',
+                  'assets/img/emosi & gejala tubuh.png',
+                  textStyle: TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'Roboto-Bold'
+                  )
+              )),
         ],
       ),
     );

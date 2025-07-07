@@ -30,7 +30,7 @@ class Sosial extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
-                      image: AssetImage('assets/img/spiritual--.png'),
+                      image: AssetImage('assets/img/hubungan sosial1.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -44,13 +44,13 @@ class Sosial extends StatelessWidget {
                   children: [
                     Text("Hubungan Sosial",
                       style: TextStyle(
-                          fontSize: TitlesSize(),
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins'
+                          fontFamily: 'Poppins-Bold'
                       ),),
-                    Text("Hadirlan Sepenuhnya, jalinlah \nhubungan yang bermakna",
+                    Text("Hadirlah Sepenuhnya, jalinlah \nhubungan yang bermakna",
                       style: TextStyle(
-                          fontSize: Header1Size(),
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Inter'
                       ),),
@@ -58,7 +58,13 @@ class Sosial extends StatelessWidget {
                 )
               ],
             ),
-            Text("Hubungan yang hangat, saling menghargai dan tahan uji, baik dengan keluarga, pasangan, sahabat, Rekan Kerja maupun orang baru.Di sinilah tempatnya belajar menjadi manusia yang lebih hangat dan terhubung"),
+            Text("Hubungan yang hangat, saling menghargai dan tahan uji, baik dengan keluarga, pasangan, sahabat, Rekan Kerja "
+                "maupun orang baru.Di sinilah tempatnya belajar menjadi manusia yang lebih hangat dan terhubung",
+              style: TextStyle(
+                fontFamily: 'Inter',
+                fontSize: 12
+              ),
+            ),
             const SizedBox(height: 10),
             _buildTopButtons(),
             const SizedBox(height: 20),
@@ -87,7 +93,7 @@ class Sosial extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/tes tantangan1.png'),
                               fit: BoxFit.cover,
                             ),
 
@@ -104,7 +110,8 @@ class Sosial extends StatelessWidget {
                               Text("Tes dan Tantangan",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontFamily: 'Poppins-Bold',
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -181,7 +188,7 @@ class Sosial extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/aksi nyata1.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -197,7 +204,8 @@ class Sosial extends StatelessWidget {
                               Text("Aksi Nyata",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins-Bold',
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -272,7 +280,7 @@ class Sosial extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/konselor komunikasi1.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -289,7 +297,8 @@ class Sosial extends StatelessWidget {
                               Text("Konsultasi Ahli",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins-Bold',
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -307,11 +316,13 @@ class Sosial extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nKeluarga",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString:
+                              "Psikolog\nKeluarga",imagePath: 'assets/img/Komunitas_.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Konselor\nKomunikasi",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString:
+                              "Konselor\nKomunikasi",imagePath: 'assets/img/konselor komunikasi1.png',Left: false),
                             )
                           ],
                         ),
@@ -322,11 +333,13 @@ class Sosial extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nParenting",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString:
+                              "Psikolog\nParenting",imagePath: 'assets/img/psikolog parenting1.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Sosiolog\nKomunitas",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Sosiolog\nKomunitas",imagePath: 'assets/img/sosiologi komunitas1.png',Left: false),
                             )
                           ],
                         ),
@@ -353,13 +366,33 @@ class Sosial extends StatelessWidget {
         children: [
           Expanded(
               flex: 1,
-              child: iconImageButton('Pola\nHubungan', 'assets/img/Ilmu agama.png')),
+              child: iconImageButton(
+                'Pola\nHubungan',
+                'assets/img/pola hubungan1.png',
+                textStyle: TextStyle(
+                  fontFamily: 'Roboto-Bold',
+                  fontSize: 14,
+                )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Komunikasi Empatik', 'assets/img/Inspirasi Islam.png')),
+              child: iconImageButton(
+                  'Komunikasi Empatik',
+                  'assets/img/komunikasi empatik1.png',
+                  textStyle: TextStyle(
+                    fontFamily: 'Roboto-Bold',
+                    fontSize: 14,
+                  )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Petuah\nLeluhur', 'assets/img/Syukur & Amal harian.png')),
+              child: iconImageButton('Petuah\nLeluhur',
+                  'assets/img/petuah leluhur1.png',
+                  textStyle: TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'Roboto-Bold'
+                  )
+              )),
         ],
       ),
     );

@@ -30,7 +30,7 @@ class Hunian extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
-                      image: AssetImage('assets/img/spiritual--.png'),
+                      image: AssetImage('assets/img/hunian11.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -44,13 +44,13 @@ class Hunian extends StatelessWidget {
                   children: [
                     Text("Hunian & Lingkungan",
                       style: TextStyle(
-                          fontSize: TitlesSize(),
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins'
+                          fontFamily: 'Poppins-Bold'
                       ),),
-                    Text("Hadirlan Sepenuhnya, jalinlah \nhubungan yang bermakna",
+                    Text("Wujudkan rumah untuk\nketenangan batin\ndan produktivitas yang optimal",
                       style: TextStyle(
-                          fontSize: Header1Size(),
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Inter'
                       ),),
@@ -58,7 +58,12 @@ class Hunian extends StatelessWidget {
                 )
               ],
             ),
-            Text("Hubungan yang hangat, saling menghargai dan tahan uji, baik dengan keluarga, pasangan, sahabat, Rekan Kerja maupun orang baru.Di sinilah tempatnya belajar menjadi manusia yang lebih hangat dan terhubung"),
+            Text("Ruang tinggal yang sehat, nyaman, dan selaras menciptakan ketenangan batin, meningkatkan produktivitas"
+                "dan memperkuat koneksi dengan bumi serta sesama.",
+            style: TextStyle(
+              fontFamily: 'Inter',
+              fontSize: 12,
+            ),),
             const SizedBox(height: 10),
             _buildTopButtons(),
             const SizedBox(height: 20),
@@ -87,7 +92,7 @@ class Hunian extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/tes & tantangan 4.png'),
                               fit: BoxFit.cover,
                             ),
 
@@ -101,10 +106,11 @@ class Hunian extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Tes dan Tantangan",
+                              Text("Tes & Tantangan",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontFamily: 'Poppins-Bold',
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -122,11 +128,13 @@ class Hunian extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Tes Kualitas Hubungan",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Skor Kesehatan\nHunian",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Level Hubunganku",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Level\nHarmonisasi",Left: false,),
                             )
                           ],
                         ),
@@ -137,11 +145,12 @@ class Hunian extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Panduan\nBijak",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Peta Hunian\nImpian",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Progress",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Progres",Left: false,),
                             )
                           ],
                         )
@@ -181,7 +190,7 @@ class Hunian extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/aksiii.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -197,7 +206,8 @@ class Hunian extends StatelessWidget {
                               Text("Aksi Nyata",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontFamily: 'Poppins-Bold',
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -215,11 +225,12 @@ class Hunian extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Jurnal\nHubungan",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Diagnosa\nRumah Sehat",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Komunikasi\nSehat",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Revolusi\nHijau",Left: false,),
                             )
                           ],
                         ),
@@ -230,11 +241,11 @@ class Hunian extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Koneksi\nPositif",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Sirkulitas\nSampah",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Aksi Kebaikan\nSosial",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Pemulihan\nDiri",Left: false,),
                             )
                           ],
                         )
@@ -272,7 +283,7 @@ class Hunian extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/mindset ruang energi.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -289,7 +300,8 @@ class Hunian extends StatelessWidget {
                               Text("Konsultasi Ahli",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontFamily: 'Poppins-Bold',
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -307,11 +319,15 @@ class Hunian extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nKeluarga",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Arsitek\nBiofilik",imagePath:
+                                  'assets/img/arsitek biofilik.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Konselor\nKomunikasi",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Desainer\nInterior",imagePath:
+                                  'assets/img/desainer interior.png',Left: false),
                             )
                           ],
                         ),
@@ -322,11 +338,15 @@ class Hunian extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nParenting",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Ahli\nEkologi",imagePath:
+                                  'assets/img/ahli ekologi.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Sosiolog\nKomunitas",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Psikolog\nLingkungan",imagePath:
+                                  'assets/img/mindset ruang energi.png',Left: false),
                             )
                           ],
                         ),
@@ -353,13 +373,30 @@ class Hunian extends StatelessWidget {
         children: [
           Expanded(
               flex: 1,
-              child: iconImageButton('Pola\nHubungan', 'assets/img/Ilmu agama.png')),
+              child: iconImageButton('Konsep\nHunian Sehat', 'assets/img/konsep sehat.png',
+                textStyle: TextStyle(
+                  fontSize: 13,
+                  fontFamily: 'Roboto-Bold'
+                )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Komunikasi Empatik', 'assets/img/Inspirasi Islam.png')),
+              child: iconImageButton('Mindset Ruang\nBerenergi',
+                  'assets/img/mindset ruang energi.png',
+                textStyle: TextStyle(
+                  fontFamily: 'Roboto-Bold',
+                  fontSize: 12
+                )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Petuah\nLeluhur', 'assets/img/Syukur & Amal harian.png')),
+              child: iconImageButton('Hidup Selaras\ndengan Alam',
+                  'assets/img/hidup selaras.png',
+              textStyle: TextStyle(
+                fontSize: 13,
+                fontFamily: 'Roboto-Bold'
+              )
+              )),
         ],
       ),
     );

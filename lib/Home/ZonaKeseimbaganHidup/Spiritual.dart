@@ -30,7 +30,7 @@ class Spiritual extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
-                      image: AssetImage('assets/img/spiritual--.png'),
+                      image: AssetImage('assets/img/spiritual_icon.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -44,13 +44,13 @@ class Spiritual extends StatelessWidget {
                   children: [
                     Text("Spiritual & Kontribusi",
                       style: TextStyle(
-                          fontSize: TitlesSize(),
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins'
+                          fontFamily: 'Poppins-Bold'
                       ),),
                     Text("Temukan Ketenangan lewat Ibadah,\ndzikir, syukur dan amal baik.",
                       style: TextStyle(
-                          fontSize: Header1Size(),
+                          fontSize: 15,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Inter'
                       ),),
@@ -58,7 +58,14 @@ class Spiritual extends StatelessWidget {
                 )
               ],
             ),
-            Text("Teruslah membangun hubungan yang hangat dengn Allah SWT,langkah demi langkah sesuai ritme hidupmu.\nJadilah versi terbaikmu yang ikhlas &amp; selalu terhubung dengan-Nya."),
+            Text
+              ("Teruslah membangun hubungan yang hangat dengn Allah SWT,langkah"
+                " demi langkah sesuai ritme hidupmu.\nJadilah versi terbaikmu yang ikhlas & selalu terhubung dengan-Nya.",
+              style: TextStyle(
+                fontFamily: 'Inter',
+                fontSize: 12,
+              ),
+            ),
             const SizedBox(height: 10),
             _buildTopButtons(),
             const SizedBox(height: 20),
@@ -87,7 +94,7 @@ class Spiritual extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/Ibadah.png'),
                               fit: BoxFit.cover,
                             ),
 
@@ -104,8 +111,9 @@ class Spiritual extends StatelessWidget {
                               Text("Ibadah & Aksi Kebaikan",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
-                                    fontWeight: FontWeight.bold
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins-Bold',
+                                    fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
@@ -181,7 +189,7 @@ class Spiritual extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/langkah.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -197,8 +205,9 @@ class Spiritual extends StatelessWidget {
                               Text("Langkah Spiritual & Kontribusi",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
-                                    fontWeight: FontWeight.bold
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins-Bold',
+                                    fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
@@ -272,7 +281,7 @@ class Spiritual extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/konsultan.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -289,7 +298,8 @@ class Spiritual extends StatelessWidget {
                               Text("Konsultasi Ahli",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins-Bold',
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -307,11 +317,13 @@ class Spiritual extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(), TextString: "Ustadz",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(),
+                                  TextString: "Ustadz",imagePath: 'assets/img/ustadz 2.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(), TextString: "Ustadzah",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(),
+                                  TextString: "Ustadzah",imagePath: 'assets/img/ustadzah 2.png',Left: false),
                             )
                           ],
                         ),
@@ -322,11 +334,13 @@ class Spiritual extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(), TextString: "Ahli Fikih\n& Ibadah",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(),
+                                  TextString: "Ahli Fikih\n& Ibadah",imagePath: 'assets/img/konsultan.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(), TextString: "Relawan\nSosial Islami",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSpiritualAndKontrbusiKonsultasi(),
+                                  TextString: "Relawan\nSosial Islami",imagePath: 'assets/img/relawan sosial islami.png',Left: false),
                             )
                           ],
                         ),
@@ -353,13 +367,31 @@ class Spiritual extends StatelessWidget {
         children: [
           Expanded(
               flex: 1,
-              child: iconImageButton('Ruang Ilmu', 'assets/img/Ilmu agama.png')),
+              child: iconImageButton('Ruang Ilmu',
+                  'assets/img/ruang ilmu1.png',
+                textStyle: TextStyle(
+                  fontFamily: 'Roboto-Bold',
+                  fontSize: 14,
+                )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Inspirasi Spiritual', 'assets/img/Inspirasi Islam.png')),
+              child: iconImageButton('Inspirasi Spiritual',
+                  'assets/img/inspi--.png',
+                  textStyle: TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'Roboto-Bold',
+                  )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Inspirasi Kebaikan', 'assets/img/Syukur & Amal harian.png')),
+              child: iconImageButton('Inspirasi Kebaikan',
+                  'assets/img/inspi.png',
+                  textStyle: TextStyle(
+                    fontFamily: 'Roboto-Bold',
+                    fontSize: 14,
+                  )
+              )),
         ],
       ),
     );

@@ -22,7 +22,9 @@ class CardbuttonGeneral extends StatelessWidget {
         ),
         child: Center(child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Text(TextString,style: TextStyle(fontFamily: "Roboto",fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+          child: Text(TextString,style: TextStyle(
+              fontFamily: "Roboto",
+              fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
         )),
       ),
     );

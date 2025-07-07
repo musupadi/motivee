@@ -441,7 +441,7 @@ class Home extends StatelessWidget {
                               onTap: () { toSpiritual(context, false); },
                               child: BalanceZoneCard(
                                 title: "Spiritual & Kontribusi",
-                                imagePath: "assets/img/spiritual--.png",
+                                imagePath: "assets/img/spiritual_icon.png",
                                 current: 7,
                                 total: 10,
                                 backgroundColor: CSpiritual(),
@@ -501,7 +501,7 @@ class Home extends StatelessWidget {
                               onTap: () { toSosial(context, false); },
                               child: BalanceZoneCard(
                                 title: "Hubungan Sosial",
-                                imagePath: "assets/img/komunitas--.png",
+                                imagePath: "assets/img/hubungan sosial1.png",
                                 current: 7,
                                 total: 10,
                                 backgroundColor: CHubunganSosial(),
@@ -559,7 +559,7 @@ class Home extends StatelessWidget {
                               onTap: () { toPengembanganDiri(context, false); },
                               child: BalanceZoneCard(
                                 title: "Pengembangan\nDiri & Kreativitas",
-                                imagePath: "assets/img/pengembangan2.png",
+                                imagePath: "assets/img/pengembangan diri11.png",
                                 current: 7,
                                 total: 10,
                                 backgroundColor: CPengembanganDiri(),

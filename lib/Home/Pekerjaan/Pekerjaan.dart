@@ -30,7 +30,7 @@ class Pekerjaan extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
-                      image: AssetImage('assets/img/spiritual--.png'),
+                      image: AssetImage('assets/img/pekerjaan.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -44,13 +44,13 @@ class Pekerjaan extends StatelessWidget {
                   children: [
                     Text("Pekerjaan & Karir",
                       style: TextStyle(
-                          fontSize: TitlesSize(),
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins'
+                          fontFamily: 'Poppins-Bold'
                       ),),
-                    Text("Hadirlan Sepenuhnya, jalinlah \nhubungan yang bermakna",
+                    Text("Langkah cerdas untuk\nmasa depan yang terukur",
                       style: TextStyle(
-                          fontSize: Header1Size(),
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Inter'
                       ),),
@@ -58,7 +58,17 @@ class Pekerjaan extends StatelessWidget {
                 )
               ],
             ),
-            Text("Hubungan yang hangat, saling menghargai dan tahan uji, baik dengan keluarga, pasangan, sahabat, Rekan Kerja maupun orang baru.Di sinilah tempatnya belajar menjadi manusia yang lebih hangat dan terhubung"),
+            Text("Kelola pekerjaan dan karir secara sadar, bukan sekedar cari penghasilan, tapi membangun masa depan yang utuh,"
+                " bertumbuh dan memberi arti.",
+              style: TextStyle(
+                  fontSize: 12,
+                  fontFamily: 'Inter'
+              ),),
+            Text("Dapatkan peluang, dukungan ahli dan progres yang bisa dilacak dengan jelas dan terarah.",
+              style: TextStyle(
+                  fontSize: 12,
+                  fontFamily: 'Inter'
+              ),),
             const SizedBox(height: 10),
             _buildTopButtons(),
             const SizedBox(height: 20),
@@ -87,7 +97,7 @@ class Pekerjaan extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/tes & tantangan 3.png'),
                               fit: BoxFit.cover,
                             ),
 
@@ -101,10 +111,11 @@ class Pekerjaan extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Tes dan Tantangan",
+                              Text("Tes & Tantangan",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontFamily: 'Poppins-Bold',
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -122,11 +133,12 @@ class Pekerjaan extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Tes Kualitas Hubungan",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Tes Potensi dan\nKarir",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Level Hubunganku",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Level Kerja &\nKarierku",Left: false,),
                             )
                           ],
                         ),
@@ -137,11 +149,11 @@ class Pekerjaan extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Panduan\nBijak",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Panduan",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Progress",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Lacak Progres",Left: false,),
                             )
                           ],
                         )
@@ -181,7 +193,7 @@ class Pekerjaan extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/langkah nyata11.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -194,10 +206,11 @@ class Pekerjaan extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Aksi Nyata",
+                              Text("Langkah Nyata",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontFamily: 'Poppins-Bold',
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -215,11 +228,11 @@ class Pekerjaan extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Jurnal\nHubungan",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Perencanaan\nKarir",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Komunikasi\nSehat",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Upgrade\nSkill",Left: false,),
                             )
                           ],
                         ),
@@ -230,11 +243,11 @@ class Pekerjaan extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Koneksi\nPositif",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Bursa\nKerja",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Aksi Kebaikan\nSosial",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Kantor\nOnlineku",Left: false,),
                             )
                           ],
                         )
@@ -272,7 +285,7 @@ class Pekerjaan extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/pola pikir bertumbuh.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -289,7 +302,8 @@ class Pekerjaan extends StatelessWidget {
                               Text("Konsultasi Ahli",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontFamily: 'Poppins-Bold',
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -307,11 +321,13 @@ class Pekerjaan extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nKeluarga",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString:
+                              "Konsultan\nKarir",imagePath: 'assets/img/langkah nyata11.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Konselor\nKomunikasi",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString:
+                              "Mentor\nProfesi",imagePath: 'assets/img/mentor profesi 11.png',Left: false),
                             )
                           ],
                         ),
@@ -322,11 +338,14 @@ class Pekerjaan extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nParenting",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Psikolog\nKerja",imagePath:
+                                  'assets/img/psikolog kerja11.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Sosiolog\nKomunitas",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString:
+                              "Trainer\nSkill",imagePath: 'assets/img/trainer skill.png',Left: false),
                             )
                           ],
                         ),
@@ -353,13 +372,33 @@ class Pekerjaan extends StatelessWidget {
         children: [
           Expanded(
               flex: 1,
-              child: iconImageButton('Pola\nHubungan', 'assets/img/Ilmu agama.png')),
+              child: iconImageButton('Kerja Zaman\nNow',
+                'assets/img/kerja zaman now.png',
+                textStyle: TextStyle(
+                  fontSize: 14,
+                  fontFamily: 'Roboto-Bold'
+                )
+              )
+          ),
           Expanded(
               flex: 1,
-              child: iconImageButton('Komunikasi Empatik', 'assets/img/Inspirasi Islam.png')),
+              child: iconImageButton('Pola Pikir\nBertumbuh',
+                'assets/img/pola pikir bertumbuh.png',
+                textStyle: TextStyle(
+                  fontFamily: 'Roboto-Bold',
+                  fontSize: 14
+                )
+              )
+          ),
           Expanded(
               flex: 1,
-              child: iconImageButton('Petuah\nLeluhur', 'assets/img/Syukur & Amal harian.png')),
+              child: iconImageButton('Visi Kerja\nKarirku',
+                'assets/img/visi kerja.png',
+                textStyle: TextStyle(
+                  fontSize: 14,
+                  fontFamily: 'Roboto-Bold'
+                )
+              )),
         ],
       ),
     );

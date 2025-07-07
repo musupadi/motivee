@@ -30,7 +30,7 @@ class Finansial extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
-                      image: AssetImage('assets/img/spiritual--.png'),
+                      image: AssetImage('assets/img/koin.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -44,13 +44,13 @@ class Finansial extends StatelessWidget {
                   children: [
                     Text("Finansial",
                       style: TextStyle(
-                          fontSize: TitlesSize(),
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins'
+                          fontFamily: 'Poppins-Bold'
                       ),),
-                    Text("Menata Keuangan menuju \nketenangan hidup",
+                    Text("Menata Keuangan menuju \nKetenangan Hidup",
                       style: TextStyle(
-                          fontSize: Header1Size(),
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Inter'
                       ),),
@@ -58,7 +58,13 @@ class Finansial extends StatelessWidget {
                 )
               ],
             ),
-            Text("Uang bukan segalanya, tapi cara kita mengelolanya menentukan arah hidup yang lebih bebas.\nZona ini membantumu menjadi bijak, merdeka, dan seimbang secara finansial"),
+            Text("Uang bukan segalanya, tapi cara kita mengelolanya menentukan arah hidup"
+                " yang lebih bebas.\nZona ini membantumu menjadi bijak, merdeka, dan seimbang secara finansial",
+              style: TextStyle(
+                fontFamily: 'Inter',
+                fontSize: 12
+              ),
+            ),
             const SizedBox(height: 10),
             _buildTopButtons(),
             const SizedBox(height: 20),
@@ -87,7 +93,7 @@ class Finansial extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/uji dan tantangan1.png'),
                               fit: BoxFit.cover,
                             ),
 
@@ -104,8 +110,9 @@ class Finansial extends StatelessWidget {
                               Text("Uji dan Tantangan",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
-                                    fontWeight: FontWeight.bold
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Poppins-Bold'
                                 ),
                               ),
                             ],
@@ -181,7 +188,7 @@ class Finansial extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/mindset finansial1.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -194,10 +201,11 @@ class Finansial extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Aksi Finansial",
+                              Text("\Aksi Finansial",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins-Bold',
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -272,7 +280,7 @@ class Finansial extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/aksi finansial1.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -289,7 +297,8 @@ class Finansial extends StatelessWidget {
                               Text("Konsultasi Ahli",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins-Bold',
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -307,11 +316,13 @@ class Finansial extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Perencana\nKeuangan",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString:
+                              "Perencana\nKeuangan",imagePath: 'assets/img/perencana keuangan1.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Konsultan\nBisnis UMKM",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString:
+                              "Konsultan\nBisnis UMKM",imagePath: 'assets/img/konsultan bisnis1.png',Left: false),
                             )
                           ],
                         ),
@@ -322,11 +333,13 @@ class Finansial extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Konsultan\nPajak",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString:
+                              "Konsultan\nPajak",imagePath: 'assets/img/konsultan pajak.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString: "Konselor Emosional Finansial",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CIbadahDanAksiButton(), TextString:
+                              "Konselor Emosional Finansial",imagePath: 'assets/img/konselor finansial1.png',Left: false),
                             )
                           ],
                         ),
@@ -353,13 +366,34 @@ class Finansial extends StatelessWidget {
         children: [
           Expanded(
               flex: 1,
-              child: iconImageButton('Ilmu\nKeuangan', 'assets/img/Ilmu agama.png')),
+              child: iconImageButton(
+                  'Ilmu\nKeuangan',
+                  'assets/img/ilmu keuangan1.png',
+                textStyle: TextStyle(
+                  fontFamily: 'Roboto-Bold',
+                  fontSize: 14,
+                )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Mindset\nFinansial', 'assets/img/Inspirasi Islam.png')),
+              child: iconImageButton(
+                  'Mindset\nFinansial',
+                  'assets/img/aksi finansial1.png',
+                textStyle: TextStyle(
+                  fontSize: 14,
+                  fontFamily: 'Roboto-Bold'
+                )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Tips\nKeuangan', 'assets/img/Syukur & Amal harian.png')),
+              child: iconImageButton(
+                  'Tips\nKeuangan',
+                  'assets/img/tips keuangan1.png',
+                textStyle: TextStyle(
+                  fontFamily: 'Roboto-Bold',
+                  fontSize: 14,
+                )
+              )),
         ],
       ),
     );

@@ -30,7 +30,7 @@ class PengembanganDiri extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
-                      image: AssetImage('assets/img/spiritual--.png'),
+                      image: AssetImage('assets/img/pengembangan diri11.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -44,13 +44,13 @@ class PengembanganDiri extends StatelessWidget {
                   children: [
                     Text("Pengembangan Diri &\nKreativitas",
                       style: TextStyle(
-                          fontSize: TitlesSize(),
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins'
+                          fontFamily: 'Poppins-Bold'
                       ),),
-                    Text("Hadirlan Sepenuhnya, jalinlah \nhubungan yang bermakna",
+                    Text("Buka Hati, Hadirlah Sepenuhnya",
                       style: TextStyle(
-                          fontSize: Header1Size(),
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Inter'
                       ),),
@@ -58,7 +58,13 @@ class PengembanganDiri extends StatelessWidget {
                 )
               ],
             ),
-            Text("Hubungan yang hangat, saling menghargai dan tahan uji, baik dengan keluarga, pasangan, sahabat, Rekan Kerja maupun orang baru.Di sinilah tempatnya belajar menjadi manusia yang lebih hangat dan terhubung"),
+            Text("Memberi wawasan dan pola pikir yang mencerahkan agar pertumbuhan diri berakar"
+                "dari kesadaran dan tujuan yang tepat. Ilmu bukan beban, "
+                "ia adalah cahaya yang menuntun arah.",
+              style: TextStyle(
+                  fontSize: 12,
+                  fontFamily: 'Inter'
+              ),),
             const SizedBox(height: 10),
             _buildTopButtons(),
             const SizedBox(height: 20),
@@ -87,7 +93,7 @@ class PengembanganDiri extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/uji potensi111.png'),
                               fit: BoxFit.cover,
                             ),
 
@@ -101,10 +107,11 @@ class PengembanganDiri extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Tes dan Tantangan",
+                              Text("Uji Potensi & Kenali Diri",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontFamily: 'Poppins-Bold',
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -122,11 +129,13 @@ class PengembanganDiri extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Tes Kualitas Hubungan",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Tes Potensi",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Level Hubunganku",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Level Perkembangan",Left: false,),
                             )
                           ],
                         ),
@@ -137,11 +146,13 @@ class PengembanganDiri extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Panduan\nBijak",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Panduan Bertumbuh",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Progress",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Pelacak Progres",Left: false,),
                             )
                           ],
                         )
@@ -181,7 +192,7 @@ class PengembanganDiri extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/bertumbuh lewat langkah.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -194,10 +205,11 @@ class PengembanganDiri extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Aksi Nyata",
+                              Text("Bertumbuh Lewat Langkah",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontFamily: 'Poppins-Bold',
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -215,11 +227,13 @@ class PengembanganDiri extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Jurnal\nHubungan",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Rencana Aksi\nPribadi",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Komunikasi\nSehat",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Kebiasaan\nBaik",Left: false,),
                             )
                           ],
                         ),
@@ -230,11 +244,13 @@ class PengembanganDiri extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Koneksi\nPositif",Left: true,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Tantangan\nHarian",Left: true,),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(), TextString: "Aksi Kebaikan\nSosial",Left: false,),
+                              child: CardbuttonGeneral(ColorsData: CIbadahDanAksiButton(),
+                                TextString: "Ruang\nKreatif",Left: false,),
                             )
                           ],
                         )
@@ -272,7 +288,7 @@ class PengembanganDiri extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/pola pikir positif1.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -289,7 +305,8 @@ class PengembanganDiri extends StatelessWidget {
                               Text("Konsultasi Ahli",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontFamily: 'Poppins-Bold',
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -307,11 +324,13 @@ class PengembanganDiri extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nKeluarga",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Coach Pengembangan\nDiri",imagePath: 'assets/img/coach peng diri.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Konselor\nKomunikasi",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Mentor Kreativitas\n& Ekspresi",imagePath: 'assets/img/mentor kreativitas.png',Left: false),
                             )
                           ],
                         ),
@@ -322,11 +341,15 @@ class PengembanganDiri extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nParenting",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Coach Public\nSpeaking &\nConfidence",imagePath:
+                                  'assets/img/coach public speaking.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Sosiolog\nKomunitas",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Konsultan\nKarir & Skill",imagePath:
+                                  'assets/img/konsultan karir111.png',Left: false),
                             )
                           ],
                         ),
@@ -347,19 +370,37 @@ class PengembanganDiri extends StatelessWidget {
   }
   Widget _buildTopButtons() {
     return Container(
-      margin: EdgeInsets.only(top: 10),
+      margin: EdgeInsets.only(top: 20, bottom: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Expanded(
               flex: 1,
-              child: iconImageButton('Pola\nHubungan', 'assets/img/Ilmu agama.png')),
+              child: iconImageButton('Kumpulan\nWawasan',
+                  'assets/img/kumpulan wawasan1.png',
+                textStyle: TextStyle(
+                  fontSize: 14,
+                  fontFamily: 'Roboto-Bold'
+                )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Komunikasi Empatik', 'assets/img/Inspirasi Islam.png')),
+              child: iconImageButton('Pola Pikir\nPositif',
+                  'assets/img/pola pikir positif1.png',
+                textStyle: TextStyle(
+                  fontSize: 14,
+                  fontFamily: 'Roboto-Bold'
+                )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Petuah\nLeluhur', 'assets/img/Syukur & Amal harian.png')),
+              child: iconImageButton('Mini\nAkademi',
+                  'assets/img/mini akademiku.png',
+                textStyle: TextStyle(
+                  fontFamily: 'Roboto-Bold',
+                  fontSize: 14
+                )
+              )),
         ],
       ),
     );

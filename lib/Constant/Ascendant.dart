@@ -5,25 +5,25 @@ import 'ArrowPainter.dart';
 import 'Color.dart';
 import 'Size.dart';
 
-Widget iconImageButton(String label, String imagePath) {
+Widget iconImageButton(String label, String imagePath, {TextStyle? textStyle}) { // 1. TAMBAHKAN {TextStyle? textStyle}
   return Stack(
     children: [
       Padding(
-        padding: const EdgeInsets.only(left: 8,right: 8),
+        padding: const EdgeInsets.only(left: 8, right: 8),
         child: Container(
           margin: EdgeInsets.only(top: 10),
-          height: 80,
+          height: 85,
           width: double.maxFinite,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: CSpiritualAndKontribusiHeader(),
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.brown.shade200,
-                    offset: Offset(0, 0),
-                    blurRadius: 0.1
-                )
-              ]
+            borderRadius: BorderRadius.circular(20),
+            color: CSpiritualAndKontribusiHeader(),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.brown.shade200,
+                offset: Offset(0, 0),
+                blurRadius: 0.1,
+              )
+            ],
           ),
           child: Padding(
             padding: const EdgeInsets.all(5.0),
@@ -34,7 +34,7 @@ Widget iconImageButton(String label, String imagePath) {
                 ),
                 Text(
                   label,
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                  style: textStyle, // 2. GANTI DENGAN textStyle dari parameter
                   textAlign: TextAlign.center,
                 ),
               ],
@@ -49,13 +49,11 @@ Widget iconImageButton(String label, String imagePath) {
           height: 40,
           child: Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                    image: AssetImage(
-                        imagePath
-                    ),
-                    fit: BoxFit.cover
-                )
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                image: AssetImage(imagePath),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),
@@ -105,7 +103,7 @@ Widget menujuKomunitasButton(BuildContext context) {
                   height: 30,
                   decoration: BoxDecoration(
                     image: const DecorationImage(
-                      image: AssetImage('assets/img/Konsultasi ahli.png'),
+                      image: AssetImage('assets/img/Komunitas_.png'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.circular(30),

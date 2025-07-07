@@ -30,7 +30,7 @@ class Rekreasi extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
-                      image: AssetImage('assets/img/spiritual--.png'),
+                      image: AssetImage('assets/img/rekreasi2i.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -44,13 +44,13 @@ class Rekreasi extends StatelessWidget {
                   children: [
                     Text("Rekreasi & Relaksasi",
                       style: TextStyle(
-                          fontSize: TitlesSize(),
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins'
+                          fontFamily: 'Poppins-Bold'
                       ),),
-                    Text("Hadirlan Sepenuhnya, jalinlah \nhubungan yang bermakna",
+                    Text("Menikmati hidup, menyegarkan\ndiri dan mengisi ulang energi.",
                       style: TextStyle(
-                          fontSize: Header1Size(),
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Inter'
                       ),),
@@ -58,7 +58,13 @@ class Rekreasi extends StatelessWidget {
                 )
               ],
             ),
-            Text("Hubungan yang hangat, saling menghargai dan tahan uji, baik dengan keluarga, pasangan, sahabat, Rekan Kerja maupun orang baru.Di sinilah tempatnya belajar menjadi manusia yang lebih hangat dan terhubung"),
+            Text("Membantu pengguna menjaga kesehatan mental lewat aktivitas rekreatif,"
+                "relaksasi berkualitas, dan momen sederhana yang menyegarkan hati, pikiran,"
+                " serta tubuh untuk menemukan kembali kebahagiaan sejati.",
+            style: TextStyle(
+              fontFamily: 'Inter',
+              fontSize: 12,
+            ),),
             const SizedBox(height: 10),
             _buildTopButtons(),
             const SizedBox(height: 20),
@@ -87,7 +93,7 @@ class Rekreasi extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/tes kebutuhan.png'),
                               fit: BoxFit.cover,
                             ),
 
@@ -101,11 +107,12 @@ class Rekreasi extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Tes dan Tantangan",
+                              Text("Tes Kebutuhan",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
-                                    fontWeight: FontWeight.bold
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  fontFamily: 'Poppins-Bold'
                                 ),
                               ),
                             ],
@@ -181,7 +188,7 @@ class Rekreasi extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/tindakan nyata.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -194,10 +201,11 @@ class Rekreasi extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Aksi Nyata",
+                              Text("Tindakan Nyata",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins-Bold',
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -272,7 +280,7 @@ class Rekreasi extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
-                              image: AssetImage('assets/img/spiritual--.png'),
+                              image: AssetImage('assets/img/mindset seimbang.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -289,7 +297,8 @@ class Rekreasi extends StatelessWidget {
                               Text("Konsultasi Ahli",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: Header2Size(),
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins-Bold',
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -352,14 +361,34 @@ class Rekreasi extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Expanded(
-              flex: 1,
-              child: iconImageButton('Pola\nHubungan', 'assets/img/Ilmu agama.png')),
+            flex: 1,
+            child: iconImageButton(
+              'Edu\nRekreasi',
+              'assets/img/edu rekreasi.png', // ✅ Path lengkap & tanpa spasi
+              textStyle: TextStyle(
+                fontFamily: 'Roboto-bold',
+                fontSize: 14,
+              ),
+            ),
+          ),
           Expanded(
               flex: 1,
-              child: iconImageButton('Komunikasi Empatik', 'assets/img/Inspirasi Islam.png')),
+              child: iconImageButton('Mindset\nSeimbang',
+                  'assets/img/mindset seimbang.png',
+                textStyle: TextStyle(
+                  fontFamily: 'Roboto-Bold',
+                  fontSize: 14
+                )
+              )),
           Expanded(
               flex: 1,
-              child: iconImageButton('Petuah\nLeluhur', 'assets/img/Syukur & Amal harian.png')),
+              child: iconImageButton('Relaksasi\nBijak',
+                  'assets/img/relaksasi bijak.png',
+                textStyle: TextStyle(
+                  fontSize: 14,
+                  fontFamily: 'Roboto-Bold'
+                )
+              )),
         ],
       ),
     );
