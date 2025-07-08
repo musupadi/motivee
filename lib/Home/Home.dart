@@ -795,42 +795,7 @@ class Home extends StatelessWidget {
               ),
             ),
 
-            // Padding(
-            //   padding: const EdgeInsets.only(left: 8,right: 8),
-            //   child: Container(
-            //     padding: const EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 10),
-            //     decoration: BoxDecoration(
-            //       color: CBackground2(),
-            //       borderRadius: BorderRadius.circular(20),
-            //     ),
-            //     child: Column(
-            //       children: [
-            //         Row(
-            //           children: [
-            //             EconomyCard(
-            //               title: "Dompetku",
-            //               imagePath: "assets/img/dompetku.png",
-            //               Left: true,
-            //             ),
-            //             EconomyCard(
-            //               title: "Lapak MotiVee",
-            //               imagePath: "assets/img/lapak.png",
-            //               Left: false,
-            //             ),
-            //
-            //           ],
-            //         ),
-            //         Row(
-            //           children: [
-            //
-            //           ],
-            //         )
-            //       ],
-            //     ),
-            //
-            //   ),
-            // ),
-            // const SizedBox(height: 12),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SponsorCard(imagePath: "assets/img/Klinik Aliyya.png"),
@@ -841,15 +806,21 @@ class Home extends StatelessWidget {
             //   child: ZonaPotensiSection(),
             // ),
             const SizedBox(height: 12),
-            // Padding(
-            //   padding: const EdgeInsets.all(8.0),
-            //   child: PremiumUpgradeButton(),
-            // ),
-            // const SizedBox(height: 12),
-            // Padding(
-            //   padding: const EdgeInsets.only(left: 8,right: 8),
-            //   child: ZonaPublikSection(),
-            // ),
+            Padding(
+              padding: const EdgeInsets.only(left: 8,right: 8),
+              child: ZonaPotensiSection(),
+            ),
+            const SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PremiumUpgradeButton(),
+            ),
+            const SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.only(left: 8,right: 8),
+              child: ZonaPublikSection(),
+            ),
+            const SizedBox(height: 12),
             const SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.only(bottom: 16),
