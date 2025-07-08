@@ -6,6 +6,7 @@ import 'package:motivee/Constant/Route.dart'; // Ensure toSpiritual is defined h
 
 import '../Card/BalanceZoneCard.dart';
 import '../Card/EconomyCard.dart';
+import '../Card/PotensiCard.dart';
 import '../Constant/Color.dart';
 import '../Constant/PeakCarousel.dart';
 import '../Constant/Size.dart';
@@ -808,7 +809,78 @@ class Home extends StatelessWidget {
             const SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.only(left: 8,right: 8),
-              child: ZonaPotensiSection(),
+              child: Text(
+                "ZONA POTENSI",
+                style: TextStyle(
+                    color: CBlack(),
+                    fontWeight: FontWeight.bold,
+                    fontSize: TitleSize()
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                color: CBackground2(),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 4,bottom: 4,top: 0,left: 8),
+                          child: PotensiCard(
+                            title: "Tes & Tantangan",
+                            imagePath: "assets/img/multi tes.png",
+                            Left: true,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 4,bottom: 4,top: 0,right: 8),
+                          child:   PotensiCard(
+                            title: "VEE Akademi",
+                            imagePath: "assets/img/vee akademi2.png",
+                            Left: false,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8,bottom: 8,top: 4,right: 4),
+                          child: PotensiCard(
+                            title: "Video & Artikel",
+                            imagePath: "assets/img/artikel.png",
+                            Left: true,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 4,bottom: 8,top: 4,right: 8),
+                          child:  PotensiCard(
+                            title: "Berita",
+                            imagePath: "assets/img/berita.png",
+                            Left: false,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 12),
             Padding(
@@ -1542,110 +1614,6 @@ class ZonaPublikSection extends StatelessWidget {
                 title: item["title"]!,
                 imagePath: item["img"]!,
                 iconOnLeft: index % 2 == 0,
-              );
-            }),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class PotensiCard extends StatelessWidget {
-  final String title;
-  final String imagePath;
-  final bool iconOnRight;
-
-  const PotensiCard({
-    super.key,
-    required this.title,
-    required this.imagePath,
-    this.iconOnRight = false,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final image = Container(
-      width: 40,
-      height: 40,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        image: DecorationImage(
-          image: AssetImage(imagePath),
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
-
-    final text = Expanded(
-      child: Text(
-        title,
-        style: const TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 13,
-        ),
-        textAlign: iconOnRight ? TextAlign.right : TextAlign.left,
-      ),
-    );
-
-    return Container(
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: const Color.fromRGBO(205,214, 51, 1),
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Row(
-        children: iconOnRight ? [text, const SizedBox(width: 8), image] : [image, const SizedBox(width: 8), text],
-      ),
-    );
-  }
-}
-class ZonaPotensiSection extends StatelessWidget {
-  const ZonaPotensiSection({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final items = [
-      {"title": "Tes & Tantangan", "img": "assets/img/multi tes.png"},
-      {"title": "VEE Akademi", "img": "assets/img/vee akademi2.png"},
-      {"title": "Video & Artikel", "img": "assets/img/artikel.png"},
-      {"title": "Berita", "img": "assets/img/berita.png"},
-    ];
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(
-            "ZONA POTENSI",
-            style: TextStyle(
-              color: CBlack(),
-              fontWeight: FontWeight.bold,
-              fontSize: TitleSize(),
-            ),
-          ),
-        ),
-        const SizedBox(height: 12),
-        Container(
-          padding: const EdgeInsets.all(12),
-          decoration: BoxDecoration(
-            color: CBackground2(),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: GridView.count(
-            shrinkWrap: true,
-            crossAxisCount: 2,
-            mainAxisSpacing: 12,
-            crossAxisSpacing: 12,
-            childAspectRatio: 1.9,
-            physics: const NeverScrollableScrollPhysics(),
-            children: List.generate(items.length, (index) {
-              final item = items[index];
-              return PotensiCard(
-                title: item["title"]!,
-                imagePath: item["img"]!,
-                iconOnRight: index % 2 == 1,
               );
             }),
           ),
