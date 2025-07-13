@@ -20,7 +20,7 @@ Color CBackground(){
 }
 
 Color CBackground2(){
-  return const Color.fromRGBO(0, 173, 181, 1.0);
+  return const Color(0xFFFFDBBB);
 }
 
 Color CBackgroundChat(){
