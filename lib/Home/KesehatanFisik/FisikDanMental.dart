@@ -42,7 +42,7 @@ class FisikDanMental extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Kesehatan Fisik & Mental",
+                    Text("Kesehatan\nFisik & Mental",
                       style: TextStyle(
                           fontSize: 19,
                           fontWeight: FontWeight.bold,

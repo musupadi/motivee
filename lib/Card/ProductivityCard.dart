@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class ProductivityCard extends StatelessWidget {
   final String title;
@@ -12,20 +13,21 @@ class ProductivityCard extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: EdgeInsets.only(left: Left == true ? 35 : 10 ,right: Left == true ? 10 : 35,top: 5,bottom: 5),
+          padding: EdgeInsets.only(left: Left == true ? 10 : 10 ,right: Left == true ? 10 : 10,top: 5,bottom: 5),
           child: Container(
             height: 70,
             decoration: BoxDecoration(
-              color: const Color(0xFFFFD54F), // Added const
+              color: const Color(0xFFF2D1BE), // Added const
               borderRadius: BorderRadius.circular(16),
             ),
             child: Center(
               child: Text(
                 title,
                 style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xFF1A237E),
+                  fontSize: 14,
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
                 ),
               ),
             )

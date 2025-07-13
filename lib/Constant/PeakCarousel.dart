@@ -14,10 +14,11 @@ class _PeekCarouselState extends State<PeekCarousel> {
   );
 
   final List<String> imagePaths = [
-    'assets/img/slider A.png',
-    'assets/img/Slider news 1.png',
-    'assets/img/slider news2.png',
-    'assets/img/slide news3.png',
+    'assets/img/Slider1_.png',
+    'assets/img/Slider2_.png',
+    'assets/img/Slider3_.png',
+    'assets/img/Slider4_.png',
+    'assets/img/Slider5a.png ',
   ];
 
   @override
@@ -45,7 +46,7 @@ class _PeekCarouselState extends State<PeekCarousel> {
           controller: _controller,
           count: imagePaths.length,
           effect: const ExpandingDotsEffect(
-            activeDotColor: Color.fromRGBO(201, 100, 73, 1.0),
+            activeDotColor: Color(0xFF00ADB5),
             dotColor: Colors.grey,
             dotHeight: 8,
             dotWidth: 8,//push

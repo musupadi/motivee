@@ -28,8 +28,8 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
-          color: CBackground()
-      ),
+            color: CBackground()
+        ),
         child: ListView(
           children: [
             Row(
@@ -40,8 +40,8 @@ class Home extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: CBackground2()
+                          borderRadius: BorderRadius.circular(20),
+                          color: CBackground2()
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -49,7 +49,6 @@ class Home extends StatelessWidget {
                           "Tantangan",
                           style: TextStyle(
                             fontFamily: 'Inter',
-                            fontWeight: FontWeight.bold,
                             fontSize: 10,
                             color: Colors.black,
                           ),
@@ -73,7 +72,6 @@ class Home extends StatelessWidget {
                           "Saldo",
                           style: TextStyle(
                             fontFamily: 'Inter',
-                            fontWeight: FontWeight.bold,
                             fontSize: 10,
                             color: Colors.black,
                           ),
@@ -97,7 +95,6 @@ class Home extends StatelessWidget {
                           "Kantorku",
                           style: TextStyle(
                             fontFamily: 'Inter',
-                            fontWeight: FontWeight.bold,
                             fontSize: 10,
                             color: Colors.black,
                           ),
@@ -122,7 +119,6 @@ class Home extends StatelessWidget {
                           "+",
                           style: TextStyle(
                             fontFamily: 'Inter',
-                            fontWeight: FontWeight.bold,
                             fontSize: 10,
                             color: Colors.black,
                           ),
@@ -161,7 +157,7 @@ class Home extends StatelessWidget {
                                 ),
                                 image: DecorationImage(
                                     image: AssetImage("assets/img/BotAppVee.png"),
-                                  fit: BoxFit.fill
+                                    fit: BoxFit.fill
                                 )
                             ),
                           ),
@@ -212,13 +208,13 @@ class Home extends StatelessWidget {
                                       "Vee ",
                                       textAlign: TextAlign.start,
                                       style: TextStyle(
-                                        fontFamily: 'Roboto',
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold
+                                          fontFamily: 'Roboto',
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold
                                       ),
                                     ),
                                     Text(
-                                        "siap menemani dan membantu \nkapanpun kamu butuh ✋ ",
+                                      "siap menemani dan membantu \nkapanpun kamu butuh ✋ ",
                                       textAlign: TextAlign.start,
                                       style: TextStyle(
                                         fontFamily: 'Roboto',
@@ -247,7 +243,7 @@ class Home extends StatelessWidget {
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.only(right: 10),
-                      height: 167,
+                      height: 163,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Color(0xFF00CCCC),
@@ -264,7 +260,7 @@ class Home extends StatelessWidget {
                                   height: 44,
                                   width: 41,
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(16),
+                                      borderRadius: BorderRadius.circular(16),
                                       image: DecorationImage(
                                           image: AssetImage("assets/img/pengembangan2.png"),
                                           fit: BoxFit.fill
@@ -322,7 +318,7 @@ class Home extends StatelessWidget {
 
 
 
-                            ),
+                          ),
 
 
 
@@ -337,15 +333,15 @@ class Home extends StatelessWidget {
                       margin: EdgeInsets.only(left: 6, right: 10),
                       height: 160,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Color(0xFF00CCCC),
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color(0xFF00CCCC),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 10, right: 15, top: 12),
+                            padding: const EdgeInsets.only(left: 14, right: 15, top: 10, bottom: 2),
                             child: Row(
                               children: [
                                 Container(
@@ -375,7 +371,7 @@ class Home extends StatelessWidget {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 18,right: 2,top: 10),
+                              padding: const EdgeInsets.only(left: 18,right: 2,top: 19),
                               child: Text(
                                 "Butuh dorongan semangat yang\nlebih kuat ?",
                                 style: TextStyle(
@@ -387,25 +383,25 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(bottom: 8, right: 10, left: 30, top: 2),
-                            child: Container(
-                              height: 25,
-                              width: 120,
+                              padding: const EdgeInsets.only(bottom: 8, right: 10, left: 30, top: 2),
+                              child: Container(
+                                height: 25,
+                                width: 120,
 
-                              decoration: BoxDecoration(
-                                  color: Color.fromRGBO(249, 77, 0, 1.0),
-                                  borderRadius: BorderRadius.circular(10)
-                              ),
-                              child: Center(child: Text(
-                                "BOOST SEKARANG",
-                                style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 11,
-                                  color: Colors.white,
+                                decoration: BoxDecoration(
+                                    color: Color.fromRGBO(249, 77, 0, 1.0),
+                                    borderRadius: BorderRadius.circular(10)
                                 ),
-                              ),),
-                            )
+                                child: Center(child: Text(
+                                  "BOOST SEKARANG",
+                                  style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 11,
+                                    color: Colors.white,
+                                  ),
+                                ),),
+                              )
                           )
                         ],
                       ),
@@ -423,8 +419,8 @@ class Home extends StatelessWidget {
               child: Container(
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: CBackground3(),
-                    borderRadius: BorderRadius.circular(20),
+                      color: CBackground3(),
+                      borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.brown.shade200,
@@ -469,7 +465,7 @@ class Home extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: InkWell(
-                              onTap: () { toKesehatan(context, false); },
+                              // onTap: () { toKesehatan(context, false); },
                               child: BalanceZoneCard(
                                 title: "Kesehatan Fisik & Mental",
                                 imagePath: "assets/img/kesehatan fisik.png",
@@ -512,7 +508,7 @@ class Home extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: InkWell(
-                              onTap: () { toSosial(context, false); },
+                               onTap: () { toSosial(context, false); },
                               child: BalanceZoneCard(
                                 title: "Hubungan Sosial",
                                 imagePath: "assets/img/hubungan sosial1.png",
@@ -529,7 +525,7 @@ class Home extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: InkWell(
-                              onTap: () { toFinansial(context, false); },
+                              // onTap: () { toFinansial(context, false); },
                               child: BalanceZoneCard(
                                 title: "Finansial",
                                 imagePath: "assets/img/koin.png",
@@ -587,7 +583,7 @@ class Home extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: InkWell(
-                              onTap: () { toPekerjaan(context, false); },
+                              // onTap: () { toPekerjaan(context, false); },
                               child: BalanceZoneCard(
                                 title: "Pekerjaan & Karir",
                                 imagePath: "assets/img/pekerjaan2.png",
@@ -672,140 +668,134 @@ class Home extends StatelessWidget {
 
 
 
-            const SizedBox(height: 12),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 8, top: 8, bottom: 20),
-              child: Text(
-                "ZONA PRODUKTIVITAS",
-                style: TextStyle(
-                    color: CBlack(),
-                    fontWeight: FontWeight.w900,
-                    fontFamily: 'Poppins-Bold',
-                    fontSize: 18,
+            const SizedBox(height: 30),
+            Padding(padding: const EdgeInsets.only(left: 8, right: 8),
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: CBackground3(),
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.brown.shade200,
+                          offset: Offset(0, 0),
+                          blurRadius: 0.1
+                      )
+                    ]
                 ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.all(10),
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                  color: CBackground(),
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.brown.shade200,
-                        offset: Offset(0, 0),
-                        blurRadius: 0.1
-                    )
-                  ]
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: ProductivityCard(title: 'Rencana', imagePath: 'assets/img/rencana2.png',Left: true,),
+                child: Column(
+                  children: [
+                    Padding(padding: const EdgeInsets.only(right: 90, top:8, bottom: 12, left: 1),
+                      child: Text(
+                        "ZONA PRODUKTIVITAS",
+                        style: TextStyle(
+                          color: CBlack(),
+                          fontFamily: 'Poppins-Bold',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17,
+                        ),
                       ),
-                      Expanded(
-                        flex: 1,
-                        child: ProductivityCard(title: 'Agenda', imagePath: 'assets/img/agenda.png',Left: false,),
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: ProductivityCard(title: 'Aktivitas', imagePath: 'assets/img/aktivitas.png',Left: true,),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: ProductivityCard(title: 'Catatan', imagePath: 'assets/img/catatan2.png',Left: false,),
-                      )
-                    ],
-                  ),
-                ],
+                    ),
+                    Column(
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: ProductivityCard(title: '  Rencana', imagePath: 'assets/img/rencana2.png',Left: true,),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: ProductivityCard(title: 'Agenda', imagePath: 'assets/img/agenda.png', Left: false),
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: ProductivityCard(title: '  Aktivitas', imagePath: 'assets/img/aktivitas.png',Left: true,),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: ProductivityCard(title: 'Catatan', imagePath: 'assets/img/catatan2.png',Left: false,),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ], // This was missing a closing parenthesis and comma, assuming it's inside a Column
+                ),
               ),
             ),
 
 
-            const SizedBox(height: 12),
-            Padding(
-              padding: const EdgeInsets.only(left: 8,right: 8),
-              child: Text(
-                "ZONA EKONOMI",
-                style: TextStyle(
-                    color: CBlack(),
-                    fontWeight: FontWeight.bold,
-                    fontSize: TitleSize()
+
+
+
+
+            const SizedBox(height: 30),
+            Padding(padding: const EdgeInsets.only(left: 8, right: 8),
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: CBackground3(),
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.brown.shade200,
+                          offset: Offset(0, 0),
+                          blurRadius: 0.1
+                      )
+                    ]
+                ),
+                child: Column(
+                  children: [
+                    Padding(padding: const EdgeInsets.only(right: 140, top:8, bottom: 12, left: 1),
+                      child: Text(
+                        "ZONA EKONOMI",
+                        style: TextStyle(
+                          color: CBlack(),
+                          fontFamily: 'Poppins-Bold',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17,
+                        ),
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: Economycard(title: '   Dompetku', imagePath: 'assets/img/dompetku.png',Left: true,),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Economycard(title: '  Lapak\nMotivee', imagePath: 'assets/img/lapak.png', Left: false),
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: Economycard(title: '  Cuan dari\n    Rumah',
+                                imagePath: 'assets/img/cuan.png',Left: true,),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Economycard(title: ' Pojok\nUMKM', imagePath: 'assets/img/pojok umkm2.png',Left: false,),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ], // This was missing a closing parenthesis and comma, assuming it's inside a Column
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.all(10),
-              padding: const EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                color: CBackground2(),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 4,bottom: 4,top: 0,left: 8),
-                          child: EconomyCard(
-                            title: "Dompetku",
-                            imagePath: "assets/img/dompetku.png",
-                            Left: true,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 4,bottom: 4,top: 0,right: 8),
-                          child:   EconomyCard(
-                            title: "Lapak MotiVee",
-                            imagePath: "assets/img/lapak.png",
-                            Left: false,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8,bottom: 8,top: 4,right: 4),
-                          child: EconomyCard(
-                            title: "Cuan Dari Rumah",
-                            imagePath: "assets/img/cuan.png",
-                            Left: true,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 4,bottom: 8,top: 4,right: 8),
-                          child:  EconomyCard(
-                            title: "Pojok UMKM",
-                            imagePath: "assets/img/pojok umkm2.png",
-                            Left: false,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
+
 
 
             Padding(
@@ -817,82 +807,68 @@ class Home extends StatelessWidget {
             //   padding: const EdgeInsets.only(left: 8,right: 8),
             //   child: ZonaPotensiSection(),
             // ),
-            const SizedBox(height: 12),
-            Padding(
-              padding: const EdgeInsets.only(left: 8,right: 8),
-              child: Text(
-                "ZONA POTENSI",
-                style: TextStyle(
-                    color: CBlack(),
-                    fontWeight: FontWeight.bold,
-                    fontSize: TitleSize()
+            const SizedBox(height: 30),
+            Padding(padding: const EdgeInsets.only(left: 8, right: 8),
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: CBackground3(),
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.brown.shade200,
+                          offset: Offset(0, 0),
+                          blurRadius: 0.1
+                      )
+                    ]
+                ),
+                child: Column(
+                  children: [
+                    Padding(padding: const EdgeInsets.only(right: 140, top:8, bottom: 12, left: 1),
+                      child: Text(
+                        "ZONA POTENSI",
+                        style: TextStyle(
+                          color: CBlack(),
+                          fontFamily: 'Poppins-Bold',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17,
+                        ),
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: PotensiCard(title: '       Tes &\n   Tantangan', imagePath: 'assets/img/tes12.png',Left: true,),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: PotensiCard(title: '    Vee\nAkademi', imagePath: 'assets/img/vee akademi2.png', Left: false),
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: PotensiCard(title: '    Video &\n     Artikel', imagePath: 'assets/img/artikel.png',Left: true,),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: PotensiCard(title: 'Berita', imagePath: 'assets/img/berita.png',Left: false,),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ], // This was missing a closing parenthesis and comma, assuming it's inside a Column
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.all(10),
-              padding: const EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                color: CBackground2(),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 4,bottom: 4,top: 0,left: 8),
-                          child: PotensiCard(
-                            title: "Tes & Tantangan",
-                            imagePath: "assets/img/multi tes.png",
-                            Left: true,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 4,bottom: 4,top: 0,right: 8),
-                          child:   PotensiCard(
-                            title: "VEE Akademi",
-                            imagePath: "assets/img/vee akademi2.png",
-                            Left: false,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8,bottom: 8,top: 4,right: 4),
-                          child: PotensiCard(
-                            title: "Video & Artikel",
-                            imagePath: "assets/img/artikel.png",
-                            Left: true,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 4,bottom: 8,top: 4,right: 8),
-                          child:  PotensiCard(
-                            title: "Berita",
-                            imagePath: "assets/img/berita.png",
-                            Left: false,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
+
+
             const SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -912,7 +888,7 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ); // <-- THIS SEMICOLON WAS ADDED
   }
 }
 
@@ -1177,7 +1153,7 @@ class PremiumUpgradeButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const Text(
-            "Upgrade Premium",
+            "         Upgrade Premium",
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -1276,14 +1252,14 @@ class VeeChatPrompt extends StatelessWidget {
                   children: [
                     const SizedBox(height: 12),
                     Container(
-                      height: 130,
+                      height: 100,
                       width: 100,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(
                               50
                           ),
                           image: DecorationImage(
-                              image: AssetImage("assets/img/vee_bot.png"),
+                              image: AssetImage("assets/img/BotAppVee-crop.png"),
                               fit: BoxFit.fill
                           )
                       ),
@@ -1561,8 +1537,9 @@ class PublikCard extends StatelessWidget {
         title,
         style: const TextStyle(
           fontWeight: FontWeight.bold,
-          fontSize: 13,
-          color: Colors.white,
+          fontFamily: 'Roboto',
+          fontSize: 14,
+          color: Colors.black,
         ),
         textAlign: iconOnLeft ? TextAlign.right : TextAlign.left,
       ),
@@ -1571,7 +1548,7 @@ class PublikCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: const Color.fromRGBO(236, 23, 99, 1),
+        color: const Color(0xFFFCE486),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
@@ -1587,48 +1564,62 @@ class ZonaPublikSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final items = [
       {"title": "Komunitas", "img": "assets/img/komunitas--.png"},
-      {"title": "Layanan Umum", "img": "assets/img/layanan umum2.png"},
+      {"title": "    Layanan\n    Umum ", "img": "assets/img/layanan umum2.png"},
       {"title": "Kolaborasi", "img": "assets/img/kolaborasi2.png"},
-      {"title": "Acara", "img": "assets/img/acara.png"},
+      {"title": "     Acara", "img": "assets/img/acara.png"},
     ];
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
-          child: Text(
-            "ZONA PUBLIK",
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 22,
+
+        Padding(
+          padding: const EdgeInsets.only(left: 8, right: 8),
+          child: Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                color: CBackground3(),
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.brown.shade200,
+                      offset: Offset(0, 0),
+                      blurRadius: 0.1)
+                ]),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 140, top: 8, bottom: 12, left: 1),
+                  child: Text(
+                    "ZONA PUBLIK",
+                    style: TextStyle(
+                      color: CBlack(),
+                      fontFamily: 'Poppins-Bold',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17,
+                    ),
+                  ),
+                ),
+                GridView.count(
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 12,
+                  crossAxisSpacing: 12,
+                  childAspectRatio: 1.9,
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: List.generate(items.length, (index) {
+                    final item = items[index];
+                    return PublikCard(
+                      title: item["title"]!,
+                      imagePath: item["img"]!,
+                      iconOnLeft: index % 2 == 0,
+                    );
+                  }),
+                ),
+              ],
             ),
           ),
-        ),
-        Container(
-          padding: const EdgeInsets.all(12),
-          decoration: BoxDecoration(
-            color: CBackground2(),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: GridView.count(
-            shrinkWrap: true,
-            crossAxisCount: 2,
-            mainAxisSpacing: 12,
-            crossAxisSpacing: 12,
-            childAspectRatio: 1.9,
-            physics: const NeverScrollableScrollPhysics(),
-            children: List.generate(items.length, (index) {
-              final item = items[index];
-              return PublikCard(
-                title: item["title"]!,
-                imagePath: item["img"]!,
-                iconOnLeft: index % 2 == 0,
-              );
-            }),
-          ),
-        ),
+        )
       ],
     );
   }

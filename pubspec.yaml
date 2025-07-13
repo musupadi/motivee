@@ -80,6 +80,7 @@ flutter:
     - assets/lottie/
     - assets/img/
     - assets/img/langkah.png
+    - assets/img/Slider5a.png
 
   fonts:
     - family: gotham

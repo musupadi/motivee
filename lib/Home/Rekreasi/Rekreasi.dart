@@ -316,11 +316,13 @@ class Rekreasi extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nKeluarga",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Psikolog\nKeluarga",imagePath: 'assets/img/Komunitas_.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Konselor\nKomunikasi",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Konselor\nKomunikasi",imagePath: 'assets/img/konselor komunikasi1.png',Left: false),
                             )
                           ],
                         ),
@@ -331,11 +333,13 @@ class Rekreasi extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Psikolog\nParenting",imagePath: 'assets/img/spiritual--.png',Left: true),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Psikolog\nParenting",imagePath: 'assets/img/psikolog parenting1.png',Left: true),
                             ),
                             Expanded(
                               flex: 1,
-                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(), TextString: "Sosiolog\nKomunitas",imagePath: 'assets/img/spiritual--.png',Left: false),
+                              child: CardbuttonGeneral2(ColorsData: CSosialKonsultasi(),
+                                  TextString: "Sosiolog\nKomunitas",imagePath: 'assets/img/sosiologi komunitas1.png',Left: false),
                             )
                           ],
                         ),
