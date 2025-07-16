@@ -25,6 +25,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool Clicked = false;
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
@@ -1383,19 +1384,8 @@ class VeeChatPrompt extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 5),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: IconButton(
-                icon: Image.asset(
-                  'assets/img/mic1.png',
-                  width: 32,
-                  height: 32,
-                ),
-                onPressed: () {},
-              ),
-            ),
+            CheckClicked(),
+
           ],
         ),
       ),
@@ -1405,7 +1395,45 @@ class VeeChatPrompt extends StatelessWidget {
 
 
 
+class MicClicked extends StatefulWidget {
+  const MicClicked({super.key});
 
+  @override
+  State<MicClicked> createState() => _MicClickedState();
+}
+
+class _MicClickedState extends State<MicClicked> {
+  bool Clicked = false;
+  @override
+  Widget build(BuildContext context) {
+    return
+    AnimatedContainer(
+      duration: Duration(milliseconds: 200),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Clicked ? Colors.blue : Colors.white
+      ),
+      child: InkWell(
+        child: Icon(
+            Icons.mic,size: 32,color: Clicked ? Colors.white : Colors.black,
+        ),
+        onTap: () {
+          setState(() {
+            if(Clicked == true){
+              Clicked = false;
+            }else{
+              Clicked = true;
+            }
+          });
+        },
+      )
+    );
+  }
+}
+
+Widget CheckClicked(){
+  return MicClicked();
+}
 
 class RobotWithBubble extends StatelessWidget {
   final String robotImagePath;

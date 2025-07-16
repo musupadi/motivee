@@ -161,12 +161,12 @@ class _DashboardState extends State<Dashboard> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
                   image: DecorationImage(
-                      image: AssetImage("assets/img/bantuan.png"),
+                      image: AssetImage("assets/img/bot_app.png"),
                       fit: BoxFit.cover
                   )
               ),
             ),
-            label: "Bantuan",
+            label: "Vee",
           ),
           BottomNavigationBarItem(
             icon: Container(
